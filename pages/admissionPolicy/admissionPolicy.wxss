@@ -1,0 +1,44 @@
+
+.top-two{
+	width: 100%;
+	height: 90rpx;
+	border-bottom: solid 1rpx #EAEAEA;
+}
+.top-item{
+	width: 33.33%;
+	text-align: center;
+	line-height: 90rpx;
+	color: rgb(33,33,33);
+	box-sizing: border-box;
+	height:84rpx ;
+}
+.top-item view{
+	height: 100%;
+	display: inline-block;
+	height:84rpx ;
+}
+.top-itemstar view{
+	color: #2E82FF;
+	border-bottom: solid 4rpx #2E82FF;
+}
+.he10{
+	width: 100%;
+	height: 10rpx;
+	background: #F5F5F5;
+}
+.list-two{
+	box-sizing: border-box;
+	padding: 30rpx 4%;
+}
+.list-left{
+	width: 66%;
+	height: 140rpx;
+}
+.list-two .flo-right{
+	width: 29.2%;
+	height: 140rpx;
+}
+.list-two .flo-right image{
+	width: 100%;
+	height: 100%;
+}

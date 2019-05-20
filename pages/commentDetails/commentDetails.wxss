@@ -1,0 +1,33 @@
+.top{
+	box-sizing: border-box;
+	padding: 40rpx 4%;
+}
+.he10{
+	width: 100%;
+	height: 10rpx;
+	background: #F5F5F5;
+}
+.text-box{
+	box-sizing: border-box;
+	padding: 4%;
+}
+.text{
+	text-align: justify;
+	line-height: 36rpx;
+	margin-bottom: 20rpx;
+}
+.img{
+	width: 80%;
+	height: 340rpx;
+	margin: 0rpx auto 20rpx;
+}
+.img image{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+

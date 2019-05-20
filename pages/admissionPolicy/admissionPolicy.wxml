@@ -1,0 +1,65 @@
+<view class="top-two bg1">
+	 <view class="top-item ilblock top-itemstar">
+		 <view class="font15">
+			 招生政策
+		 </view>
+	 </view><view class="top-item ilblock">
+		 <view class="font15">
+			 批次录取政策
+		 </view>
+	 </view>
+	 <view class="top-item ilblock">
+		 <view class="font15">
+			 加分政策
+		 </view>
+	 </view>
+ </view>
+ <view class="list-two"  bindtap="intoPath" data-path="/pages/commentDetails/commentDetails">
+ 	<view class="ilblock list-left">
+ 		<view class="font14 coloe1" style="height: 120rpx;">2019年高考各省市招生政策规定</view>
+ 		<view class="color3 font12">2019-06-10</view>
+ 	</view>
+ 	<view class="ilblock flo-right">
+ 		<image src="../../image/home-img1.png"></image>
+ 	</view>
+ </view>
+ <view class="he10"></view>
+ <view class="list-two"  bindtap="intoPath" data-path="/pages/commentDetails/commentDetails">
+ 	<view class="ilblock list-left">
+ 		<view class="font14 coloe1" style="height: 120rpx;">各省高招规定陆续公布 今年各省都有哪些变化</view>
+ 		<view class="color3 font12">2019-06-10</view>
+ 	</view>
+ 	<view class="ilblock flo-right">
+ 		<image src="../../image/home-img1.png"></image>
+ 	</view>
+ </view>
+ <view class="he10"></view>
+ 
+ 
+ 
+ <view class="navbar">
+	<view class="navbar_item"  bindtap="intoPathRedirect" data-path="/pages/index/index">
+		<view class="nav_img">
+			<image src="../../image/nabar1.png" style="width: 48rpx; height: 44rpx;"></image>
+		</view>
+		<view class="text">首页</view>
+	</view>
+	<view class="navbar_item">
+		<view class="nav_img">
+			<image src="../../image/nabar2-a.png"></image>
+		</view>
+		<view class="text this-text">资讯</view>
+	</view>
+	<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/questionBank/questionBank">
+		<view class="nav_img">
+			<image src="../../image/nabar3.png"></image>
+		</view>
+		<view class="text">真题库</view>
+	</view>
+	<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/user/user">
+		<view class="nav_img">
+			<image src="../../image/nabar4.png" style="width: 44rpx;"></image>
+		</view>
+		<view class="text">我的</view>
+	</view>
+</view>

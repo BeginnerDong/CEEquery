@@ -1,0 +1,58 @@
+page{
+	
+}
+.top{
+	background: #F5F5F5;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 4%;
+}
+.topRight{
+	width: 100%;
+	height:60rpx;
+	position: relative;
+	z-index: 10;
+	box-shadow: 0rpx 2rpx 10rpx #D1D1D1;
+}
+
+.topRight image{
+	margin-left: 22rpx;
+	margin-bottom: 8rpx;
+}
+.topRight input{
+	width: 56%;
+	margin-left: 30rpx;
+	position: relative; 
+	top: 6rpx;
+}
+.search-box{
+	border-radius: 0rpx 20rpx 20rpx 0rpx;
+	height: 60rpx;
+	width: 18%;
+	line-height: 60rpx;
+	position: absolute;
+	bottom: 0rpx;
+	right: 0rpx;
+}
+
+.he10{
+	width: 100%;
+	height: 10rpx;
+	background: #F5F5F5;
+}
+.list-two{
+	box-sizing: border-box;
+	padding: 30rpx 4%;
+}
+.list-right{
+	width: 66%;
+	height: 140rpx;
+}
+.list-left{
+	width: 29.2%;
+	height: 140rpx;
+}
+.list-left image{
+	width: 100%;
+	height: 100%;
+}

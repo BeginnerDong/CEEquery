@@ -1,0 +1,156 @@
+<view class="bg1 top">
+	<image class="top-img1" src="../../image/home-icon1.png"></image>
+	<view class="ilblock color1 font12">黑龙江</view>
+	<image class="top-img2" src="../../image/home-icon3.png"></image>
+</view>
+<view class="banner-box">
+	<view class="banner">
+		<swiper bindchange="bindhange" indicator-dots="true" indicator-active-color="#606060" current="{{web_current}}" class="banbox" autoplay="{{autoplay}}" duration="{{duration}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}">
+			<block class="swipera" wx:for="{{arr}}">
+				<swiper-item>
+					<image src="{{item}}" mode="widthFix" class="banimg"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+</view>
+<view style="width: 100%;">
+	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/searchSchool/searchSchool">
+		<image src="../../image/home-icon4.png"></image>
+		<view class="color2 font13">
+			查大学
+		</view>
+	</view>
+	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/searchSchool/searchSchool">
+		<image src="../../image/home-icon5.png"></image>
+		<view class="color2 font13">
+			查专业
+		</view>
+	</view>
+	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/searchSchool/searchSchool">
+		<image src="../../image/home-icon6.png"></image>
+		<view class="color2 font13">
+			批次线
+		</view>
+	</view>
+	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/searchSchool/searchSchool">
+		<image src="../../image/home-icon7.png"></image>
+		<view class="color2 font13">
+			青睐专业
+		</view>
+	</view>
+	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/searchSchool/searchSchool">
+		<image src="../../image/home-icon8.png"></image>
+		<view class="color2 font13">
+			招生政策
+		</view>
+	</view>
+	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/searchSchool/searchSchool">
+		<image src="../../image/home-icon9.png"></image>
+		<view class="color2 font13">
+			咨询课堂
+		</view>
+	</view>
+	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/searchSchool/searchSchool">
+		<image src="../../image/home-icon10.png"></image>
+		<view class="color2 font13">
+			就业相关
+		</view>
+	</view>
+	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/searchSchool/searchSchool">
+		<image src="../../image/home-icon11.png"></image>
+		<view class="color2 font13">
+			排名
+		</view>
+	</view>
+</view>
+<view class="bg2 he20" style="margin: 50rpx 0rpx 0rpx;"></view>
+<view class="info-box bg1">
+	<view class="info bg1 radiu15">
+		<view class="bg2 color2 font14 info-top">
+			<view class="ilblock active">
+				文科
+			</view>
+			<view class="ilblock">
+				理科
+			</view>
+		</view>
+		<view class="info-list">
+			<view class="ilblock font13 color2">选择生源地：</view>
+			<view class="color1 font14 flo-right" style="margin-top: 4rpx;">黑龙江
+			 <image src="../../image/home-icon2.png" style="width: 12rpx; height: 22rpx;margin-left: 10rpx;"></image>
+			 </view>
+		</view>
+		<view class="info-list">
+			<view class="ilblock font13 color2">总分：</view>
+			<input class="font12 color2 ilblock" placeholder="请输入总分数" />
+		</view>
+		<button class="bg7 color5 font14 radiu15" style="width: 85%; margin: 50rpx auto 20rpx;">立即查询</button>
+		<view class="color8 font10" style="margin-left: 7.5%;">推荐规则</view>
+	</view>
+</view>
+<view class="bg2 he20"></view>
+<view class="line">
+	<view class="color1 font15 line-red fat-font ilblock">招生政策</view>
+	<view class="font11 color3 ilblock flo-right" style="margin-top: 10rpx;"  bindtap="intoPath" data-path="/pages/admissionPolicy/admissionPolicy">更多
+	<image src="../../image/home-icon2.png" style="width: 12rpx;height: 18rpx;margin-left: 20rpx;"></image> </view>
+</view>
+<view class="list-two"  bindtap="intoPath" data-path="/pages/commentDetails/commentDetails">
+ 	<view class="ilblock list-left">
+ 		<view class="font14 coloe1" style="height: 120rpx;">各省高招规定陆续公布 今年各省都有哪些变化</view>
+ 		<view class="color3 font12">2019-06-10</view>
+ 	</view>
+ 	<view class="ilblock flo-right">
+ 		<image src="../../image/home-img1.png"></image>
+ 	</view>
+ </view>
+<view class="bg2 he10"></view>
+<view class="list-two"  bindtap="intoPath" data-path="/pages/commentDetails/commentDetails">
+ 	<view class="ilblock list-left">
+ 		<view class="font14 coloe1" style="height: 120rpx;">各省高招规定陆续公布 今年各省都有哪些变化</view>
+ 		<view class="color3 font12">2019-06-10</view>
+ 	</view>
+ 	<view class="ilblock flo-right">
+ 		<image src="../../image/home-img1.png"></image>
+ 	</view>
+ </view>
+<view class="bg2 he10"></view>
+<view class="list-two"  bindtap="intoPath" data-path="/pages/commentDetails/commentDetails">
+ 	<view class="ilblock list-left">
+ 		<view class="font14 coloe1" style="height: 120rpx;">各省高招规定陆续公布 今年各省都有哪些变化</view>
+ 		<view class="color3 font12">2019-06-10</view>
+ 	</view>
+ 	<view class="ilblock flo-right">
+ 		<image src="../../image/home-img1.png"></image>
+ 	</view>
+ </view>
+<view class="bg2 he10"></view>
+<view style="width: 100%;height: 120rpx;"></view>
+
+<view class="navbar">
+	<view class="navbar_item">
+		<view class="nav_img">
+			<image src="../../image/nabar1-a.png" style="width: 48rpx; height: 44rpx;"></image>
+		</view>
+		<view class="text this-text">首页</view>
+	</view>
+	<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/information/information">
+		<view class="nav_img">
+			<image src="../../image/nabar2.png"></image>
+		</view>
+		<view class="text">资讯</view>
+	</view>
+	<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/questionBank/questionBank">
+		<view class="nav_img">
+			<image src="../../image/nabar3.png"></image>
+		</view>
+		<view class="text">真题库</view>
+	</view>
+	<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/user/user">
+		<view class="nav_img">
+			<image src="../../image/nabar4.png" style="width: 44rpx;"></image>
+		</view>
+		<view class="text">我的</view>
+	</view>
+</view>
+

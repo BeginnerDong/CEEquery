@@ -1,0 +1,50 @@
+page{
+	background: #F2F2F2;
+}
+.top{
+	width: 100%;
+	height: 240rpx;
+}
+.top_top{
+	width: 100%;
+	height: 100rpx;
+}
+.itemimg{
+	width: 120rpx;
+	height:120rpx;
+	margin-left: 30rpx;
+}
+.itemimg image{
+	width: 100%;
+	height: 100%;
+}
+.info{
+	border-bottom: solid 1rpx #F2F2F2;
+	padding-left: 30rpx;
+	padding-right: 30rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+}
+.listimg{
+	height: 100%;
+	width: 60rpx;
+	}
+
+.listimg image{
+	height: 35rpx;
+	width: 33rpx;
+	position:relative;
+	top: 10rpx;
+	}
+.vip{
+	width: 24%;
+	height: 50rpx;
+	line-height: 50rpx;
+	text-align: center;
+	border-radius: 40rpx 0rpx 0rpx 40rpx;
+	position: absolute;
+	right: 0rpx;
+	top: -80rpx;
+	
+}
+

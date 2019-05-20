@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/index/index",
+		"pages/information/information",
+		"pages/questionBank/questionBank",
+		"pages/user/user",
+		"pages/admissionPolicy/admissionPolicy",
+		"pages/commentDetails/commentDetails",
+		"pages/searchSchool/searchSchool"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor":"#4891FF",
+    "navigationBarTitleText": "首页",
+		"navigationBarTextStyle":"#fff"
+  }
+}

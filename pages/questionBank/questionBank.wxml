@@ -1,0 +1,29 @@
+
+
+<view class="navbar">
+		<view class="navbar_item"  bindtap="intoPathRedirect" data-path="/pages/index/index">
+			<view class="nav_img">
+				<image src="../../image/nabar1.png" style="width: 48rpx; height: 44rpx;"></image>
+			</view>
+			<view class="text">首页</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/information/information">
+			<view class="nav_img">
+				<image src="../../image/nabar2.png"></image>
+			</view>
+			<view class="text">资讯</view>
+		</view>
+		<view class="navbar_item">
+			<view class="nav_img">
+				<image src="../../image/nabar3-a.png"></image>
+			</view>
+			<view class="text this-text">真题库</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/user/user">
+			<view class="nav_img">
+				<image src="../../image/nabar4.png" style="width: 44rpx;"></image>
+			</view>
+			<view class="text">我的</view>
+		</view>
+	</view>
+

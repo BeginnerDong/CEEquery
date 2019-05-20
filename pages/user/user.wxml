@@ -1,0 +1,74 @@
+<view class="top bg7">
+	<view>
+		<view class="ilblock itemimg radiu50 hiden">
+			<image src="../../image/about-img1.png"></image>
+		</view>
+		<view class="ilblock" style="margin-left: 30rpx;position: relative;top: -10rpx;">
+			<view class="color5 font14" style="margin-bottom: 10rpx;">昵称昵称昵称</view>
+			<view class="font12 ilblock" style="color: #EDA81F;">
+				<image src="../../image/about-icon1.png" style="width: 28rpx;height: 22rpx; margin-right: 10rpx;"></image>VIP</view>
+		</view>
+	</view>
+	<view style="position: relative;">
+		<view class="bg8 color5 font13 vip">开通会员卡</view>
+	</view>
+</view>
+
+<view class="info bg1" bindtap="intoPath" data-path="/pages/myflowerbag/myflowerbag">
+	<view class="ilblock listimg">
+		<image src="../../image/about-icon2.png"></image>
+	</view>
+	<view class="ilblock color2 font14">我的收藏</view>
+	<view class="color2 font24 flo-right">
+	 <image src="../../image/home-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
+	 </view>
+</view>
+<view class="info bg1" bindtap="intoPath" data-path="/pages/myflowerbag/myflowerbag">
+	<view class="ilblock listimg">
+		<image src="../../image/about-icon3.png"></image>
+	</view>
+	<view class="ilblock color2 font14">完善资料</view>
+	<view class="color2 font24 flo-right">
+	 <image src="../../image/home-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
+	 </view>
+</view>
+<view class="info bg1" bindtap="intoPath" data-path="/pages/myflowerbag/myflowerbag">
+	<view class="ilblock listimg">
+		<image src="../../image/about-icon4.png"></image>
+	</view>
+	<view class="ilblock color2 font14">平台客服</view>
+	<view class="color2 font12 flo-right">029-23154687
+	 <image src="../../image/home-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
+	 </view>
+</view>
+
+<view style="width: 100%; height: 90rpx;"></view>
+
+
+
+<view class="navbar">
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/index/index">
+			<view class="nav_img">
+				<image src="../../image/nabar1.png" style="width: 48rpx; height: 44rpx;"></image>
+			</view>
+			<view class="text">首页</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/information/information">
+			<view class="nav_img">
+				<image src="../../image/nabar2.png"></image>
+			</view>
+			<view class="text">资讯</view>
+		</view>
+		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/questionBank/questionBank">
+			<view class="nav_img">
+				<image src="../../image/nabar3.png"></image>
+			</view>
+			<view class="text">真题库</view>
+		</view>
+		<view class="navbar_item">
+			<view class="nav_img">
+				<image src="../../image/nabar4-a.png" style="width: 44rpx;"></image>
+			</view>
+			<view class="text this-text">我的</view>
+		</view>
+	</view>
