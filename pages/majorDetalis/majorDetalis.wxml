@@ -1,0 +1,54 @@
+<view class="top bg7">
+	<view class="top-box bg1">
+		<view class="info-list font13 color2">
+			<view class="list-left ilblock">
+				专业代码：101010
+			</view>
+			<view class="list-right ilblock">
+				专业人气：41544
+			</view>
+		</view>
+		<view class="info-list font13 color2">
+			<view class="list-left ilblock">
+				专业代码：101010
+			</view>
+			<view class="list-right ilblock">
+				专业人气：41544
+			</view>
+		</view>
+		<view class="info-list font13 color2">
+			<view class="list-left ilblock">
+				专业代码：101010
+			</view>
+			<view class="list-right ilblock">
+				专业人气：41544
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="he10" style="margin-top: 40rpx;"></view>
+<view class="line">
+	<view class="color1 font15 line-red fat-font">学院简介</view>
+</view>
+<view class="blue font14 color8" style="margin-top: 30rpx;">是什么</view>
+<view class="text color2 font12">
+	内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内内容内容
+	内容容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+</view>
+<view class="blue font14 color8">学什么</view>
+<view class="text color2 font12">
+	内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+	内容容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+</view>
+<view class="blue font14 color8">干什么</view>
+<view class="text color2 font12">
+	内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容容内容内容内容内容内容内容内容内容
+	内容容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+</view>
+<view class="line">
+	<view class="color1 font15 line-red fat-font">开设专业</view>
+</view>
+
+
+

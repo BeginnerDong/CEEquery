@@ -1,0 +1,83 @@
+page{
+	background: #F5F5F5;
+}
+.top-two{
+	width: 100%;
+	height: 90rpx;
+	border-bottom: solid 1rpx #EAEAEA;
+	box-sizing: border-box;
+}
+.top-item{
+	width:50%;
+	text-align: center;
+	line-height: 90rpx;
+	color: rgb(33,33,33);
+	box-sizing: border-box;
+	height:84rpx ;
+}
+.top-item view{
+	height: 100%;
+	display: inline-block;
+	height:84rpx ;
+}
+.top-itemstar view{
+	color: #2E82FF;
+	border-bottom: solid 6rpx #2E82FF;
+}
+
+.top-btm{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30rpx 0rpx;
+}
+.btm-item{
+	width:33.3%;
+	text-align: center;
+	color: rgb(153,153,153);
+	box-sizing: border-box;
+}
+.btm-item image{
+	width: 12rpx;
+	height: 6rpx;
+	margin-left:10rpx;
+	position: relative;
+	top: -6rpx;
+}
+
+
+
+
+
+.box{
+	box-sizing: border-box;
+	padding: 4% 4% 0rpx;
+}
+.tabe{
+	width: 100%;
+	border-top: solid 1rpx #EDEDED;
+	}
+.th{
+	background: #EFEFEF;
+	width: 100%;
+	height: 60rpx;
+	line-height: 60rpx;
+	border-bottom: solid 1rpx #EDEDED;
+}
+.td{
+	height: 100%;
+	width:24.7%;
+	display: inline-block;
+	text-align: center;
+	font-size: 24rpx;
+	border-right: solid 1rpx #EDEDED;
+}
+.tr{
+	background: #fff;
+	width: 100%;
+	height: 96rpx;
+	line-height: 96rpx;
+	border-bottom: solid 1rpx #EDEDED;
+	margin-left: solid 1rpx #EDEDED;
+	
+}
+

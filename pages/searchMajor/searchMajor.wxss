@@ -1,0 +1,114 @@
+page{
+	
+}
+.top{
+	background: #F5F5F5;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 4%;
+}
+.topRight{
+	width: 100%;
+	height:60rpx;
+	position: relative;
+	z-index: 10;
+	box-shadow: 0rpx 2rpx 10rpx #D1D1D1;
+}
+
+.topRight image{
+	margin-left: 22rpx;
+	margin-bottom: 8rpx;
+}
+.topRight input{
+	width: 56%;
+	margin-left: 30rpx;
+	position: relative; 
+	top: 6rpx;
+}
+.search-box{
+	border-radius: 0rpx 20rpx 20rpx 0rpx;
+	height: 60rpx;
+	width: 18%;
+	line-height: 60rpx;
+	position: absolute;
+	bottom: 0rpx;
+	right: 0rpx;
+}
+.box{
+	box-sizing: border-box;
+	padding: 4%;
+}
+.tabe{
+	width: 100%;
+	}
+.th{
+	background: #EFEFEF;
+	width: 100%;
+	height: 100rpx;
+}
+.td{
+	height: 100%;
+	width: 19.4%;
+	display: inline-block;
+	text-align: center;
+	font-size: 24rpx;
+	line-height: 100rpx;
+}
+.td4{
+	float: left;
+	width: 19.4%;
+	height: 100%;
+	display: inline-block;
+	border: solid 1rpx #F5F5F5;
+	line-height: 400rpx;
+	text-align: center;
+}
+.td-more{
+	float: right;
+	display: inline-block;
+	width: 79.4%;
+	border: solid 1rpx #F5F5F5;
+	height: 100%;
+}
+.td-more .tr{
+	width:100%;
+	display: inline-block;
+	border-bottom: solid 1rpx #F5F5F5;
+}
+.td-more .tr .td{
+	width: 24.6%;
+	height: 90rpx;
+	border-right: solid 1rpx #F5F5F5;
+	float: left;
+}
+.last-td{
+	border: none;
+}
+.td-more .last-td{
+	color: #2E82FF;
+}
+
+.fixd{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+	top: 0rpx;
+	z-index: 1000;
+}
+.fixd-box{
+	width:90%;
+	height: 400rpx;
+	margin: 50% 5%;
+	box-sizing: border-box;
+	padding: 30rpx;
+}
+.fixd-box button{
+	display: inline-block;
+	width: 40%;
+	height: 70rpx;
+	line-height:70rpx;
+	margin: 80rpx 30%;
+}
+
+

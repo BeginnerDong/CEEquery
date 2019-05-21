@@ -1,0 +1,27 @@
+<view class="box">
+	<view class="color8 font15 fat-font" style="margin-bottom: 40rpx;">法律学</view>
+	<view class="color1 font14">
+		专业介绍
+	</view>
+	<view class="color2 font14">
+		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+	</view>
+	<view class="color1 font14">
+		主要课程
+	</view>
+	<view class="color2 font14">
+		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+	</view>
+	<view class="color1 font14">
+		就业方向
+	</view>
+	<view class="color2 font14">
+		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+	</view>
+</view>

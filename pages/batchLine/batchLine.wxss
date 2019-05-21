@@ -1,0 +1,64 @@
+page{
+	background: #F5F5F5;
+}
+.top{
+	border: solid 1rpx #F5F5F5;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 4%;
+	text-align:center ;
+}
+.year{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30rpx 30rpx 0rpx;
+	}
+.year-item{
+	width: 23%;
+	height: 60rpx;
+	text-align: center;
+	line-height: 60rpx;
+	border: solid 1rpx #E7E7E7;
+	display: inline-block;
+	margin-bottom: 30rpx;
+}
+.year-item-center{
+	margin: 0rpx 14.3%;
+}
+.item-acive{
+	background: #2E82FF;
+	color: #fff;
+}
+.box{
+	box-sizing: border-box;
+	padding: 4% 4% 0rpx;
+}
+.tabe{
+	width: 100%;
+	border-top: solid 1rpx #EDEDED;
+	}
+.th{
+	background: #EFEFEF;
+	width: 100%;
+	height: 60rpx;
+	line-height: 60rpx;
+	border-bottom: solid 1rpx #EDEDED;
+}
+.td{
+	height: 100%;
+	width:33%;
+	display: inline-block;
+	text-align: center;
+	font-size: 24rpx;
+	border-right: solid 1rpx #EDEDED;
+}
+.tr{
+	background: #fff;
+	width: 100%;
+	height: 86rpx;
+	line-height: 86rpx;
+	border-bottom: solid 1rpx #EDEDED;
+	margin-left: solid 1rpx #EDEDED;
+	
+}
+

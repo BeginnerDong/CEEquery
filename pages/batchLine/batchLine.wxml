@@ -1,0 +1,47 @@
+<view class="top font14 color1 bg1">
+	黑龙江
+</view>
+<view class="year color2 font13 bg1">
+	<view class="year-item">2019年</view>
+	<view class="year-item year-item-center item-acive">2018年</view>
+	<view class="year-item">2017年</view>
+	<view class="year-item">2016年</view>
+	<view class="year-item year-item-center">2015年</view>
+	<view class="year-item">2014年</view>
+</view>
+<view class="box">
+	<view class="tabe color2 font13">
+		<view class="th color1">
+			<view class="td">批次</view>
+			<view class="td">文科</view>
+			<view class="td">理科</view>
+		</view>
+		<view class="tr">
+			<view class="td">一批</view>
+			<view class="td">490</view>
+			<view class="td">472</view>
+		</view>
+		<view class="tr">
+			<view class="td">二批</view>
+			<view class="td">406</view>
+			<view class="td">353</view>
+		</view>
+		<view class="tr">
+			<view class="td">高职</view>
+			<view class="td">106</view>
+			<view class="td">160</view>
+		</view>
+		<view class="tr">
+			<view class="td">艺术类本科</view>
+			<view class="td">-</view>
+			<view class="td">-</view>
+		</view>
+		<view class="tr">
+			<view class="td">体育类本科</view>
+			<view class="td">-</view>
+			<view class="td">-</view>
+		</view>
+	</view>
+</view>
+<view class="color3 font11" style="padding:30rpx;">注：默认抓取的是定位城市</view>
+ 

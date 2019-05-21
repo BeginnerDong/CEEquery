@@ -1,0 +1,9 @@
+.box{
+	box-sizing: border-box;
+	padding: 40rpx 4%; 
+	text-align: justify;
+	line-height: 40rpx;
+}
+.box view{
+	margin-bottom: 30rpx;
+}

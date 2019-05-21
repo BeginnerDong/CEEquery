@@ -1,0 +1,52 @@
+<view class="top-two bg1">
+	 <view class="top-item ilblock">
+		 <view class="font15">
+			 真题
+		 </view>
+	 </view><view class="top-item ilblock">
+		 <view class="font15">
+			 答案
+		 </view>
+	 </view>
+	 <view class="top-item ilblock top-itemstar">
+		 <view class="font15">
+			 解析
+		 </view>
+	 </view>
+ </view>
+ <view>
+	 <view class="text">
+		 <view class="text-one">一、总体评价</view>
+		 <view class="color1 font13" style="line-height: 46rpx;">
+			 2018年全国高考试题的命制，严格遵循教育部修订颁布的《2018年普通高等学校招生全国统一考试大纲-语文》，既体现新《考试大纲》的精神，
+			 同时又尽量保持与往年的衔接照应，以体现稳中求新、稳中求变的命题原则。在命题思路上，体现立德树人、服务选拔、引导教学的核心立场;在考
+			 察内容上，体现必备知识、关键能力、学科素养、核心价值的考察目标;在考查形式上，体现基础性、综合性、应用性和创新性的考查导向。
+		 </view>
+		 <view class="text-one">二、试题分析</view>
+				<view class="text-two">第一大题</view>
+				 <view class="text-fore">
+					第一大题为现代文阅读，分为论述类文本阅读、文学类文本阅读和实用类文本阅读三个部分。与2017年保持一致，文学类文本阅读和实用类文本阅读都是必考。
+				 </view>
+				 <view class="text-three"> 
+					 (一)论述类文本阅读
+				 </view>
+				 <view class="text-fore">
+					论述类文本阅读重点考查考生筛选并整合文中信息，分析原文论证以及综合文中信息进行推断的能力。阅读材料摘编自杨国荣《历史视域中的诸子学》一文，适合高中毕业水平考生的阅读和理解。3道题考点各不相同且指向明确，第1题考查筛选整合文中信息的能力，第2题考查分析原文论证的能力，第3题考查综合文中信息进行推断的能力。
+				</view>
+				<view class="text-three">
+					(二)文学类文本阅读
+				 </view>
+				 <view class="text-fore">
+					 　文学类文本阅读重点考查文章内容的理解和艺术特色的分析鉴赏。阅读材料是阿成的小说《赵一曼女士》。选择这篇材料作为高考文学类阅读材料，追忆了革命先烈，彰显了爱国精神，且具有重要的教育和导向意义。第4题作为客观题，考查的综合性较强，涉及到文章内容的理解，也涉及到艺术特色的分析鉴赏;第5题考查文中关键句子的含意;第6题考查艺术特色的鉴赏。
+				</view>
+		
+	 </view>
+	 
+	 
+ </view>
+ 
+ 
+ 
+  
+ 
+ 

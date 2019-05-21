@@ -21,43 +21,43 @@
 			查大学
 		</view>
 	</view>
-	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/searchSchool/searchSchool">
+	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/searchMajor/searchMajor">
 		<image src="../../image/home-icon5.png"></image>
 		<view class="color2 font13">
 			查专业
 		</view>
 	</view>
-	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/searchSchool/searchSchool">
+	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/batchLine/batchLine">
 		<image src="../../image/home-icon6.png"></image>
 		<view class="color2 font13">
 			批次线
 		</view>
 	</view>
-	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/searchSchool/searchSchool">
+	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/withProfessional/withProfessional">
 		<image src="../../image/home-icon7.png"></image>
 		<view class="color2 font13">
 			青睐专业
 		</view>
 	</view>
-	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/searchSchool/searchSchool">
+	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/admissionPolicy/admissionPolicy">
 		<image src="../../image/home-icon8.png"></image>
 		<view class="color2 font13">
 			招生政策
 		</view>
 	</view>
-	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/searchSchool/searchSchool">
+	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/admissionPolicy/admissionPolicy">
 		<image src="../../image/home-icon9.png"></image>
 		<view class="color2 font13">
 			咨询课堂
 		</view>
 	</view>
-	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/searchSchool/searchSchool">
+	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/jobAbout/jobAbout">
 		<image src="../../image/home-icon10.png"></image>
 		<view class="color2 font13">
 			就业相关
 		</view>
 	</view>
-	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/searchSchool/searchSchool">
+	<view class="circel-nav ilblock" bindtap="intoPath" data-path="/pages/ranking/ranking">
 		<image src="../../image/home-icon11.png"></image>
 		<view class="color2 font13">
 			排名
@@ -85,8 +85,22 @@
 			<view class="ilblock font13 color2">总分：</view>
 			<input class="font12 color2 ilblock" placeholder="请输入总分数" />
 		</view>
-		<button class="bg7 color5 font14 radiu15" style="width: 85%; margin: 50rpx auto 20rpx;">立即查询</button>
-		<view class="color8 font10" style="margin-left: 7.5%;">推荐规则</view>
+		<button class="bg7 color5 font14 radiu15" style="width: 85%; margin: 50rpx auto 20rpx;" bindtap="show">立即查询</button>
+		<view class="color8 font10" style="margin-left: 7.5%;" bindtap="play">推荐规则</view>
+		<view class="regulation color2 font11" wx:if="{{is_play}}">
+			<view>
+				<image class="flo-right" src="../../image/home-icon12.png" style="width: 24rpx;height: 24rpx;" bindtap="play"></image>
+			</view>
+			<view class="text">
+				1、本系统数据均有高校提供，具备参考价值；
+			</view>
+			<view class="text">
+				2、考生输入分数，系统将根据在当省招生的高校录取情况，推荐合适的高校；
+			</view>
+			<view class="text">
+				3、本系统推荐的院校名单，进攻志愿参考。
+			</view>
+		</view>
 	</view>
 </view>
 <view class="bg2 he20"></view>
@@ -126,6 +140,20 @@
  </view>
 <view class="bg2 he10"></view>
 <view style="width: 100%;height: 120rpx;"></view>
+
+<view class="fixd" wx:if="{{is_show}}">
+	<view class="bg1 fixd-box radiu15">
+		<view>
+			<image class="flo-right" src="../../image/details-icon1.png" style="width: 36rpx;height: 36rpx" bindtap="show"></image>
+		</view>
+		<view class="font15 color1" style="text-align: center; margin: 100rpx 0rpx 0rpx;">加入会员开通所有权限，仅需￥298</view>
+		<view class="font13">
+			<button class="bg7" bindtap="intoPath" data-path="/pages/forecast/forecast">立即购买</button>
+		</view>
+	</view>
+</view>
+
+
 
 <view class="navbar">
 	<view class="navbar_item">

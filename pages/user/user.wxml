@@ -9,12 +9,12 @@
 				<image src="../../image/about-icon1.png" style="width: 28rpx;height: 22rpx; margin-right: 10rpx;"></image>VIP</view>
 		</view>
 	</view>
-	<view style="position: relative;">
+	<view style="position: relative;" bindtap="intoPath" data-path="/pages/Vip/Vip">
 		<view class="bg8 color5 font13 vip">开通会员卡</view>
 	</view>
 </view>
 
-<view class="info bg1" bindtap="intoPath" data-path="/pages/myflowerbag/myflowerbag">
+<view class="info bg1" bindtap="intoPath" data-path="/pages/myCollect/myCollect">
 	<view class="ilblock listimg">
 		<image src="../../image/about-icon2.png"></image>
 	</view>
@@ -23,7 +23,7 @@
 	 <image src="../../image/home-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
 	 </view>
 </view>
-<view class="info bg1" bindtap="intoPath" data-path="/pages/myflowerbag/myflowerbag">
+<view class="info bg1" bindtap="intoPath" data-path="/pages/info/info">
 	<view class="ilblock listimg">
 		<image src="../../image/about-icon3.png"></image>
 	</view>
@@ -32,7 +32,7 @@
 	 <image src="../../image/home-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
 	 </view>
 </view>
-<view class="info bg1" bindtap="intoPath" data-path="/pages/myflowerbag/myflowerbag">
+<view class="info bg1">
 	<view class="ilblock listimg">
 		<image src="../../image/about-icon4.png"></image>
 	</view>

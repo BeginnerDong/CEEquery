@@ -1,0 +1,107 @@
+<view class="top">
+	<image src="../../image/school-img2.png" style="width: 100%; height: 200rpx;"></image>
+	<image class="logo" src="../../image/school-img1.png"></image>
+</view>
+<view style="text-align: center; margin-top: 20rpx; position: relative;">
+	<view class="color1 font14">上海理工大学<text class="color2 font12" style="margin-left: 20rpx;">上海</text> </view>
+	<view class="font12 one-color">
+		<view class="ilblock">理工类</view>
+		<view class="ilblock">985</view>
+		<view class="ilblock">本科</view>
+	</view>
+	<view class="one-time color1 font13">
+		报名热度：95
+	</view>
+	<view class="left">
+		<view>
+			<image src="../../image/school-icon1.png"></image>
+			<view class="font12 color1">收藏</view>
+		</view>
+		<view style="margin-top: 30rpx;" bindtap="show">
+			<image src="../../image/school-icon2.png"></image>
+			<view class="font12 color1">加入对比</view>
+		</view>
+	</view>
+	
+</view>
+<view class="he10" style="margin-top: 40rpx;"></view>
+<view class="line">
+	<view class="color1 font15 line-red fat-font">学院简介</view>
+</view>
+<view class="text color2 font12 overflow5">
+	内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+	内容容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+</view>
+<view style="text-align: center;">
+	<image src="../../image/微信图片_20190521183332.png" style="width: 22rpx;height: 12rpx;"></image>
+</view>
+<view class="line">
+	<view class="color1 font15 line-red fat-font">开设专业</view>
+</view>
+<view class="font13 color1" style="margin-top: 20rpx;" bindtap="intoPathRedirect" data-path="/pages/openMajor/openMajor">
+	<view class="open-list">
+		金融学
+	</view>
+	<view class="open-list">
+		财务管理
+	</view>
+	<view class="open-list">
+		金融科技
+	</view>
+	<view class="open-list">
+		金融学
+	</view>
+	<view class="open-list">
+		金融学
+	</view>
+	<view class="open-list">
+		财务管理
+	</view>
+	<view class="open-list">
+		金融科技
+	</view>
+	<view class="open-list">
+		金融学
+	</view>
+	<view class="open-list">
+		金融学
+	</view>
+	<view class="open-list">
+		财务管理
+	</view>
+	<view class="open-list">
+		金融科技
+	</view>
+	<view class="open-list">
+		金融学
+	</view>
+</view>
+<view class="contrast-box bg1" wx:if="{{is_show}}">
+	<view class="color1 font14 fat-font contrast-top">
+		<image class="flo-right" src="../../image/home-icon12.png" style="width: 14rpx;height: 14rpx;margin: 8rpx;" bindtap="show"></image>
+		对比栏
+	</view>
+	<view class="contrast color2 font11">
+		上海理工
+		<image src="../../image/home-icon12.png" style="width: 12rpx;height: 12rpx; margin-left: 20rpx;"></image>
+	</view>
+	<view class="contrast color2 font11">
+		南京大学
+		<image src="../../image/home-icon12.png" style="width: 12rpx;height: 12rpx; margin-left: 20rpx;"></image>
+	</view>
+	<button class="contrast bg7 color5" style="border: none; border-radius: 10rpx;">对比</button>
+</view>
+
+<view style="width: 100%; height: 200rpx;"></view>
+
+<view class="btm-nav">
+	<view class="nav_item" style="background: #22B595;" bindtap="intoPath" data-path="/pages/enrollmentPlan/enrollmentPlan">
+		招生计划
+	</view>
+	<view class="nav_item" style="background: #FF9B30;" bindtap="intoPath" data-path="/pages/shengLine/shengLine">
+		省录取分数线
+	</view>
+	<view class="nav_item" style="background: #2E82FF;" bindtap="intoPath" data-path="/pages/majorLine/majorLine">
+		专业录取分数线
+	</view>
+</view>

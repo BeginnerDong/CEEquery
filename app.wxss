@@ -112,7 +112,7 @@
 	background: #1AA034;
 }
 .bg7{
-	background: #4891FF;
+	background: #2E82FF;
 }
 .bg8{
 	background: #FFAD00;
@@ -142,6 +142,13 @@
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 3;
+	overflow: hidden;
+	text-align: justify;
+}
+.overflow5{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5;
 	overflow: hidden;
 	text-align: justify;
 }

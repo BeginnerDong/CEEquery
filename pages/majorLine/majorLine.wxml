@@ -1,0 +1,83 @@
+<view class="top-two bg1">
+	 <view class="top-item ilblock top-itemstar">
+		 <view class="font14">
+			文科
+		 </view>
+	 </view><view class="top-item ilblock">
+		 <view class="font14">
+			理科
+		 </view>
+	 </view>
+ </view>
+ <view class="top-btm bg1">
+ 	 <view class="btm-item ilblock">
+ 		<view class="font14">
+ 			<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+ 				地区
+ 			    <image src="../../image/volume-icon2.png"></image>
+ 			</picker>
+ 		</view>
+ 	 </view>
+ 	 <view class="btm-item ilblock">
+ 			<view class="font14">
+ 				<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+ 					时间
+ 				    <image src="../../image/volume-icon2.png"></image>
+ 				</picker>
+ 			</view>
+ 	</view>
+ </view>
+  
+<view class="box">
+	<view class="tabe color2 font13">
+		<view class="th color1">
+			<view class="td">学校名称</view>
+			<view class="td">学校名称</view>
+			<view class="td">地区</view>
+			<view class="td">类别</view>
+			<view class="td">人气值</view>
+			<view class="td">人气值</view>
+		</view>
+		<view class="tr">
+			<view class="td">学校名称</view>
+			<view class="td">1厦门大学</view>
+			<view class="td">福建</view>
+			<view class="td">综合类</view>
+			<view class="td">1280.9万</view>
+			<view class="td">人气值</view>
+		</view>
+		<view class="tr">
+			<view class="td">学校名称</view>
+			<view class="td">1厦门大学</view>
+			<view class="td">福建</view>
+			<view class="td">综合类</view>
+			<view class="td">1280.9万</view>
+			<view class="td">人气值</view>
+		</view>
+		<view class="tr">
+			<view class="td">学校名称</view>
+			<view class="td">1厦门大学</view>
+			<view class="td">福建</view>
+			<view class="td">综合类</view>
+			<view class="td">1280.9万</view>
+			<view class="td">人气值</view>
+		</view>
+		<view class="tr">
+			<view class="td">学校名称</view>
+			<view class="td">1厦门大学</view>
+			<view class="td">福建</view>
+			<view class="td">综合类</view>
+			<view class="td">1280.9万</view>
+			<view class="td">人气值</view>
+		</view>
+		<view class="tr">
+			<view class="td">学校名称</view>
+			<view class="td">1厦门大学</view>
+			<view class="td">福建</view>
+			<view class="td">综合类</view>
+			<view class="td">1280.9万</view>
+			<view class="td">人气值</view>
+		</view>
+	</view>
+</view>
+ 

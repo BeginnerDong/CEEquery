@@ -1,3 +1,79 @@
+<view class="top-btm bg1">
+	 <view class="btm-item ilblock">
+		<view class="font14">
+			<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+				地区
+			    <image src="../../image/volume-icon2.png"></image>
+			</picker>
+		</view>
+	 </view>
+	 <view class="btm-item ilblock">
+			<view class="font14">
+				<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+					年份
+				    <image src="../../image/volume-icon2.png"></image>
+				</picker>
+			</view>
+	</view>
+	  <view class="btm-item ilblock">
+	 		<view class="font14">
+	 			<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+	 				科目
+	 			    <image src="../../image/volume-icon2.png"></image>
+	 			</picker>
+	 		</view>
+	 </view>
+</view>
+<view>
+	<view class="lenson" bindtap="intoPath" data-path="/pages/chinese/chinese">
+		<view class="lenson-title">语文</view>
+		<view class="lenson-item">
+			<view>真题</view>
+			<view>答案</view>
+			<view style="border: none;">解析</view>
+		</view>
+	</view>
+	<view class="lenson">
+		<view class="lenson-title">英语</view>
+		<view class="lenson-item">
+			<view>真题</view>
+			<view>答案</view>
+			<view style="border: none;">解析</view>
+		</view>
+	</view>
+	<view class="lenson">
+		<view class="lenson-title">数学（理）</view>
+		<view class="lenson-item">
+			<view>真题</view>
+			<view>答案</view>
+			<view style="border: none;">解析</view>
+		</view>
+	</view>
+	<view class="lenson">
+		<view class="lenson-title">数学（文）</view>
+		<view class="lenson-item">
+			<view>真题</view>
+			<view>答案</view>
+			<view style="border: none;">解析</view>
+		</view>
+	</view>
+	<view class="lenson">
+		<view class="lenson-title">综合（理）</view>
+		<view class="lenson-item">
+			<view>真题</view>
+			<view>答案</view>
+			<view style="border: none;">解析</view>
+		</view>
+	</view>
+	<view class="lenson">
+		<view class="lenson-title">综合（文）</view>
+		<view class="lenson-item">
+			<view>真题</view>
+			<view>答案</view>
+			<view style="border: none;">解析</view>
+		</view>
+	</view>
+</view>
 
 
 <view class="navbar">

@@ -6,11 +6,28 @@
 		"pages/user/user",
 		"pages/admissionPolicy/admissionPolicy",
 		"pages/commentDetails/commentDetails",
-		"pages/searchSchool/searchSchool"
+		"pages/searchSchool/searchSchool",
+		"pages/searchMajor/searchMajor",
+		"pages/batchLine/batchLine",
+		"pages/withProfessional/withProfessional",
+		"pages/jobAbout/jobAbout",
+		"pages/ranking/ranking",
+		"pages/chinese/chinese",
+		"pages/Vip/Vip",
+		"pages/info/info",
+		"pages/myCollect/myCollect",
+		"pages/schoolDetalis/schoolDetalis",
+		"pages/openMajor/openMajor",
+		"pages/enrollmentPlan/enrollmentPlan",
+		"pages/shengLine/shengLine",
+		"pages/majorLine/majorLine",
+		"pages/forecast/forecast",
+		"pages/majorDetalis/majorDetalis"
+		
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor":"#4891FF",
+    "navigationBarBackgroundColor":"#2E82FF",
     "navigationBarTitleText": "首页",
 		"navigationBarTextStyle":"#fff"
   }

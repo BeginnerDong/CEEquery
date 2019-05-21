@@ -10,6 +10,7 @@ const token = new Token();
 
 Page({
   data: {
+		 is_play:false,
 		 is_show:false,
 		 autoplay:true,
 		 duration:1000,
@@ -27,10 +28,17 @@ Page({
 		
 	show(e){
 		const self=this;
-		self.data.is_show=false;
+		self.data.is_show=!self.data.is_show;
 		self.setData({
 			web_current:self.data.current,
 			is_show:self.data.is_show
+		})
+	},
+	play(e){
+		const self=this;
+		self.data.is_play=!self.data.is_play;
+		self.setData({
+			is_play:self.data.is_play
 		})
 	},
 	onLoad: function (options) {

@@ -1,0 +1,22 @@
+<view class="top bg7">
+	<view class="card">
+		<image class="flo-right" src="../../image/vip-icon1.png"></image>
+	</view>
+</view>
+<view style="width: 100%;height: 180rpx;"></view>
+<view style="box-sizing: border-box;padding: 0rpx 4%; text-align: justify;">
+	<view class="color1 font15 fat-font" style="margin: 30rpx 0rpx;">会员卡使用说明</view>
+	<view class="color2 font12" style="margin-bottom: 20rpx;">
+		一、内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+	</view>
+	<view class="color2 font12" style="margin-bottom: 20rpx;">
+		二、内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+	</view>
+	<view class="color2 font12" style="margin-bottom: 20rpx;">
+		三、内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+	</view>
+	<view class="color2 font12" style="margin-bottom: 20rpx;">
+		四、内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+	</view>
+</view>
+<button class="bg7 color5 font15 radiu15">立即购买</button>

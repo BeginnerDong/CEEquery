@@ -1,0 +1,126 @@
+<view class="top-two bg1">
+	 <view class="top-item ilblock top-itemstar">
+		 <view class="font15">
+			 院校
+		 </view>
+	 </view><view class="top-item ilblock">
+		 <view class="font15">
+			 专业
+		 </view>
+	 </view>
+ </view>
+ 
+<view>
+	 <view class="list-two" bindtap="intoPath" data-path="/pages/schoolDetalis/schoolDetalis">
+		 <view class="ilblock list-left">
+		 	<image src="../../image/school-img1.png"></image>
+		 </view>
+		<view class="one-center ilblock">
+			<view>
+				<view class="one-title color1 font14 ilblock">上海理工大学<text class="color2 font12" style="margin-left: 20rpx;">上海</text> </view> 
+				<view class="flo-right color8 font12 ilblock" style="margin-top: 10rpx;">+加入对比</view>
+			</view>
+			<view class="font12 one-color">
+				<view class="ilblock">理工类</view>
+				<view class="ilblock">985</view>
+				<view class="ilblock">本科</view>
+			</view>
+			<view class="one-time color1 font13">
+				报名热度：95
+			</view>
+		</view>
+	</view>
+	<view class="he10"></view>
+	<view class="list-two" bindtap="intoPath" data-path="/pages/schoolDetalis/schoolDetalis">
+		 <view class="ilblock list-left">
+		 	<image src="../../image/school-img1.png"></image>
+		 </view>
+		<view class="one-center ilblock">
+			<view>
+				<view class="one-title color1 font14 ilblock">上海理工大学<text class="color2 font12" style="margin-left: 20rpx;">上海</text> </view> 
+				<view class="flo-right color8 font12 ilblock" style="margin-top: 10rpx;">+加入对比</view>
+			</view>
+			<view class="font12 one-color">
+				<view class="ilblock">理工类</view>
+				<view class="ilblock">985</view>
+				<view class="ilblock">本科</view>
+			</view>
+			<view class="one-time color1 font13">
+				报名热度：95
+			</view>
+		</view>
+	</view>
+	<view class="he10"></view>
+	<view class="list-two" bindtap="intoPath" data-path="/pages/schoolDetalis/schoolDetalis">
+		 <view class="ilblock list-left">
+		 	<image src="../../image/school-img1.png"></image>
+		 </view>
+		<view class="one-center ilblock">
+			<view>
+				<view class="one-title color1 font14 ilblock">上海理工大学<text class="color2 font12" style="margin-left: 20rpx;">上海</text> </view> 
+				<view class="flo-right color8 font12 ilblock" style="margin-top: 10rpx;">+加入对比</view>
+			</view>
+			<view class="font12 one-color">
+				<view class="ilblock">理工类</view>
+				<view class="ilblock">985</view>
+				<view class="ilblock">本科</view>
+			</view>
+			<view class="one-time color1 font13">
+				报名热度：95
+			</view>
+		</view>
+	</view>
+	<view class="he10"></view>
+</view>
+ 
+<view >
+	 <view class="box">
+	 	<view class="tabe color2 font13">
+	 		<view class="th color1">
+	 			<view class="td">排名</view>
+	 			<view class="td">学校名称</view>
+	 			<view class="td">地区</view>
+	 			<view class="td">类别</view>
+	 			<view class="td last-td">查看</view>
+	 		</view>
+	 		<view class="tr">
+	 			<view class="td">1</view>
+	 			<view class="td">1厦门大学</view>
+	 			<view class="td">福建</view>
+	 			<view class="td">综合类</view>
+	 			<view class="td last-td" bindtap="intoPath" data-path="/pages/majorDetalis/majorDetalis">点击查看</view>
+	 		</view>
+	 		<view class="tr">
+	 			<view class="td">1</view>
+	 			<view class="td">1厦门大学</view>
+	 			<view class="td">福建</view>
+	 			<view class="td">综合类</view>
+	 			<view class="td last-td" bindtap="intoPath" data-path="/pages/majorDetalis/majorDetalis">点击查看</view>
+	 		</view>
+	 		<view class="tr">
+	 			<view class="td">1</view>
+	 			<view class="td">1厦门大学</view>
+	 			<view class="td">福建</view>
+	 			<view class="td">综合类</view>
+	 			<view class="td last-td" bindtap="intoPath" data-path="/pages/majorDetalis/majorDetalis">点击查看</view>
+	 		</view>
+	 		<view class="tr">
+	 			<view class="td">1</view>
+	 			<view class="td">1厦门大学</view>
+	 			<view class="td">福建</view>
+	 			<view class="td">综合类</view>
+	 			<view class="td last-td" bindtap="intoPath" data-path="/pages/majorDetalis/majorDetalis">点击查看</view>
+	 		</view>
+	 		<view class="tr">
+	 			<view class="td">1</view>
+	 			<view class="td">1厦门大学</view>
+	 			<view class="td">福建</view>
+	 			<view class="td">综合类</view>
+	 			<view class="td last-td" bindtap="intoPath" data-path="/pages/majorDetalis/majorDetalis">点击查看</view>
+	 		</view>
+	 	</view>
+	 </view>
+ </view>
+ 
+
+ 

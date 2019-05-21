@@ -1,0 +1,91 @@
+<view class="top">
+	<view class="topRight ilblock radiu40 bg1 hiden">
+		<image src="../../image/search-icon1.png" style="width: 28rpx; height: 28rpx;"></image>
+		<input class="color3 font11 ilblock" placeholder="请输入您想要查询的专业"/>
+		<button class="ilblock color5 bg7 font13 search-box flo-right">搜索</button>
+	</view>
+</view>
+<view class="box">
+	<view class="tabe color1">
+		<view class="th">
+			<view class="td">专业类别</view>
+			<view class="td">专业名称</view>
+			<view class="td">报考热度</view>
+			<view class="td">层次</view>
+			<view class="td last-td">专业详情</view>
+		</view>
+		<view style="width: 100%; height: 400rpx;">
+			<view class="td4 font12">
+				哲学
+			</view>
+			<view class="td-more">
+				<view class="tr">
+					<view class="td">哲学</view>
+					<view class="td">全国25</view>
+					<view class="td">本科</view>
+					<view class="td last-td" bindtap="show">点击查看</view>
+				</view>
+				<view class="tr">
+					<view class="td">哲学</view>
+					<view class="td">全国25</view>
+					<view class="td">本科</view>
+					<view class="td last-td" bindtap="show">点击查看</view>
+				</view>
+				<view class="tr">
+					<view class="td">哲学</view>
+					<view class="td">全国25</view>
+					<view class="td">本科</view>
+					<view class="td last-td" bindtap="show">点击查看</view>
+				</view>
+				<view class="tr" style="border: none;">
+					<view class="td">哲学</view>
+					<view class="td">全国25</view>
+					<view class="td">本科</view>
+					<view class="td last-td" bindtap="show">点击查看</view>
+				</view>
+			</view>
+		</view>
+		<view style="width: 100%; height: 400rpx;">
+			<view class="td4 font12">
+				哲学
+			</view>
+			<view class="td-more">
+				<view class="tr">
+					<view class="td">哲学</view>
+					<view class="td">全国25</view>
+					<view class="td">本科</view>
+					<view class="td last-td">点击查看</view>
+				</view>
+				<view class="tr">
+					<view class="td">哲学</view>
+					<view class="td">全国25</view>
+					<view class="td">本科</view>
+					<view class="td last-td">点击查看</view>
+				</view>
+				<view class="tr">
+					<view class="td">哲学</view>
+					<view class="td">全国25</view>
+					<view class="td">本科</view>
+					<view class="td last-td">点击查看</view>
+				</view>
+				<view class="tr" style="border: none;">
+					<view class="td">哲学</view>
+					<view class="td">全国25</view>
+					<view class="td">本科</view>
+					<view class="td last-td">点击查看</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+ <view class="fixd" wx:if="{{is_show}}">
+ 	<view class="bg1 fixd-box radiu15">
+ 		<view>
+ 			<image class="flo-right" src="../../image/details-icon1.png" style="width: 36rpx;height: 36rpx" bindtap="show"></image>
+ 		</view>
+ 		<view class="font15 color1" style="text-align: center; margin: 100rpx 0rpx 0rpx;">加入会员开通所有权限，仅需￥298</view>
+ 		<view class="font13">
+ 			<button class="bg7" bindtap="intoPath" data-path="/pages/forecast/forecast">立即购买</button>
+ 		</view>
+ 	</view>
+ </view>

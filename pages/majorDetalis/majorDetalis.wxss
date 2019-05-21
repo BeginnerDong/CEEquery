@@ -1,0 +1,48 @@
+.top{
+	width: 100%;
+	height: 336rpx;
+	box-sizing: border-box;
+	padding: 5% 4%;
+}
+.top-box{
+	width: 100%;
+	height: 270rpx;
+	border-radius: 20rpx;
+	border-bottom: solid 1rpx #E9E9E9;
+}
+.info-list{
+	box-sizing: border-box;
+	padding: 29rpx;
+	text-align: center;
+}
+.list-left{
+	width: 49.5%;
+	border-right: solid 1rpx #E9E9E9;
+}
+.list-right{
+	width: 50%;
+}
+
+.line{
+	box-sizing: border-box;
+	padding: 40rpx 4% 0rpx;
+}
+.line-red{
+	border-left: solid 6rpx #2E82FF;
+	text-indent: 20rpx;
+}
+.text{
+	box-sizing: border-box;
+	padding: 30rpx;
+	line-height: 38rpx;
+	height: 230rpx;
+}
+.blue{
+	margin: 0rpx 30rpx 0rpx;
+}
+
+
+
+
+
+

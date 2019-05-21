@@ -1,0 +1,103 @@
+<view class="top-two bg1">
+	 <view class="top-item ilblock top-itemstar">
+		 <view class="font15">
+			 冲刺
+		 </view>
+	 </view>
+	 <view class="top-item ilblock">
+		 <view class="font15">
+			 稳妥
+		 </view>
+	 </view>
+	 <view class="top-item ilblock">
+		 <view class="font15">
+			保底
+		 </view>
+	 </view>
+ </view>
+ <view class="list-two" bindtap="intoPath" data-path="/pages/schoolDetalis/schoolDetalis">
+	 <view class="ilblock list-left">
+		 <view class="list-img">
+		 	<image src="../../image/school-img1.png"></image>
+		 </view>
+		 <view class="color2 font11" style="position: relative;top: -10rpx;">知名热度：<text class="color4">95</text></view>
+	 </view>
+ 	<view class="one-center ilblock">
+		<view>
+			<view class="one-title color1 font14 ilblock">上海理工大学<text class="color2 font12" style="margin-left: 20rpx;">上海</text> </view> 
+			<view class="flo-right color8 font12 ilblock" style="margin-top: 10rpx;">+加入对比</view>
+		</view>
+		<view class="font12 one-color">
+			<view class="ilblock">理工类</view>
+			<view class="ilblock">985</view>
+			<view class="ilblock">本科</view>
+		</view>
+		<view class="one-time color1 font12">
+			<view class="ilblock">最高分：690</view>
+			<view class="ilblock" style="margin-left: 30rpx;">最低分：670</view>
+		</view>
+		<view class="ilblock color1 font12">
+			<view class="ilblock">录取批次：二批</view>
+			<view class="ilblock" style="margin-left: 30rpx;">录取概率：冲刺</view>
+		</view>
+ 	</view>
+ </view>
+ <view class="he10"></view>
+ <view class="list-two" bindtap="intoPath" data-path="/pages/schoolDetalis/schoolDetalis">
+ 	 <view class="ilblock list-left">
+ 		 <view class="list-img">
+ 		 	<image src="../../image/school-img1.png"></image>
+ 		 </view>
+ 		 <view class="color2 font11" style="position: relative;top: -10rpx;">知名热度：<text class="color4">95</text></view>
+ 	 </view>
+ 	<view class="one-center ilblock">
+ 		<view>
+ 			<view class="one-title color1 font14 ilblock">上海理工大学<text class="color2 font12" style="margin-left: 20rpx;">上海</text> </view> 
+ 			<view class="flo-right color8 font12 ilblock" style="margin-top: 10rpx;">+加入对比</view>
+ 		</view>
+ 		<view class="font12 one-color">
+ 			<view class="ilblock">理工类</view>
+ 			<view class="ilblock">985</view>
+ 			<view class="ilblock">本科</view>
+ 		</view>
+ 		<view class="one-time color1 font12">
+ 			<view class="ilblock">最高分：690</view>
+ 			<view class="ilblock" style="margin-left: 30rpx;">最低分：670</view>
+ 		</view>
+ 		<view class="ilblock color1 font12">
+ 			<view class="ilblock">录取批次：二批</view>
+ 			<view class="ilblock" style="margin-left: 30rpx;">录取概率：冲刺</view>
+ 		</view>
+ 	</view>
+ </view>
+ <view class="he10"></view>
+ <view class="list-two" bindtap="intoPath" data-path="/pages/schoolDetalis/schoolDetalis">
+ 	 <view class="ilblock list-left">
+ 		 <view class="list-img">
+ 		 	<image src="../../image/school-img1.png"></image>
+ 		 </view>
+ 		 <view class="color2 font11" style="position: relative;top: -10rpx;">知名热度：<text class="color4">95</text></view>
+ 	 </view>
+ 	<view class="one-center ilblock">
+ 		<view>
+ 			<view class="one-title color1 font14 ilblock">上海理工大学<text class="color2 font12" style="margin-left: 20rpx;">上海</text> </view> 
+ 			<view class="flo-right color8 font12 ilblock" style="margin-top: 10rpx;">+加入对比</view>
+ 		</view>
+ 		<view class="font12 one-color">
+ 			<view class="ilblock">理工类</view>
+ 			<view class="ilblock">985</view>
+ 			<view class="ilblock">本科</view>
+ 		</view>
+ 		<view class="one-time color1 font12">
+ 			<view class="ilblock">最高分：690</view>
+ 			<view class="ilblock" style="margin-left: 30rpx;">最低分：670</view>
+ 		</view>
+ 		<view class="ilblock color1 font12">
+ 			<view class="ilblock">录取批次：二批</view>
+ 			<view class="ilblock" style="margin-left: 30rpx;">录取概率：冲刺</view>
+ 		</view>
+ 	</view>
+ </view>
+ <view class="he10"></view>
+ 
+ 

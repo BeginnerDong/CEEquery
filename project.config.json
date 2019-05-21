@@ -34,7 +34,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 96,
+			"current": 114,
 			"list": [
 				{
 					"id": -1,
@@ -615,7 +615,115 @@
 				{
 					"id": -1,
 					"name": "查大学",
-					"pathName": "pages/searchSchool/searchSchool"
+					"pathName": "pages/searchSchool/searchSchool",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "查专业",
+					"pathName": "pages/searchMajor/searchMajor",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "批次线",
+					"pathName": "pages/batchLine/batchLine",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "青睐专业",
+					"pathName": "pages/withProfessional/withProfessional",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "就业相关",
+					"pathName": "pages/jobAbout/jobAbout",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "排名",
+					"pathName": "pages/ranking/ranking",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "真题库",
+					"pathName": "pages/questionBank/questionBank",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "语文真题",
+					"pathName": "pages/chinese/chinese",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "会员卡",
+					"pathName": "pages/Vip/Vip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的娃",
+					"pathName": "pages/myCollect/myCollect",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "完善信息",
+					"pathName": "pages/info/info",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "学院详情",
+					"pathName": "pages/schoolDetalis/schoolDetalis",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "开设专业",
+					"pathName": "pages/openMajor/openMajor",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "张生记哈",
+					"pathName": "pages/enrollmentPlan/enrollmentPlan",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "省仙",
+					"pathName": "pages/shengLine/shengLine",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "0",
+					"pathName": "pages/majorLine/majorLine",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "预测",
+					"pathName": "pages/forecast/forecast",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "下哈专业",
+					"pathName": "pages/searchMajor/searchMajor",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "专业详情",
+					"pathName": "pages/majorDetalis/majorDetalis"
 				}
 			]
 		}

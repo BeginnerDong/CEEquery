@@ -1,0 +1,53 @@
+page{
+	
+}
+
+.top-two{
+	width: 100%;
+	height: 90rpx;
+	border-bottom: solid 1rpx #EAEAEA;
+}
+.top-item{
+	width: 33.3%;
+	text-align: center;
+	line-height: 90rpx;
+	color: rgb(33,33,33);
+	box-sizing: border-box;
+	height:84rpx ;
+}
+.top-item view{
+	height: 100%;
+	display: inline-block;
+	height:84rpx ;
+}
+.top-itemstar view{
+	color: #2E82FF;
+	border-bottom: solid 4rpx #2E82FF;
+}
+
+.text{
+	width: 100%;
+	box-sizing: border-box;
+	padding:0rpx 4% 30rpx;
+	text-align: justify;
+}
+.text-one{
+	color: rgb(34,34,34);
+	font-size: 30rpx;
+	margin: 40rpx 0rpx;
+}
+.text-two{
+	color: rgb(65,65,65);
+	font-size: 28rpx;
+	margin: 30rpx 0rpx;
+}
+.text-three{
+	font-size: 26rpx;
+	color: rgb(65,65,65);
+	margin: 30rpx 0rpx;
+}
+.text-fore{
+	font-size: 24rpx;
+	color: rgb(102,102,102);
+	line-height: 44rpx;
+}
