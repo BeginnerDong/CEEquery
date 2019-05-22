@@ -45,7 +45,7 @@
  	</view>
  </view>
  <view class="he10"></view>
- <view class="list-two" bindtap="show">
+ <view class="list-two" bindtap="">
  	 <view class="ilblock list-left">
  	 	<image src="../../image/school-img1.png"></image>
  	 </view>

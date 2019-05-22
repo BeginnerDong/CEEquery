@@ -33,7 +33,7 @@
 	内容容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
 </view>
 <view style="text-align: center;">
-	<image src="../../image/微信图片_20190521183332.png" style="width: 22rpx;height: 12rpx;"></image>
+	<image src="../../image/volume-icon25.png" style="width: 22rpx;height: 12rpx;"></image>
 </view>
 <view class="line">
 	<view class="color1 font15 line-red fat-font">开设专业</view>

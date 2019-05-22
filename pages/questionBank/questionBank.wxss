@@ -40,15 +40,3 @@
 	border-right:solid 1rpx #BAD6FF ;
 	
 }
-.list-onebox{
-	position: fixed;
-	background: rgba(0,0,0,0.5);
-	width: 100%;
-	height: 100%;
-	top: 9%;
-	z-index: 1000;
-}
-.list-one{
-	background: #fff;
-	border-top: solid 1rpx #F2F2F2;
-}

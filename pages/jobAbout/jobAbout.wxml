@@ -11,7 +11,7 @@
  </view>
  <view class="list-two">
 	 <view class="ilblock list-left flo-left" style="margin: 40rpx 30rpx 0rpx 0rpx;">
-	 	<image src="../../image/微信图片_20190520145048.png"></image>
+	 	<image src="../../image/volume-icon24.png"></image>
 	 </view>
  	<view class="ilblock list-right">
 		<view class="color8 font15 fat-font">经济学</view>
@@ -35,7 +35,7 @@
  </view>
   <view class="list-two">
  	 <view class="ilblock list-left flo-right" style="margin: 40rpx 0rpx 0rpx 30rpx;">
- 	 	<image src="../../image/微信图片_20190520145048.png"></image>
+ 	 	<image src="../../image/volume-icon24.png"></image>
  	 </view>
  	<view class="ilblock list-right">
  		<view class="color8 font15 fat-font">经济学</view>
