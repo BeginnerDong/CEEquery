@@ -83,7 +83,7 @@ Page({
 					};
 					for (var i = 0; i < self.data.mainData.jobdetail[2].length; i++) {
 						area.push(self.data.mainData.jobdetail[2][i].area);
-						areaRate.push(self.data.mainData.jobdetail[2][i].rate)
+						areaRate.push(parseFloat(self.data.mainData.jobdetail[2][i].rate))
 					};
 					console.log('area',area)
 					console.log('areaRate',areaRate)
@@ -161,32 +161,27 @@ Page({
 						height: 300,
 						dataLabel: true,
 					});
+					
 					new wxCharts({
+						
 						canvasId: 'canvas3',
-						dataPointShape: false,
 						type: 'column',
 						categories: area,
 						series: [{
-							name: '比例',
-							data: areaRate,
-						 color: "rgba(0,0,0,0.3)" //支持rgba，但不支持渐变色
+							name: '就业比例',
+							data:areaRate
 						}],
 						yAxis: {
-							format: function(val) {
-								return val + '万';
+							format: function (val) {
+								return val + '%';
 							}
 						},
-						xAxis: {
-							disableGrid: true,
-						},
-						width: 640,
-						height: 400,
-						dataLabel: false,
-						extra: {
-							column: {
-								width: 40 //柱的宽度
-							}
-						}
+						width: 320,
+						height: 200
+						
+						
+						
+						
 					});
 				}
 				self.setData({

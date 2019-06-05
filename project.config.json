@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 116,
+			"current": 117,
 			"list": [
 				{
 					"id": -1,
@@ -739,6 +739,14 @@
 					"id": -1,
 					"name": "对比",
 					"pathName": "pages/contrasts/contrasts",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 117,
+					"name": "图标",
+					"pathName": "pages/majorDetalis/majorDetalis",
+					"query": "id=1",
 					"scene": null
 				}
 			]

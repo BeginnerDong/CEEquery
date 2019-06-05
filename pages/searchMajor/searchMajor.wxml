@@ -1,9 +1,11 @@
-
-<view style="height:680rpx">
+{{web_type}} 
+<view>open</view>
+<view wx:if="{{web_is_show}}" style="display:flex;flex-wrap:wrap;position: absolute;background-color: white;">
 	<block wx:for="{{array}}" wx:key="index" >
-		<view style="float: left;margin: 2% 2%;font-size:12px;border: 1px solid #2E82FF;padding: 10rpx;border-radius:10rpx;{{web_type==item?'background: #2E82FF;color:#fff':''}}" 
+		<view style="margin: 2% 2%;font-size:12px;border: 1px solid #2E82FF;padding: 10rpx;border-radius:10rpx;{{web_type==item?'background: #2E82FF;color:#fff':''}}" 
 		bindtap="{{web_buttonCanClick?'changeSearch':''}}" data-name="{{item}}">{{item}}</view>
 	</block>
+	<view>关闭</view>	
 </view>
 <view class="box">
 	<view class="tabe color1">
