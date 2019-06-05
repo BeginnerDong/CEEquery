@@ -1,9 +1,9 @@
-<view class="top">
-	<view class="topRight ilblock radiu40 bg1 hiden">
-		<image src="../../image/search-icon1.png" style="width: 28rpx; height: 28rpx;"></image>
-		<input class="color3 font11 ilblock" placeholder="请输入您想要查询的专业"/>
-		<button class="ilblock color5 bg7 font13 search-box flo-right">搜索</button>
-	</view>
+
+<view style="height:680rpx">
+	<block wx:for="{{array}}" wx:key="index" >
+		<view style="float: left;margin: 2% 2%;font-size:12px;border: 1px solid #2E82FF;padding: 10rpx;border-radius:10rpx;{{web_type==item?'background: #2E82FF;color:#fff':''}}" 
+		bindtap="{{web_buttonCanClick?'changeSearch':''}}" data-name="{{item}}">{{item}}</view>
+	</block>
 </view>
 <view class="box">
 	<view class="tabe color1">
@@ -14,65 +14,16 @@
 			<view class="td">层次</view>
 			<view class="td last-td">专业详情</view>
 		</view>
-		<view style="width: 100%; height: 400rpx;">
+		<view style="width: 100%;border:solid 1rpx #F5F5F5;display: flex;" wx:for="{{web_mainData}}">
 			<view class="td4 font12">
-				哲学
+				{{item.title}}
 			</view>
 			<view class="td-more">
-				<view class="tr">
-					<view class="td">哲学</view>
-					<view class="td">全国25</view>
-					<view class="td">本科</view>
-					<view class="td last-td" bindtap="show">点击查看</view>
-				</view>
-				<view class="tr">
-					<view class="td">哲学</view>
-					<view class="td">全国25</view>
-					<view class="td">本科</view>
-					<view class="td last-td" bindtap="show">点击查看</view>
-				</view>
-				<view class="tr">
-					<view class="td">哲学</view>
-					<view class="td">全国25</view>
-					<view class="td">本科</view>
-					<view class="td last-td" bindtap="show">点击查看</view>
-				</view>
-				<view class="tr" style="border: none;">
-					<view class="td">哲学</view>
-					<view class="td">全国25</view>
-					<view class="td">本科</view>
-					<view class="td last-td" bindtap="show">点击查看</view>
-				</view>
-			</view>
-		</view>
-		<view style="width: 100%; height: 400rpx;">
-			<view class="td4 font12">
-				哲学
-			</view>
-			<view class="td-more">
-				<view class="tr">
-					<view class="td">哲学</view>
-					<view class="td">全国25</view>
-					<view class="td">本科</view>
-					<view class="td last-td">点击查看</view>
-				</view>
-				<view class="tr">
-					<view class="td">哲学</view>
-					<view class="td">全国25</view>
-					<view class="td">本科</view>
-					<view class="td last-td">点击查看</view>
-				</view>
-				<view class="tr">
-					<view class="td">哲学</view>
-					<view class="td">全国25</view>
-					<view class="td">本科</view>
-					<view class="td last-td">点击查看</view>
-				</view>
-				<view class="tr" style="border: none;">
-					<view class="td">哲学</view>
-					<view class="td">全国25</view>
-					<view class="td">本科</view>
-					<view class="td last-td">点击查看</view>
+				<view class="tr" wx:for="{{item.child}}" wx:key="id" wx:for-item="c_value">
+					<view class="td">{{c_value.name}}</view>
+					<view class="td">全国{{c_value.rankall}}{{web_type}}{{c_value.rank_type}}</view>
+					<view class="td">{{c_value.level1_name}}</view>
+					<view class="td last-td" bindtap="goDetail" data-path="/pages/majorDetalis/majorDetalis?id={{c_value.special_id}}">点击查看</view>
 				</view>
 			</view>
 		</view>
@@ -83,9 +34,9 @@
  		<view>
  			<image class="flo-right" src="../../image/details-icon1.png" style="width: 36rpx;height: 36rpx" bindtap="show"></image>
  		</view>
- 		<view class="font15 color1" style="text-align: center; margin: 100rpx 0rpx 0rpx;">加入会员开通所有权限，仅需￥298</view>
+ 		<view class="font15 color1" style="text-align: center; margin: 100rpx 0rpx 0rpx;">加入会员开通所有权限</view>
  		<view class="font13">
- 			<button class="bg7" bindtap="intoPath" data-path="/pages/forecast/forecast">立即购买</button>
+ 			<button class="bg7" bindtap="intoPath" data-path="/pages/Vip/Vip">立即购买</button>
  		</view>
  	</view>
  </view>

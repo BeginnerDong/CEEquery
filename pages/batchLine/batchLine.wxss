@@ -21,6 +21,7 @@ page{
 	border: solid 1rpx #E7E7E7;
 	display: inline-block;
 	margin-bottom: 30rpx;
+	margin:10rpx 4%
 }
 .year-item-center{
 	margin: 0rpx 14.3%;

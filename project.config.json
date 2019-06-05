@@ -13,9 +13,11 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.6",
-	"appid": "wxdd868581ee40a421",
+	"appid": "wxbd07185566a70c79",
 	"projectname": "CEEquery",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -34,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 114,
+			"current": 115,
 			"list": [
 				{
 					"id": -1,
@@ -723,7 +725,15 @@
 				{
 					"id": -1,
 					"name": "专业详情",
-					"pathName": "pages/majorDetalis/majorDetalis"
+					"pathName": "pages/majorDetalis/majorDetalis",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "zhuanye ",
+					"pathName": "pages/majorDetalis/majorDetalis",
+					"query": "id=1",
+					"scene": null
 				}
 			]
 		}

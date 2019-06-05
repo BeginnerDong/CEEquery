@@ -44,42 +44,40 @@ page{
 .th{
 	background: #EFEFEF;
 	width: 100%;
-	height: 100rpx;
+
 }
 .td{
-	height: 100%;
+	
 	width: 19.4%;
 	display: inline-block;
 	text-align: center;
 	font-size: 24rpx;
-	line-height: 100rpx;
+	line-height: 80rpx;
 }
 .td4{
-	float: left;
+
 	width: 19.4%;
-	height: 100%;
-	display: inline-block;
-	border: solid 1rpx #F5F5F5;
-	line-height: 400rpx;
-	text-align: center;
+	align-items:center;
+	justify-content:center;
+	display:flex;
+
+
 }
 .td-more{
-	float: right;
-	display: inline-block;
+	
 	width: 79.4%;
 	border: solid 1rpx #F5F5F5;
-	height: 100%;
 }
 .td-more .tr{
 	width:100%;
-	display: inline-block;
+	align-items:center;
+	justify-content:center;
+	display:flex;
 	border-bottom: solid 1rpx #F5F5F5;
 }
 .td-more .tr .td{
 	width: 24.6%;
-	height: 90rpx;
 	border-right: solid 1rpx #F5F5F5;
-	float: left;
 }
 .last-td{
 	border: none;

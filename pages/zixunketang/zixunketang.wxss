@@ -1,14 +1,11 @@
-page{
-	
-}
-@import "../../wxParse/wxParse.wxss"
+
 .top-two{
 	width: 100%;
 	height: 90rpx;
 	border-bottom: solid 1rpx #EAEAEA;
 }
 .top-item{
-	width: 33.3%;
+	width: 33.33%;
 	text-align: center;
 	line-height: 90rpx;
 	color: rgb(33,33,33);
@@ -24,22 +21,24 @@ page{
 	color: #2E82FF;
 	border-bottom: solid 4rpx #2E82FF;
 }
-
+.he10{
+	width: 100%;
+	height: 10rpx;
+	background: #F5F5F5;
+}
 .list-two{
 	box-sizing: border-box;
 	padding: 30rpx 4%;
-	border-bottom: solid 1rpx #F4F4F4;
 }
-.list-right{
-	width: 67%;
-	text-align: justify;
+.list-left{
+	width: 66%;
+	height: 140rpx;
 }
-.list-two .list-left{
-	width: 27.5%;
-	height:180rpx;
-	border-radius: 50%;
+.list-two .flo-right{
+	width: 29.2%;
+	height: 140rpx;
 }
-.list-two .list-left image{
+.list-two .flo-right image{
 	width: 100%;
 	height: 100%;
 }

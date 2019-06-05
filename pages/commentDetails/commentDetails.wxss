@@ -1,3 +1,4 @@
+@import "../../wxParse/wxParse.wxss"
 .top{
 	box-sizing: border-box;
 	padding: 40rpx 4%;

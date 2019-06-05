@@ -2,53 +2,64 @@
 	<view class="top-box bg1">
 		<view class="info-list font13 color2">
 			<view class="list-left ilblock">
-				专业代码：101010
+				专业代码：{{web_mainData.code}}
 			</view>
 			<view class="list-right ilblock">
-				专业人气：41544
+				专业人气：{{web_mainData.heat.view_total}}
 			</view>
 		</view>
 		<view class="info-list font13 color2">
 			<view class="list-left ilblock">
-				专业代码：101010
+				授予学位：{{web_mainData.degree}}
 			</view>
 			<view class="list-right ilblock">
-				专业人气：41544
+				修业年限：{{web_mainData.limit_year}}
 			</view>
 		</view>
 		<view class="info-list font13 color2">
 			<view class="list-left ilblock">
-				专业代码：101010
+				学科门类：{{web_mainData.type}}
 			</view>
 			<view class="list-right ilblock">
-				专业人气：41544
+				专业类：{{web_mainData.type_detail}}
 			</view>
 		</view>
 	</view>
 </view>
-
+<view class="left">
+	<view bindtap="collect">
+		<image src="{{web_isInCollectSpecialData?'../../image/school-icon1-active.png':'../../image/school-icon1.png'}}"></image>
+		<view class="font12 color1">{{web_isInCollectSpecialData?'已收藏':'收藏'}}</view>
+	</view>
+</view>
 <view class="he10" style="margin-top: 40rpx;"></view>
 <view class="line">
 	<view class="color1 font15 line-red fat-font">学院简介</view>
 </view>
 <view class="blue font14 color8" style="margin-top: 30rpx;">是什么</view>
 <view class="text color2 font12">
-	内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内内容内容
-	内容容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+	{{web_mainData.is_what}}
 </view>
 <view class="blue font14 color8">学什么</view>
 <view class="text color2 font12">
-	内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-	内容容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+	{{web_mainData.learn_what}}
 </view>
 <view class="blue font14 color8">干什么</view>
 <view class="text color2 font12">
-	内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容容内容内容内容内容内容内容内容内容
-	内容容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+	{{web_mainData.do_what}}
 </view>
 <view class="line">
-	<view class="color1 font15 line-red fat-font">开设专业</view>
+	<view class="color1 font15 line-red fat-font">性别比例</view>
+</view>
+<canvas canvas-id="ringCanvas" disable-scroll="true" class="ringCanvas" style="width:300px; height:300px;margin: 0 auto;"></canvas>
+<view class="line">
+	<view class="color1 font15 line-red fat-font">就业率(近三年)</view>
 </view>
 
-
-
+<canvas canvas-id="pieCanvas" disable-scroll="true" class="pieCanvas" style="width:300px; height:300px;margin: 0 auto;"></canvas>
+<canvas canvas-id="pieCanvasTwo" disable-scroll="true" class="pieCanvas" style="width:300px; height:300px;margin: 0 auto;"></canvas>
+<canvas canvas-id="pieCanvasThree" disable-scroll="true" class="pieCanvas" style="width:300px; height:300px;margin: 0 auto;"></canvas>
+<view class="line">
+	<view class="color1 font15 line-red fat-font">就业地区</view>
+</view>
+<canvas canvas-id="canvas3" disable-scroll="true" class="pieCanvas" style="width:300px; height:300px;margin: 0 auto;"></canvas>

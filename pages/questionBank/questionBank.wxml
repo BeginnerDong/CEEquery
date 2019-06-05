@@ -1,81 +1,43 @@
 <view class="top-btm bg1">
 	 <view class="btm-item ilblock">
 		<view class="font14">
-			<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-				地区
+			<picker bindchange="bindPickerChange" value="{{index}}" range="{{pArray}}">
+				黑龙江
 			    <image src="../../image/volume-icon2.png"></image>
 			</picker>
 		</view>
 	 </view>
 	 <view class="btm-item ilblock">
 			<view class="font14">
-				<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-					年份
+				<picker bindchange="bindYearChange" value="{{web_yIndex}}" range="{{yArray}}">
+					{{web_yIndex?yArray[web_yIndex]:'年份'}}
 				    <image src="../../image/volume-icon2.png"></image>
 				</picker>
 			</view>
 	</view>
 	  <view class="btm-item ilblock">
 	 		<view class="font14">
-	 			<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-	 				科目
+	 			<picker bindchange="bindProjectChange" value="{{web_jIndex}}" range="{{jArray}}">
+	 				{{web_jIndex?yArray[web_jIndex]:'科目'}}
 	 			    <image src="../../image/volume-icon2.png"></image>
 	 			</picker>
 	 		</view>
 	 </view>
 </view>
 <view>
-	<view class="lenson" bindtap="intoPath" data-path="/pages/chinese/chinese">
-		<view class="lenson-title">语文</view>
-		<view class="lenson-item">
-			<view>真题</view>
-			<view>答案</view>
-			<view style="border: none;">解析</view>
+	<block wx:for="{{web_mainData}}" wx:key="id">
+		<view class="lenson">
+			<view class="lenson-title">{{item.title}}<span class="font12 color">({{item.description}})</span></view>
+			<view class="lenson-item">
+				<view bindtap="intoPath" data-path="/pages/chinese/chinese?id={{item.id}}&num=0">真题</view>
+				<view bindtap="intoPath" data-path="/pages/chinese/chinese?id={{item.id}}&num=1">答案</view>
+				<view style="border: none;" bindtap="intoPath" data-path="/pages/chinese/chinese?id={{item.id}}&num=2">解析</view>
+			</view>
 		</view>
-	</view>
-	<view class="lenson">
-		<view class="lenson-title">英语</view>
-		<view class="lenson-item">
-			<view>真题</view>
-			<view>答案</view>
-			<view style="border: none;">解析</view>
-		</view>
-	</view>
-	<view class="lenson">
-		<view class="lenson-title">数学（理）</view>
-		<view class="lenson-item">
-			<view>真题</view>
-			<view>答案</view>
-			<view style="border: none;">解析</view>
-		</view>
-	</view>
-	<view class="lenson">
-		<view class="lenson-title">数学（文）</view>
-		<view class="lenson-item">
-			<view>真题</view>
-			<view>答案</view>
-			<view style="border: none;">解析</view>
-		</view>
-	</view>
-	<view class="lenson">
-		<view class="lenson-title">综合（理）</view>
-		<view class="lenson-item">
-			<view>真题</view>
-			<view>答案</view>
-			<view style="border: none;">解析</view>
-		</view>
-	</view>
-	<view class="lenson">
-		<view class="lenson-title">综合（文）</view>
-		<view class="lenson-item">
-			<view>真题</view>
-			<view>答案</view>
-			<view style="border: none;">解析</view>
-		</view>
-	</view>
+	</block>
 </view>
 
-
+<view style="width: 100%;height: 120rpx;"></view>
 <view class="navbar">
 		<view class="navbar_item"  bindtap="intoPathRedirect" data-path="/pages/index/index">
 			<view class="nav_img">

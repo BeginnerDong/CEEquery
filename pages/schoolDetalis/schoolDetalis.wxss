@@ -1,3 +1,4 @@
+@import "../../wxParse/wxParse.wxss"
 .top{
 	width: 100%;
 	height: 260rpx;
@@ -42,22 +43,23 @@
 }
 .open-list{
 	border: solid 1rpx #2E82FF;
-	width: 19%;
+	
 	height: 46rpx;
 	line-height: 46rpx;
 	text-align: center;
 	display: inline-block;
 	border-radius: 8rpx;
 	margin: 20rpx 2.6% 0rpx;
+	padding: 0 10rpx;
 }
 
 .left{
 	width: 100rpx;
 	height: 250rpx;
 	text-align: center;
-	position: absolute;
+	position: fixed;
 	right: 0rpx;
-	top: 50rpx;
+	top: 20%
 }
 .left image{
 	width: 60rpx;

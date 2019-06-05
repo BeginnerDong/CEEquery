@@ -1,0 +1,29 @@
+<scroll-view scroll-x="true" style="white-space: nowrap;">
+	<view class="top-two bg1">
+		<block wx:for="{{web_labelData}}" wx:key="id">
+			<view style="width:25%" class="top-item ilblock {{currentId==item.id?'top-itemstar':''}}" data-id="{{item.id}}" bindtap="{{web_buttonCanClick?'tab':''}}">
+				 <view class="font15">
+					 {{item.title}}
+				 </view>
+			</view>
+		</block>
+		 
+	 </view>
+</scroll-view>
+
+<block wx:for="{{web_mainData}}" wx:key="id">
+	<view class="list-two" bindtap="intoPath" data-path="/pages/commentDetails/commentDetails?id={{item.id}}">
+		<view class="ilblock list-left">
+			<view class="font14 coloe1" style="height: 120rpx;">{{item.title}}</view>
+			<view class="color3 font12">{{item.create_time}}</view>
+		</view>
+		<view class="ilblock flo-right">
+			<image src="{{item.mainImg[0].url}}"></image>
+		</view>
+	</view>
+	<view class="he10"></view>
+</block>
+ 
+ 
+ 
+ 

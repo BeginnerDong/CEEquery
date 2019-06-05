@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "查大学"
+  "navigationBarTitleText": "查大学",
+	"enablePullDownRefresh": true
 }

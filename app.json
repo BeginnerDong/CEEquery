@@ -1,34 +1,40 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-		"pages/information/information",
-		"pages/questionBank/questionBank",
-		"pages/user/user",
-		"pages/admissionPolicy/admissionPolicy",
-		"pages/commentDetails/commentDetails",
-		"pages/searchSchool/searchSchool",
-		"pages/searchMajor/searchMajor",
-		"pages/batchLine/batchLine",
-		"pages/withProfessional/withProfessional",
-		"pages/jobAbout/jobAbout",
-		"pages/ranking/ranking",
-		"pages/chinese/chinese",
-		"pages/Vip/Vip",
-		"pages/info/info",
-		"pages/myCollect/myCollect",
-		"pages/schoolDetalis/schoolDetalis",
-		"pages/openMajor/openMajor",
-		"pages/enrollmentPlan/enrollmentPlan",
-		"pages/shengLine/shengLine",
-		"pages/majorLine/majorLine",
-		"pages/forecast/forecast",
-		"pages/majorDetalis/majorDetalis"
-		
+    "pages/information/information",
+    "pages/questionBank/questionBank",
+    "pages/user/user",
+    "pages/admissionPolicy/admissionPolicy",
+    "pages/commentDetails/commentDetails",
+    "pages/searchSchool/searchSchool",
+    "pages/searchMajor/searchMajor",
+    "pages/batchLine/batchLine",
+    "pages/withProfessional/withProfessional",
+    "pages/jobAbout/jobAbout",
+    "pages/ranking/ranking",
+    "pages/chinese/chinese",
+    "pages/Vip/Vip",
+    "pages/info/info",
+    "pages/myCollect/myCollect",
+    "pages/schoolDetalis/schoolDetalis",
+    "pages/openMajor/openMajor",
+    "pages/enrollmentPlan/enrollmentPlan",
+    "pages/shengLine/shengLine",
+    "pages/majorLine/majorLine",
+    "pages/forecast/forecast",
+    "pages/majorDetalis/majorDetalis",
+		"pages/zixunketang/zixunketang"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor":"#2E82FF",
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2E82FF",
     "navigationBarTitleText": "首页",
-		"navigationBarTextStyle":"#fff"
-  }
+    "navigationBarTextStyle": "white"
+  },
+	"permission": {
+	  "scope.userLocation": {
+	    "desc": "你的位置信息将用于小程序位置接口的效果展示"
+	  }
+	},
+  "sitemapLocation": "sitemap.json"
 }

@@ -7,3 +7,4 @@
 .box view{
 	margin-bottom: 30rpx;
 }
+@import "../../wxParse/wxParse.wxss"

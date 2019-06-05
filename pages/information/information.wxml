@@ -1,41 +1,34 @@
-<view class="top">
+<!-- <view class="top">
 	<view class="topRight ilblock radiu40 bg1 hiden">
 		<image src="../../image/search-icon1.png" style="width: 28rpx; height: 28rpx;"></image>
 		<input class="color3 font11 ilblock" placeholder="请输入您想要查询的专业"/>
 		<button class="ilblock color5 bg7 font13 search-box flo-right">搜索</button>
 	</view>
-</view>
+</view> -->
 <view class="top-two bg1">
-	 <view class="top-item ilblock top-itemstar">
+	 <view class="top-item ilblock  {{currentId == 0?'top-itemstar':''}}" data-id="0" bindtap="{{web_buttonCanClick?'tab':''}}">
 		 <view class="font15">
 			 招生快讯
 		 </view>
-	 </view><view class="top-item ilblock">
+	 </view>
+	 <view class="top-item ilblock  {{currentId == 1?'top-itemstar':''}}" data-id="1" bindtap="{{web_buttonCanClick?'tab':''}}">
 		 <view class="font15">
 			 招生章程
 		 </view>
 	 </view>
  </view>
- <view class="list-two"  bindtap="intoPath" data-path="/pages/commentDetails/commentDetails">
- 	<view class="ilblock list-left">
- 		<view class="font14 coloe1" style="height: 120rpx;">2019年高考各省市招生政策规定</view>
- 		<view class="color3 font12">2019-06-10</view>
- 	</view>
- 	<view class="ilblock flo-right">
- 		<image src="../../image/home-img1.png"></image>
- 	</view>
- </view>
- <view class="he10"></view>
- <view class="list-two"  bindtap="intoPath" data-path="/pages/commentDetails/commentDetails">
- 	<view class="ilblock list-left">
- 		<view class="font14 coloe1" style="height: 120rpx;">各省高招规定陆续公布 今年各省都有哪些变化</view>
- 		<view class="color3 font12">2019-06-10</view>
- 	</view>
- 	<view class="ilblock flo-right">
- 		<image src="../../image/home-img1.png"></image>
- 	</view>
- </view>
- <view class="he10"></view>
+<block wx:for="{{web_mainData}}" wx:key="id">
+	<view class="list-two" bindtap="intoPath" data-path="/pages/commentDetails/commentDetails?id={{item.id}}">
+		<view class="ilblock list-left">
+			<view class="font14 coloe1" style="height: 120rpx;">{{item.title}}</view>
+			<view class="color3 font12">{{item.create_time}}</view>
+		</view>
+		<view class="ilblock flo-right">
+			<image src="{{item.mainImg[0].url}}"></image>
+		</view>
+	</view>
+	<view class="he10"></view>
+</block>
  
  
  

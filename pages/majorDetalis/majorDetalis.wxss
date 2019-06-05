@@ -35,10 +35,21 @@
 	box-sizing: border-box;
 	padding: 30rpx;
 	line-height: 38rpx;
-	height: 230rpx;
 }
 .blue{
 	margin: 0rpx 30rpx 0rpx;
+}
+.left{
+	width: 100rpx;
+	height: 250rpx;
+	text-align: center;
+	position: fixed;
+	right: 0rpx;
+	top: 30%;
+}
+.left image{
+	width: 60rpx;
+	height: 60rpx;
 }
 
 

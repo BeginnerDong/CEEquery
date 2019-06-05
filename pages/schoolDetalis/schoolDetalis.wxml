@@ -3,19 +3,20 @@
 	<image class="logo" src="../../image/school-img1.png"></image>
 </view>
 <view style="text-align: center; margin-top: 20rpx; position: relative;">
-	<view class="color1 font14">上海理工大学<text class="color2 font12" style="margin-left: 20rpx;">上海</text> </view>
+	<view class="color1 font14">{{web_mainData.name}}<text class="color2 font12" style="margin-left: 20rpx;">{{web_mainData.province_name}}</text> </view>
 	<view class="font12 one-color">
-		<view class="ilblock">理工类</view>
-		<view class="ilblock">985</view>
-		<view class="ilblock">本科</view>
+		<view class="ilblock">{{web_mainData.type_name}}</view>
+		<view class="ilblock" wx:if="{{web_mainData.f985==1}}">985</view>
+		<view class="ilblock" wx:if="{{web_mainData.f211==1&&web_mainData.f985==2}}">211</view>
+		<view class="ilblock">{{web_mainData.school_type_name}}</view>
 	</view>
 	<view class="one-time color1 font13">
-		报名热度：95
+		报名热度：{{web_mainData.rank.view_month}}
 	</view>
 	<view class="left">
-		<view>
-			<image src="../../image/school-icon1.png"></image>
-			<view class="font12 color1">收藏</view>
+		<view bindtap="collect">
+			<image src="{{web_isInCollectSchoolData?'../../image/school-icon1-active.png':'../../image/school-icon1.png'}}"></image>
+			<view class="font12 color1">{{web_isInCollectSchoolData?'已收藏':'收藏'}}</view>
 		</view>
 		<view style="margin-top: 30rpx;" bindtap="show">
 			<image src="../../image/school-icon2.png"></image>
@@ -28,53 +29,24 @@
 <view class="line">
 	<view class="color1 font15 line-red fat-font">学院简介</view>
 </view>
-<view class="text color2 font12 overflow5">
-	内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-	内容容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+<view class="color2 font12 overflow5">
+	<view class="content ql-editor" style="{{!isShow?'height:200rpx;overflow:hidden':''}}">
+	    <import src="../../wxParse/wxParse.wxml"/>
+	    <template is="wxParse" data="{{wxParseData:web_mainData.detail[0].content}}"/>
+	</view>
 </view>
-<view style="text-align: center;">
+<view style="text-align: center;" bindtap="showMore">
 	<image src="../../image/volume-icon25.png" style="width: 22rpx;height: 12rpx;"></image>
 </view>
 <view class="line">
 	<view class="color1 font15 line-red fat-font">开设专业</view>
 </view>
-<view class="font13 color1" style="margin-top: 20rpx;" bindtap="intoPathRedirect" data-path="/pages/openMajor/openMajor">
-	<view class="open-list">
-		金融学
-	</view>
-	<view class="open-list">
-		财务管理
-	</view>
-	<view class="open-list">
-		金融科技
-	</view>
-	<view class="open-list">
-		金融学
-	</view>
-	<view class="open-list">
-		金融学
-	</view>
-	<view class="open-list">
-		财务管理
-	</view>
-	<view class="open-list">
-		金融科技
-	</view>
-	<view class="open-list">
-		金融学
-	</view>
-	<view class="open-list">
-		金融学
-	</view>
-	<view class="open-list">
-		财务管理
-	</view>
-	<view class="open-list">
-		金融科技
-	</view>
-	<view class="open-list">
-		金融学
-	</view>
+<view class="font13 color1" style="margin-top: 20rpx;" >
+	<block wx:for="{{web_mainData.special}}" wx:key="id">
+		<view class="open-list" bindtap="intoPathRedirect" data-path="/pages/openMajor/openMajor?id={{item.special_id}}">
+			{{item.special_name}}
+		</view>
+	</block>
 </view>
 <view class="contrast-box bg1" wx:if="{{is_show}}">
 	<view class="color1 font14 fat-font contrast-top">
@@ -95,13 +67,13 @@
 <view style="width: 100%; height: 200rpx;"></view>
 
 <view class="btm-nav">
-	<view class="nav_item" style="background: #22B595;" bindtap="intoPath" data-path="/pages/enrollmentPlan/enrollmentPlan">
+	<view class="nav_item" style="background: #22B595;" bindtap="intoPath" data-path="/pages/enrollmentPlan/enrollmentPlan?id={{web_mainData.school_id}}">
 		招生计划
 	</view>
-	<view class="nav_item" style="background: #FF9B30;" bindtap="intoPath" data-path="/pages/shengLine/shengLine">
+	<view class="nav_item" style="background: #FF9B30;" bindtap="intoPath" data-path="/pages/shengLine/shengLine?id={{web_mainData.school_id}}">
 		省录取分数线
 	</view>
-	<view class="nav_item" style="background: #2E82FF;" bindtap="intoPath" data-path="/pages/majorLine/majorLine">
+	<view class="nav_item" style="background: #2E82FF;" bindtap="intoPath" data-path="/pages/majorLine/majorLine?id={{web_mainData.school_id}}">
 		专业录取分数线
 	</view>
 </view>

@@ -2,7 +2,11 @@
 .border-line{
 	border: solid 1rpx #fff;
 }
-
+.avoidOverflow{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
 .w700 {
 	width: 700rpx;
   margin: 0px auto;

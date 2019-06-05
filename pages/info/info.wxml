@@ -1,20 +1,20 @@
 <view class="info bg1">
 	<view class="ilblock color1 font14">姓名：</view>
-	<input class="font12 color3 ilblock" placeholder="请输入姓名"/>
+	<input class="font12 color3 ilblock" placeholder="请输入姓名" data-key="name" bindblur="changeBind" value="{{web_submitData.name}}"/>
 </view>
 <view class="info bg1">
 	<view class="ilblock color1 font14">手机号：</view>
-	<input class="font12 color3 ilblock" placeholder="请输入绑定手机号"/>
+	<input class="font12 color3 ilblock" placeholder="请输入绑定手机号" data-key="phone" bindblur="changeBind" value="{{web_submitData.phone}}"/>
 </view>
 <view class="info bg1">
 	<view class="ilblock color1 font14">学校：</view>
-	<input class="font12 color3 ilblock" placeholder="请输入您所在的学校"/>
+	<input class="font12 color3 ilblock" placeholder="请输入您所在的学校" data-key="school" bindblur="changeBind" value="{{web_submitData.school}}"/>
 </view>
 <view class="info bg1">
 	<view class="ilblock color1 font14">班级：</view>
-	<input class="font12 color3 ilblock" placeholder="请输入您所在学校的班级"/>
+	<input class="font12 color3 ilblock" placeholder="请输入您所在学校的班级" data-key="class" bindblur="changeBind" value="{{web_submitData.class}}"/>
 </view>
-<button class="bg7 color5 font15 radiu15">确定</button>
+<button class="bg7 color5 font15 radiu15"  open-type="getUserInfo" bindgetuserinfo="{{web_buttonCanClick?'submit':''}}">确定</button>
 
 
 

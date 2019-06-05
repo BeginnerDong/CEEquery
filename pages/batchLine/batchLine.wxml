@@ -2,12 +2,11 @@
 	黑龙江
 </view>
 <view class="year color2 font13 bg1">
-	<view class="year-item">2019年</view>
-	<view class="year-item year-item-center item-acive">2018年</view>
-	<view class="year-item">2017年</view>
-	<view class="year-item">2016年</view>
-	<view class="year-item year-item-center">2015年</view>
-	<view class="year-item">2014年</view>
+	<view class="year-item {{web_year==2018?'item-acive':''}}" bindtap="changeYear" data-year='2018'>2018年</view>
+	<view class="year-item {{web_year==2017?'item-acive':''}}" bindtap="changeYear" data-year='2017'>2017年</view>
+	<view class="year-item {{web_year==2016?'item-acive':''}}" bindtap="changeYear" data-year='2016'>2016年</view>
+	<view class="year-item {{web_year==2015?'item-acive':''}}" bindtap="changeYear" data-year='2015'>2015年</view>
+	<view class="year-item {{web_year==2014?'item-acive':''}}" bindtap="changeYear" data-year='2014'>2014年</view>
 </view>
 <view class="box">
 	<view class="tabe color2 font13">
@@ -17,19 +16,24 @@
 			<view class="td">理科</view>
 		</view>
 		<view class="tr">
-			<view class="td">一批</view>
-			<view class="td">490</view>
-			<view class="td">472</view>
+			<view class="td">本科一批</view>
+			<view class="td">{{web_data[web_year]['文科']['本科一批']}}</view>
+			<view class="td">{{web_data[web_year]['理科']['本科一批']}}</view>
 		</view>
 		<view class="tr">
-			<view class="td">二批</view>
-			<view class="td">406</view>
-			<view class="td">353</view>
+			<view class="td">本科二批</view>
+			<view class="td">{{web_data[web_year]['文科']['本科二批']}}</view>
+			<view class="td">{{web_data[web_year]['理科']['本科二批']}}</view>
 		</view>
 		<view class="tr">
-			<view class="td">高职</view>
-			<view class="td">106</view>
-			<view class="td">160</view>
+			<view class="td">本科三批</view>
+			<view class="td">{{web_data[web_year]['文科']['本科三批']?web_data[web_year]['文科']['本科三批']:'-'}}</view>
+			<view class="td">{{web_data[web_year]['理科']['本科三批']?web_data[web_year]['理科']['本科三批']:'-'}}</view>
+		</view>
+		<view class="tr">
+			<view class="td">专科批</view>
+			<view class="td">{{web_data[web_year]['文科']['专科批']?web_data[web_year]['文科']['专科批']:'-'}}</view>
+			<view class="td">{{web_data[web_year]['理科']['专科批']?web_data[web_year]['理科']['专科批']:'-'}}</view>
 		</view>
 		<view class="tr">
 			<view class="td">艺术类本科</view>

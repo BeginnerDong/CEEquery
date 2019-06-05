@@ -1,26 +1,14 @@
 <view class="top">
-	<view class="color1 font14" style="text-align: center;">2019年高考各省市招生政策规定</view>
-	<view class="font12 color3" style="text-align: right; margin-top: 30rpx;">2019-06-10</view>
+	<view class="color1 font14" style="text-align: center;">{{web_mainData.title}}</view>
+	<view class="font12 color3" style="text-align: right; margin-top: 30rpx;">{{web_mainData.create_time}}</view>
 </view>
 <view class="he10"></view>
 <view class="text-box">
-	<view class="color2 font13 text">内容内容内容内容内容内容内容内容内容内容内容内容内容内容容内容内容内容内容容内容内容内
-		内容内容内容内容内容内容内容内容容内容容内容内容内容内容容内容
-	</view>
-	<view class="color2 font13 text">内容内容内容内容内容内容内容内容内容内容内容内容内容内容容内容内容内容内容容内容内容内
-		内容内容内容内容内容内容内容内容容内容容内容内容内容内容容内容
-	</view>
-	<view class="img">
-		<image src="../../image/details-img1.png"></image>
-	</view>
-	<view class="color2 font13 text">内容内容内容内容内容内容内容内容内容内容内容内容内容内容容内容内容内容内容容内容内容内
-		内容内容内容内容内容内容内容内容容内容容内容内容内容内容容内容
-	</view>
-	<view class="img">
-		<image src="../../image/details-img1.png"></image>
-	</view>
-	<view class="color2 font13 text">内容内容内容内容内容内容内容内容内容内容内容内容内容内容容内容内容内容内容容内容内容内
-		内容内容内容内容内容内容内容内容容内容容内容内容内容内容容内容
+	<view class="color2 font13 text">
+		<view class="content ql-editor">
+		    <import src="../../wxParse/wxParse.wxml"/>
+		    <template is="wxParse" data="{{wxParseData:web_mainData.content}}"/>
+		</view>
 	</view>
 </view>
 

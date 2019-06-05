@@ -1,93 +1,91 @@
 <view class="top-two bg1">
-	 <view class="top-item ilblock top-itemstar">
-		 <view class="font14">
-			 大学热度
-		 </view>
-	 </view><view class="top-item ilblock">
-		 <view class="font14">
+	<view class="top-item ilblock {{num==0?'top-itemstar':''}}" data-num='0' bindtap="changeType">
+		<view class="font14">
+			大学热度
+		</view>
+	</view>
+	<view class="top-item ilblock {{num==1?'top-itemstar':''}}" data-num='1' bindtap="changeType">
+		<view class="font14">
 			专业热度
-		 </view>
-	 </view>
- </view>
- <view class="top-btm bg1">
- 	 <view class="btm-item ilblock">
- 		 <view class="font14">
- 			 人气值
-			 <image src="../../image/volume-icon2.png"></image>
- 		 </view>
- 	 </view>
-	 <view class="btm-item ilblock">
-	  		 <view class="font14">
-	  			 地区
-				 <image src="../../image/volume-icon2.png"></image>
-	  		 </view>
-	 </view>
-	 <view class="btm-item ilblock">
- 		 <view class="font14">
- 			类型
-			<image src="../../image/volume-icon2.png"></image>
- 		 </view>
- 	 </view>
-  </view>
-  
-  <view class="top-btm bg1" style="display: none;">
-  	 <view class="btm-item ilblock" style="width: 50%;">
-  		 <view class="font14">
-  			 人气值
-  			 <image src="../../image/volume-icon2.png"></image>
-  		 </view>
-  	 </view>
-  	 <view class="btm-item ilblock" style="width: 50%;">
-  		 <view class="font14">
-  			专业
-  			<image src="../../image/volume-icon2.png"></image>
-  		 </view>
-  	 </view>
-   </view>
-<view class="box">
-	<view class="tabe color2 font13">
-		<view class="th color1">
-			<view class="td">排名</view>
-			<view class="td">学校名称</view>
-			<view class="td">地区</view>
-			<view class="td">类别</view>
-			<view class="td">人气值</view>
-		</view>
-		<view class="tr">
-			<view class="td">1</view>
-			<view class="td">1厦门大学</view>
-			<view class="td">福建</view>
-			<view class="td">综合类</view>
-			<view class="td">1280.9万</view>
-		</view>
-		<view class="tr">
-			<view class="td">1</view>
-			<view class="td">1厦门大学</view>
-			<view class="td">福建</view>
-			<view class="td">综合类</view>
-			<view class="td">1280.9万</view>
-		</view>
-		<view class="tr">
-			<view class="td">1</view>
-			<view class="td">1厦门大学</view>
-			<view class="td">福建</view>
-			<view class="td">综合类</view>
-			<view class="td">1280.9万</view>
-		</view>
-		<view class="tr">
-			<view class="td">1</view>
-			<view class="td">1厦门大学</view>
-			<view class="td">福建</view>
-			<view class="td">综合类</view>
-			<view class="td">1280.9万</view>
-		</view>
-		<view class="tr">
-			<view class="td">1</view>
-			<view class="td">1厦门大学</view>
-			<view class="td">福建</view>
-			<view class="td">综合类</view>
-			<view class="td">1280.9万</view>
 		</view>
 	</view>
 </view>
- 
+<view class="top-btm bg1" wx:if="{{num==0}}">
+	<view class="btm-item ilblock">
+		<view class="font14">
+			人气值
+			<image src="../../image/volume-icon2.png"></image>
+		</view>
+	</view>
+	<view class="btm-item ilblock">
+		<view class="font14">
+			<picker bindchange="bindPickerChange" value="{{index}}" range="{{web_pArray}}" range-key="name">
+				地区
+				<image src="../../image/volume-icon2.png"></image>
+			</picker>
+		</view>
+	</view>
+	<view class="btm-item ilblock">
+		<view class="font14">
+			<picker bindchange="bindsStyleChange" value="{{index}}" range="{{sArray}}">
+				类型
+				<image src="../../image/volume-icon2.png"></image>
+			</picker>
+		</view>
+	</view>
+</view>
+
+<view class="top-btm bg1" wx:if="{{num==1}}">
+	<view class="btm-item ilblock" style="width: 50%;">
+		<view class="font14">
+			人气值
+			<image src="../../image/volume-icon2.png"></image>
+		</view>
+	</view>
+	<view class="btm-item ilblock" style="width: 50%;">
+		<view class="font14">
+			专业
+			<image src="../../image/volume-icon2.png"></image>
+		</view>
+	</view>
+</view>
+<view class="box" wx:if="{{num==0}}">
+	<view class="tabe color2 font13">
+		<view class="th color1">
+			<view class="td">排名</view>
+			<view class="td" style="width:23.7%">学校名称</view>
+			<view class="td" style="width:15.7%">地区</view>
+			<view class="td">类别</view>
+			<view class="td">人气值</view>
+		</view>
+		<block wx:for="{{web_mainData}}" wx:key="id">
+			<view class="tr">
+				<view class="td">{{index+1}}</view>
+				<view class="td avoidOverflow" style="width:23.7%">{{item.name}}</view>
+				<view class="td" style="width:15.7%">{{item.province_name}}</view>
+				<view class="td">{{item.type_name}}</view>
+				<view class="td">{{item.view_month}}</view>
+			</view>
+		</block>
+	</view>
+</view>
+<view class="box" wx:if="{{num==1}}">
+	<view class="tabe color2 font13">
+		<view class="th color1">
+			<view class="td">排名</view>
+			<view class="td" style="width:23.7%">专业名称</view>
+			<view class="td" style="width:15.7%">层次</view>
+			<view class="td">类别</view>
+			<view class="td">人气值</view>
+		</view>
+		<block wx:for="{{web_mainData}}" wx:key="id">
+			<view class="tr">
+				<view class="td">{{index+1}}</view>
+				<view class="td avoidOverflow" style="width:23.7%">{{item.name}}</view>
+				<view class="td" style="width:15.7%">{{item.level1_name}}</view>
+				<view class="td avoidOverflow">{{item.level3_name}}</view>
+				<view class="td">{{item.view_month}}</view>
+			</view>
+		</block>
+	</view>
+</view>

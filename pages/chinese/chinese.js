@@ -1,35 +1,67 @@
-import {Api} from '../../utils/api.js';
+//logs.js
+import {
+	Api
+} from '../../utils/api.js';
 var api = new Api();
 const app = getApp();
-import {Token} from '../../utils/token.js';
+import {
+	Token
+} from '../../utils/token.js';
 const token = new Token();
 
-//index.js
-//获取应用实例
-//触摸开始的事件
-
 Page({
-  data: {
-		 is_show:true
-		 
-   },
-		
-	show(e){
-		const self=this;
-		self.data.is_show=false;
+	data: {
+		mainData: [],
+		isFirstLoadAllStandard: ['getMainData'],
+	},
+
+	onLoad(options) {
+		const self = this;
+		console.log(options)
+		self.data.id = options.id;
+		self.data.num = options.num;
+		api.commonInit(self);
+
 		self.setData({
-			is_show:self.data.is_show
-		})
+			web_num: self.data.num
+		});
+		self.getMainData();
 	},
-	onLoad: function (options) {
+
+	getMainData() {
+		const self = this;
+		const postData = {};
+		postData.searchItem = {
+			thirdapp_id: getApp().globalData.thirdapp_id,
+			id: self.data.id,
+		};
+		const callback = (res) => {
+			if (res.info.data.length > 0) {
+				self.data.mainData = res.info.data[0];
+			}
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
+			self.setData({
+				web_mainData: self.data.mainData,
+			});
+			api.buttonCanClick(self,true);
+		};
+		api.articleGet(postData, callback);
 	},
-	
-  intoPathRedirect(e){
-    const self = this;
-    api.pathTo(api.getDataSet(e,'path'),'redi');
-  },
-  intoPath(e){
-    const self = this;
-    api.pathTo(api.getDataSet(e,'path'),'nav');
-  }
-	})
+
+	intoPath(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'nav');
+	},
+
+	tab(e) {
+		const self = this;
+		api.buttonCanClick(self);
+		var num = api.getDataSet(e, 'num');
+
+		self.setData({
+			web_num: num
+		});
+		self.getMainData(true);
+	},
+
+})

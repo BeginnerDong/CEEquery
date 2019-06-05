@@ -1,66 +1,77 @@
 <view class="top-two bg1">
-	 <view class="top-item ilblock top-itemstar">
-		 <view class="font15">
-			 最受女生欢迎
-		 </view>
-	 </view><view class="top-item ilblock">
-		 <view class="font15">
-			 最受男生欢迎
-		 </view>
-	 </view>
-	 <view class="top-item ilblock">
-		 <view class="font15">
-			 最受文科生欢迎
-		 </view>
-	 </view>
- </view>
- <view class="list-two">
-	 <view class="ilblock list-left flo-left" style="margin: 40rpx 30rpx 0rpx 0rpx;">
-	 	<image src="../../image/volume-icon24.png"></image>
-	 </view>
- 	<view class="ilblock list-right">
-		<view class="color8 font15 fat-font">经济学</view>
-		<view>
-			<text class="color1 font14 fat-font">推荐理由：</text>
-			<text class="font12 color2">经济学专业以及经济学知识的”广“和”精“著称。</text>
+	<view class="top-item ilblock  {{currentId == 0?'top-itemstar':''}}" data-id="0" bindtap="{{web_buttonCanClick?'tab':''}}">
+		<view class="font15">
+			最受女生欢迎
 		</view>
-		<view>
-			<text class="color1 font14 fat-font">专业介绍：</text>
-			<text class="font12 color2">本专业培养具备较扎实的马克思主义经济学理论基础，熟悉现代西方经济学理论</text>
+	</view>
+	<view class="top-item ilblock  {{currentId == 1?'top-itemstar':''}}" data-id="1" bindtap="{{web_buttonCanClick?'tab':''}}">
+		<view class="font15">
+			最受男生欢迎
 		</view>
-		<view>
-			<view class="color1 font14 fat-font ilblock">专业层次：</view>
-			<view class="font12 color2 ilblock">本科</view>
+	</view>
+	<view class="top-item ilblock  {{currentId == 2?'top-itemstar':''}}" data-id="2" bindtap="{{web_buttonCanClick?'tab':''}}">
+		<view class="font15">
+			最受文科生欢迎
 		</view>
-		<view>
-			<view class="color1 font14 fat-font ilblock">专业类别：</view>
-			<view class="font12 color2 ilblock">经济学类</view>
+	</view>
+</view>
+<block wx:for="{{web_mainData}}" wx:key="id">
+	<view class="list-two" wx:if="{{index%2 == 0}}">
+		<view class="ilblock list-left flo-left" style="margin: 40rpx 30rpx 0rpx 0rpx;">
+			<image src="{{item.mainImg[0].url}}"></image>
 		</view>
- 	</view>
- </view>
-  <view class="list-two">
- 	 <view class="ilblock list-left flo-right" style="margin: 40rpx 0rpx 0rpx 30rpx;">
- 	 	<image src="../../image/volume-icon24.png"></image>
- 	 </view>
- 	<view class="ilblock list-right">
- 		<view class="color8 font15 fat-font">经济学</view>
- 		<view>
- 			<text class="color1 font14 fat-font">推荐理由：</text>
- 			<text class="font12 color2">经济学专业以及经济学知识的”广“和”精“著称。</text>
- 		</view>
- 		<view>
- 			<text class="color1 font14 fat-font">专业介绍：</text>
- 			<text class="font12 color2">本专业培养具备较扎实的马克思主义经济学理论基础，熟悉现代西方经济学理论</text>
- 		</view>
- 		<view>
- 			<view class="color1 font14 fat-font ilblock">专业层次：</view>
- 			<view class="font12 color2 ilblock">本科</view>
- 		</view>
- 		<view>
- 			<view class="color1 font14 fat-font ilblock">专业类别：</view>
- 			<view class="font12 color2 ilblock">经济学类</view>
- 		</view>
- 	</view>
- </view>
- 
- 
+		<view class="ilblock list-right">
+			<view class="color8 font15 fat-font">{{item.title}}</view>
+			<view>
+				<text class="color1 font14 fat-font">推荐理由：</text>
+				<text class="font12 color2">{{item.description}}</text>
+			</view>
+			<view>
+				<text class="color1 font14 fat-font">专业介绍：</text>
+				<view class="font12 color2">
+					<view class="content ql-editor" style="padding: 0;">
+					    <import src="../../wxParse/wxParse.wxml"/>
+					    <template is="wxParse" data="{{wxParseData:item.content}}"/>
+					</view> 
+				</view>
+			</view>
+			<view>
+				<view class="color1 font14 fat-font ilblock">专业层次：</view>
+				<view class="font12 color2 ilblock">{{item.small_title}}</view>
+			</view>
+			<view>
+				<view class="color1 font14 fat-font ilblock">专业类别：</view>
+				<view class="font12 color2 ilblock">{{item.keywords}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="list-two" wx:else>
+		<view class="ilblock list-left flo-right" style="margin: 40rpx 0rpx 0rpx 30rpx;">
+			<image src="{{item.mainImg[0].url}}"></image>
+		</view>
+		<view class="ilblock list-right">
+			<view class="color8 font15 fat-font">{{item.title}}</view>
+			<view>
+				<text class="color1 font14 fat-font">推荐理由：</text>
+				<text class="font12 color2">{{item.description}}</text>
+			</view>
+			<view>
+				<text class="color1 font14 fat-font">专业介绍：</text>
+				<view class="font12 color2">
+					<view class="content ql-editor" style="padding: 0;">
+					    <import src="../../wxParse/wxParse.wxml"/>
+					    <template is="wxParse" data="{{wxParseData:item.content}}"/>
+					</view> 
+				</view>
+			</view>
+			<view>
+				<view class="color1 font14 fat-font ilblock">专业层次：</view>
+				<view class="font12 color2 ilblock">{{item.small_title}}</view>
+			</view>
+			<view>
+				<view class="color1 font14 fat-font ilblock">专业类别：</view>
+				<view class="font12 color2 ilblock">{{item.keywords}}</view>
+			</view>
+		</view>
+	</view>
+</block>

@@ -1,7 +1,11 @@
-import {Api} from '../../utils/api.js';
+import {
+	Api
+} from '../../utils/api.js';
 var api = new Api();
 const app = getApp();
-import {Token} from '../../utils/token.js';
+import {
+	Token
+} from '../../utils/token.js';
 const token = new Token();
 
 //index.js
@@ -9,57 +13,109 @@ const token = new Token();
 //触摸开始的事件
 
 Page({
-  data: {
-		 is_show:false,
-		 imgUrls: [
-		   '../../image/banner.png',
-		   '../../image/banner.png',
-		   '../../image/banner.png'
-		 ],
-		 swiperIndex: 0,
-		  array: ['黑龙江', '吉林', '陕西', '福建'],
-			objectArray: [
-      {
-        id: 0,
-        name: '黑龙江'
-      },
-      {
-        id: 1,
-        name: '吉林'
-      },
-      {
-        id: 2,
-        name: '陕西'
-      },
-      {
-        id: 3,
-        name: '福建'
-      }
-    ],
-    index: 0,
-   },
-		
-	show(e){
-		const self=this;
-		self.data.is_show=!self.data.is_show;
+	data: {
+
+		swiperIndex: 0,
+		pArray: ['黑龙江'],
+		yArray: [],
+		bArray: [],
+		index: 0,
+		num: 0,
+		mainData: [],
+		isFirstLoadAllStandard: ['getMainData'],
+		searchItem: {
+			local_type_name: '理科',
+			thirdapp_id: 2,
+		}
+	},
+
+
+
+
+	onLoad: function(options) {
+		const self = this;
+		api.commonInit(self);
+		self.data.id = options.id;
+		self.getMainData()
+	},
+
+	changeType(e) {
+		const self = this;
+		var num = api.getDataSet(e, 'num')
+		self.data.num = num;
+		if (num == 0) {
+			self.data.searchItem.local_type_name = '理科'
+		} else if (num == 1) {
+			self.data.searchItem.local_type_name = '文科'
+		};
 		self.setData({
-			is_show:self.data.is_show
+			num:self.data.num
 		})
+		self.getMainData(true)
 	},
-	onLoad: function (options) {
+
+	getMainData(isNew) {
+		const self = this;
+		if (isNew) {
+			api.clearPageIndex(self)
+		};
+		const postData = {};
+		// postData.tokenFuncName = 'getProjectToken';
+		postData.paginate = api.cloneForm(self.data.paginate);
+		postData.searchItem = api.cloneForm(self.data.searchItem);
+		postData.searchItem.school_id = self.data.id;
+		const callback = (res) => {
+			if (res.solely_code == 100000) {
+				api.buttonCanClick(self, true)
+				if (res.info.data.length > 0) {
+					self.data.mainData.push.apply(self.data.mainData, res.info.data);
+					for (var i = 0; i < self.data.mainData.length; i++) {
+						if (self.data.yArray.indexOf(self.data.mainData[i].year) == -1) {
+							self.data.yArray.push(self.data.mainData[i].year)
+						}
+						if (self.data.bArray.indexOf(self.data.mainData[i].local_batch_name) == -1) {
+							self.data.bArray.push(self.data.mainData[i].local_batch_name)
+						}
+					}
+				} else {
+					self.data.isLoadAll = true;
+					api.showToast('没有更多了', 'none')
+				}
+				self.setData({
+					web_yArray: self.data.yArray,
+					web_bArray: self.data.bArray,
+					web_mainData: self.data.mainData,
+				});
+			} else {
+				api.buttonCanClick(self, true)
+				api.showToast(res.msg, 'none')
+			};
+
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
+			console.log('getMainData', self.data.yArray)
+			console.log('getMainData', self.data.bArray)
+		};
+		api.planGet(postData, callback);
 	},
-	 swiperChange(e) {
-    this.setData({
-      swiperIndex: e.detail.current
-    })
-  },
-	
-  intoPathRedirect(e){
-    const self = this;
-    api.pathTo(api.getDataSet(e,'path'),'redi');
-  },
-  intoPath(e){
-    const self = this;
-    api.pathTo(api.getDataSet(e,'path'),'nav');
-  }
-	})
+
+
+	onReachBottom() {
+		const self = this;
+		if (!self.data.isLoadAll && self.data.buttonCanClick) {
+			self.data.paginate.currentPage++;
+			self.getMainData();
+		};
+	},
+
+
+	intoPathRedirect(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'redi');
+	},
+
+	intoPath(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'nav');
+	}
+
+})

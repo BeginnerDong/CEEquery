@@ -1,26 +1,26 @@
 <view class="top-two bg1">
-	 <view class="top-item ilblock top-itemstar">
-		 <view class="font14">
-			文科
-		 </view>
-	 </view><view class="top-item ilblock">
+	 <view class="top-item ilblock {{num==0?'top-itemstar':''}}" data-num='0' bindtap="changeType">
 		 <view class="font14">
 			理科
+		 </view>
+	 </view><view class="top-item ilblock {{num==1?'top-itemstar':''}}" data-num='1' bindtap="changeType">
+		 <view class="font14">
+			文科
 		 </view>
 	 </view>
  </view>
  <view class="top-btm bg1">
  	 <view class="btm-item ilblock">
  		<view class="font14">
- 			<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
- 				地区
+ 			<picker bindchange="bindPickerChange" value="{{index}}" range="{{pArray}}">
+ 				黑龙江
  			    <image src="../../image/volume-icon2.png"></image>
  			</picker>
  		</view>
  	 </view>
  	 <view class="btm-item ilblock">
  			<view class="font14">
- 				<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+ 				<picker bindchange="bindPickerChange" value="{{index}}" range="{{web_yArray}}">
  					年份
  				    <image src="../../image/volume-icon2.png"></image>
  				</picker>
@@ -28,8 +28,8 @@
  	</view>
  	  <view class="btm-item ilblock">
  	 		<view class="font14">
- 	 			<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
- 	 				科目
+ 	 			<picker bindchange="bindPickerChange" value="{{index}}" range="{{web_bArray}}">
+ 	 				批次
  	 			    <image src="../../image/volume-icon2.png"></image>
  	 			</picker>
  	 		</view>
@@ -39,41 +39,19 @@
 <view class="box">
 	<view class="tabe color2 font13">
 		<view class="th color1">
-			<view class="td">学校名称</view>
-			<view class="td">地区</view>
-			<view class="td">类别</view>
-			<view class="td">人气值</view>
+			<view class="td">专业名称</view>
+			<view class="td">学科门类</view>
+			<view class="td">二级门类</view>
+			<view class="td">计划招生</view>
 		</view>
-		<view class="tr">
-			<view class="td">1厦门大学</view>
-			<view class="td">福建</view>
-			<view class="td">综合类</view>
-			<view class="td">1280.9万</view>
-		</view>
-		<view class="tr">
-			<view class="td">1厦门大学</view>
-			<view class="td">福建</view>
-			<view class="td">综合类</view>
-			<view class="td">1280.9万</view>
-		</view>
-		<view class="tr">
-			<view class="td">1厦门大学</view>
-			<view class="td">福建</view>
-			<view class="td">综合类</view>
-			<view class="td">1280.9万</view>
-		</view>
-		<view class="tr">
-			<view class="td">1厦门大学</view>
-			<view class="td">福建</view>
-			<view class="td">综合类</view>
-			<view class="td">1280.9万</view>
-		</view>
-		<view class="tr">
-			<view class="td">1厦门大学</view>
-			<view class="td">福建</view>
-			<view class="td">综合类</view>
-			<view class="td">1280.9万</view>
-		</view>
+		<block wx:for="{{web_mainData}}" wx:key="id">
+			<view class="tr">
+				<view class="td avoidOverflow">{{item.spname}}</view>
+				<view class="td avoidOverflow">{{item.level3_name?item.level3_name:'-'}}</view>
+				<view class="td avoidOverflow">{{item.level2_name?item.level2_name:'-'}}</view>
+				<view class="td">{{item.num}}</view>
+			</view>
+		</block>
 	</view>
 </view>
  
