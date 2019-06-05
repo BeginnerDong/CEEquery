@@ -31,14 +31,14 @@ Page({
 		api.commonInit(self);
 
 		
-
+		self.getOrderData();
 		self.getMainData()
 
 	},
 
 	onShow() {
 		const self = this;
-		self.getOrderData()
+		
 	},
 
 	changeBind(e) {

@@ -23,7 +23,8 @@ Page({
 			'新闻传播大类',
 			'教育与体育大类', '公安与司法大类', '公共管理与服务大类'
 		],
-		searchItem: {}
+		searchItem: {},
+		isShow:false
 	},
 
 
@@ -36,13 +37,19 @@ Page({
 		self.setData({
 			web_type: self.data.searchItem.level2_name  
 		})
+		self.getOrderData();
 		self.getMainData()
 
 	},
 
-	onShow() {
+
+	
+	showMore(){
 		const self = this;
-		self.getOrderData()
+		self.data.isShow = !self.data.isShow;
+		self.setData({
+			isShow:self.data.isShow 
+		})
 	},
 
 	getOrderData() {
@@ -67,7 +74,10 @@ Page({
 		api.buttonCanClick(self);
 		if (self.data.searchItem.level2_name != api.getDataSet(e, 'name')) {
 			self.data.searchItem.level2_name = api.getDataSet(e, 'name');
+			self.data.isShow = false;
+
 			self.setData({
+				isShow:self.data.isShow,
 				web_type: self.data.searchItem.level2_name
 			});
 			self.getMainData(true)

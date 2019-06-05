@@ -37,6 +37,7 @@ Page({
 
   getMainData(isNew){
     const  self =this;
+	api.buttonCanClick(self);
     if(isNew){
       api.clearPageIndex(self)
     };
@@ -46,7 +47,8 @@ Page({
       thirdapp_id:getApp().globalData.solely_thirdapp_id
     };
     postData.getBefore = api.cloneForm(self.data.getBefore);
-    const callback =(res)=>{
+    const callback =(res)=>{ 
+		api.buttonCanClick(self,true);
       if(res.info.data.length>0){
         self.data.mainData.push.apply(self.data.mainData,res.info.data);
 				for (var i = 0; i < self.data.mainData.length; i++) {
@@ -56,7 +58,7 @@ Page({
         self.data.isLoadAll = true;
         api.showToast('没有更多了','fail');
       };
-      api.buttonCanClick(self,true);
+     
       api.checkLoadAll(self.data.isFirstLoadAllStandard,'getMainData',self);
       self.setData({
         web_mainData:self.data.mainData,

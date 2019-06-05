@@ -62,11 +62,12 @@ page{
 	height: 60rpx;
 	line-height: 60rpx;
 	border-bottom: solid 1rpx #EDEDED;
+	display: flex;
 }
 .td{
 	height: 100%;
 	width:19.7%;
-	display: inline-block;
+	
 	text-align: center;
 	font-size: 24rpx;
 	border-right: solid 1rpx #EDEDED;
@@ -78,6 +79,6 @@ page{
 	line-height: 96rpx;
 	border-bottom: solid 1rpx #EDEDED;
 	margin-left: solid 1rpx #EDEDED;
-	
+	display: flex;
 }
 

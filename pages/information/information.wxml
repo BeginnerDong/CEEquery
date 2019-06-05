@@ -30,7 +30,7 @@
 	<view class="he10"></view>
 </block>
  
- 
+ <view style="width: 100%;height: 120rpx;"></view>
  
  <view class="navbar">
 	<view class="navbar_item"  bindtap="intoPathRedirect" data-path="/pages/index/index">

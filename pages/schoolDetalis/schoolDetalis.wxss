@@ -44,7 +44,7 @@
 .open-list{
 	border: solid 1rpx #2E82FF;
 	
-	height: 46rpx;
+
 	line-height: 46rpx;
 	text-align: center;
 	display: inline-block;

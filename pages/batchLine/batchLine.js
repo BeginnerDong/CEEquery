@@ -133,7 +133,7 @@ Page({
 					}
 				} else {
 					self.data.isLoadAll = true;
-					api.showToast('没有更多了', 'none');
+					api.showToast('暂无数据', 'none');
 				};
 				self.setData({
 					web_data:self.data.data,

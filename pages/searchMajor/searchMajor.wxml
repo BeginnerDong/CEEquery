@@ -1,13 +1,16 @@
-{{web_type}} 
-<view>open</view>
-<view wx:if="{{web_is_show}}" style="display:flex;flex-wrap:wrap;position: absolute;background-color: white;">
+<view style="display: flex;">
+	<view style="margin: 2% 2%;font-size:12px;border: 1px solid #2E82FF;padding: 10rpx;border-radius:10rpx;background: #2E82FF;color:#fff">
+	{{web_type}} 
+	</view>
+	<button style="background: #2E82FF;color:#fff;font-size:12px;height: 60rpx;line-height: 60rpx;margin-left:60%;" bindtap="showMore">展开更多</button>
+</view>
+<view wx:if="{{isShow}}" style="display:flex;flex-wrap:wrap;position: absolute;background-color: white;">
 	<block wx:for="{{array}}" wx:key="index" >
 		<view style="margin: 2% 2%;font-size:12px;border: 1px solid #2E82FF;padding: 10rpx;border-radius:10rpx;{{web_type==item?'background: #2E82FF;color:#fff':''}}" 
 		bindtap="{{web_buttonCanClick?'changeSearch':''}}" data-name="{{item}}">{{item}}</view>
 	</block>
-	<view>关闭</view>	
 </view>
-<view class="box">
+<view class="box" wx:if="{{!isShow}}">
 	<view class="tabe color1">
 		<view class="th">
 			<view class="td">专业类别</view>
@@ -25,7 +28,7 @@
 					<view class="td">{{c_value.name}}</view>
 					<view class="td">全国{{c_value.rankall}}{{web_type}}{{c_value.rank_type}}</view>
 					<view class="td">{{c_value.level1_name}}</view>
-					<view class="td last-td" bindtap="goDetail" data-path="/pages/majorDetalis/majorDetalis?id={{c_value.special_id}}">点击查看</view>
+					<view class="td last-td" bindtap="goDetail" data-path="/pages/majorDetalis/majorDetalis?id={{c_value.id}}">点击查看</view>
 				</view>
 			</view>
 		</view>

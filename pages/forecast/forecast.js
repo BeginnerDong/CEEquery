@@ -46,7 +46,8 @@ Page({
 		self.data.searchItem ={};
 		self.data.num = num;
 		if (num == 0) {
-			self.data.searchItem.min = ['between',[self.data.score-10,parseInt(self.data.score)]] 
+			self.data.searchItem.min = ['between',[self.data.score-10,parseInt(self.data.score)]];
+			 self.data.searchItem.min = ['not in',[0]]
 		}else if (num == 1) {
 			self.data.searchItem.min = ['between',[self.data.score-50,self.data.score-20]] 
 		}else if(num==2){

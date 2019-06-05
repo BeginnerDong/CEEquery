@@ -11,31 +11,31 @@
 	</view>
 </view>
 <view class="top-btm bg1" wx:if="{{num==0}}">
-	<view class="btm-item ilblock">
+<!-- 	<view class="btm-item ilblock">
 		<view class="font14">
 			人气值
 			<image src="../../image/volume-icon2.png"></image>
 		</view>
-	</view>
-	<view class="btm-item ilblock">
+	</view> -->
+	<view class="btm-item ilblock" style="width:50%">
 		<view class="font14">
-			<picker bindchange="bindPickerChange" value="{{index}}" range="{{web_pArray}}" range-key="name">
-				地区
+			<picker bindchange="bindPickerChange" value="{{web_pIndex}}" range="{{web_pArray}}" range-key="name">
+				{{web_pIndex?web_pArray[web_pIndex].name:'地区'}}
 				<image src="../../image/volume-icon2.png"></image>
 			</picker>
 		</view>
 	</view>
-	<view class="btm-item ilblock">
+	<view class="btm-item ilblock" style="width:50%">
 		<view class="font14">
-			<picker bindchange="bindsStyleChange" value="{{index}}" range="{{sArray}}">
-				类型
+			<picker bindchange="bindsStyleChange" value="{{web_sIndex}}" range="{{sArray}}">
+				{{web_sIndex?sArray[web_sIndex]:'类型'}}
 				<image src="../../image/volume-icon2.png"></image>
 			</picker>
 		</view>
 	</view>
 </view>
 
-<view class="top-btm bg1" wx:if="{{num==1}}">
+<!-- <view class="top-btm bg1" wx:if="{{num==1}}">
 	<view class="btm-item ilblock" style="width: 50%;">
 		<view class="font14">
 			人气值
@@ -48,7 +48,7 @@
 			<image src="../../image/volume-icon2.png"></image>
 		</view>
 	</view>
-</view>
+</view> -->
 <view class="box" wx:if="{{num==0}}">
 	<view class="tabe color2 font13">
 		<view class="th color1">
@@ -59,7 +59,7 @@
 			<view class="td">人气值</view>
 		</view>
 		<block wx:for="{{web_mainData}}" wx:key="id">
-			<view class="tr">
+			<view class="tr" bindtap="intoPath" data-path="/pages/schoolDetalis/schoolDetalis?id={{item.id}}">
 				<view class="td">{{index+1}}</view>
 				<view class="td avoidOverflow" style="width:23.7%">{{item.name}}</view>
 				<view class="td" style="width:15.7%">{{item.province_name}}</view>
@@ -79,7 +79,7 @@
 			<view class="td">人气值</view>
 		</view>
 		<block wx:for="{{web_mainData}}" wx:key="id">
-			<view class="tr">
+			<view class="tr" bindtap="intoPath" data-path="/pages/majorDetalis/majorDetalis?id={{item.id}}">
 				<view class="td">{{index+1}}</view>
 				<view class="td avoidOverflow" style="width:23.7%">{{item.name}}</view>
 				<view class="td" style="width:15.7%">{{item.level1_name}}</view>

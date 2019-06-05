@@ -199,6 +199,18 @@ class Api extends Base {
 		this.request(allParams);
 	}
 
+	schoolSpecialScoreGet(param, callback) {
+		var allParams = {
+			url: 'Common/SchoolSpecialScore/get',
+			type: 'post',
+			data: param,
+			sCallback: function(data) {
+				callback && callback(data);
+			}
+		};
+		this.request(allParams);
+	}
+
 	specialRankGet(param, callback) {
 		var allParams = {
 			url: 'Common/SpecialRank/get',
@@ -235,7 +247,7 @@ class Api extends Base {
 		this.request(allParams);
 	}
 
-	
+
 
 
 	labelGet(param, callback) {

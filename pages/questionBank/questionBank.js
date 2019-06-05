@@ -72,13 +72,14 @@ Page({
 		postData.searchItem = api.cloneForm(self.data.searchItem);
 		postData.getBefore = api.cloneForm(self.data.getBefore);
 		const callback = (res) => {
+			api.buttonCanClick(self, true);
 			if (res.info.data.length > 0) {
 				self.data.mainData.push.apply(self.data.mainData, res.info.data);
 			} else {
 				self.data.isLoadAll = true;
 				api.showToast('没有更多了', 'fail');
 			};
-			api.buttonCanClick(self, true);
+			
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
 			setTimeout(function()
 			{

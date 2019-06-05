@@ -82,7 +82,12 @@ Page({
 	getMainData() {
 		const self = this;
 		const postData = {};
-		postData.paginate = api.cloneForm(self.data.paginate);
+		postData.paginate =  {
+        count: 0,
+        currentPage:1,
+        pagesize:3,
+        is_page:true,
+    };
 		postData.searchItem = {
 			thirdapp_id: getApp().globalData.solely_thirdapp_id
 		};
@@ -152,9 +157,13 @@ Page({
 			if (self.data.submitData.score == '') {
 				api.showToast('请输入您的分数')
 			} else {
-				wx.navigateTo({
-					url: '/pages/forecast/forecast?type=' + self.data.local_type_name + '&score=' + self.data.submitData.score
-				});
+				if(self.data.submitData.score<150){
+						api.showToast('输入分数过低','none')
+				}else{
+					wx.navigateTo({
+						url: '/pages/forecast/forecast?type=' + self.data.local_type_name + '&score=' + self.data.submitData.score
+					});
+				}		
 			}
 
 			self.data.submitData.score = '',

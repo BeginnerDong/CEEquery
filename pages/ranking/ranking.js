@@ -60,6 +60,9 @@ Page({
 		const self = this;
 		console.log(e);
 		self.data.searchItemSchool.province_name = self.data.pArray[e.detail.value].name;
+		self.setData({
+			web_pIndex: e.detail.value
+		});
 		self.getSchoolMainData(true);
 	},
 	
@@ -67,6 +70,9 @@ Page({
 		const self = this;
 		console.log(e);
 		self.data.searchItemSchool.type_name = self.data.sArray[e.detail.value];
+		self.setData({
+			web_sIndex: e.detail.value
+		});
 		self.getSchoolMainData(true);
 	},
 

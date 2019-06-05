@@ -43,7 +43,7 @@
 </view>
 <view class="font13 color1" style="margin-top: 20rpx;" >
 	<block wx:for="{{web_mainData.special}}" wx:key="id">
-		<view class="open-list" bindtap="intoPathRedirect" data-path="/pages/openMajor/openMajor?id={{item.special_id}}">
+		<view class="open-list" bindtap="intoPath" data-path="/pages/openMajor/openMajor?id={{item.special_id}}">
 			{{item.special_name}}
 		</view>
 	</block>

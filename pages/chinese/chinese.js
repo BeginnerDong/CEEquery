@@ -36,6 +36,7 @@ Page({
 			id: self.data.id,
 		};
 		const callback = (res) => {
+			api.buttonCanClick(self,true);
 			if (res.info.data.length > 0) {
 				self.data.mainData = res.info.data[0];
 			}
@@ -43,7 +44,7 @@ Page({
 			self.setData({
 				web_mainData: self.data.mainData,
 			});
-			api.buttonCanClick(self,true);
+			
 		};
 		api.articleGet(postData, callback);
 	},
