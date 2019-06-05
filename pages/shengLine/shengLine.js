@@ -52,6 +52,26 @@ Page({
 		})
 		self.getMainData(true)
 	},
+	
+	bindYearChange(e) {
+		const self = this;
+		self.data.searchItem.year = self.data.yArray[e.detail.value];
+		self.setData({
+			web_yIndex: e.detail.value
+		});
+		self.getMainData(true)
+	},
+	
+	onPullDownRefresh() {
+		const self = this;
+		wx.showNavigationBarLoading();
+		delete self.data.searchItem.year;
+		self.setData({
+			web_yIndex: ''
+		});
+		self.getMainData(true)
+	
+	},
 
 	getMainData(isNew) {
 		const self = this;
@@ -75,7 +95,7 @@ Page({
 					}
 				} else {
 					self.data.isLoadAll = true;
-					api.showToast('没有更多了', 'none')
+					api.showToast('暂无数据', 'none')
 				}
 				self.setData({
 					web_yArray: self.data.yArray,
@@ -85,7 +105,10 @@ Page({
 				api.buttonCanClick(self, true)
 				api.showToast(res.msg, 'none')
 			};
-
+			setTimeout(function() {
+				wx.hideNavigationBarLoading();
+				wx.stopPullDownRefresh();
+			}, 300);
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
 			console.log('getMainData', self.data.yArray)
 			console.log('getMainData', self.data.bArray)

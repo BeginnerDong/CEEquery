@@ -18,16 +18,19 @@ Page({
 		mainData: [],
 		isFirstLoadAllStandard: ['getMainData'],
 		orderData: [],
-		sForm:{
-			item:''
+		sForm: {
+			item: ''
 		},
-		searchItem:{}
+		searchItem: {},
+
 	},
 
 
 	onLoad(options) {
 		const self = this;
 		api.commonInit(self);
+
+		
 
 		self.getMainData()
 
@@ -56,7 +59,7 @@ Page({
 			self.data.searchItem.name = ['LIKE', ['%' + self.data.sForm.item + '%']],
 				self.getMainData(true);
 
-		} else if(self.data.sForm.item==''){
+		} else if (self.data.sForm.item == '') {
 			delete self.data.searchItem.name;
 			console.log(666)
 			self.getMainData(true)
@@ -110,6 +113,11 @@ Page({
 				api.buttonCanClick(self, true)
 				if (res.info.data.length > 0) {
 					self.data.mainData.push.apply(self.data.mainData, res.info.data);
+/* 					for (var i = 0; i < self.data.mainData.length; i++) {
+						if(api.findItemInArray(self.data.mainData[i], 'id',self.data.mainData[i].id)){
+							self.data.mainData.isInContrastsSchoolData = true
+						}
+					} */
 				} else {
 					self.data.isLoadAll = true;
 					api.showToast('没有更多了', 'none');
@@ -121,16 +129,70 @@ Page({
 				api.buttonCanClick(self, true)
 				api.showToast(res.msg, 'none')
 			};
-			setTimeout(function()
-			{
-			  wx.hideNavigationBarLoading();
-			  wx.stopPullDownRefresh();
-			},300);
+			setTimeout(function() {
+				wx.hideNavigationBarLoading();
+				wx.stopPullDownRefresh();
+			}, 300);
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
 			console.log('getMainData', self.data.mainData)
 		};
 		api.schoolGet(postData, callback);
 	},
+
+	/* contrasts(e) {
+		const self = this;
+		self.data.is_show = true;
+		var index = api.getDataSet(e,'index');
+		if (self.data.isInContrastsSchoolData) {
+			api.delStorageArray('contrastsSchoolData', self.data.mainData, 'id');
+		} else {
+			if (self.data.contrastsSchoolData.length == 2) {
+				api.delStorageArray('contrastsSchoolData', self.data.contrastsSchoolData[0], 'id');
+				api.setStorageArray('contrastsSchoolData', self.data.mainData, 'id', 999);
+			} else {
+				api.setStorageArray('contrastsSchoolData', self.data.mainData, 'id', 999);
+			}
+
+		};
+		self.data.contrastsSchoolData = api.getStorageArray('contrastsSchoolData');
+		self.data.isInContrastsSchoolData = api.findItemInArray(self.data.contrastsSchoolData, 'id', self.data.id);
+		self.setData({
+			web_contrastsSchoolData: self.data.contrastsSchoolData,
+			is_show: self.data.is_show,
+			web_isInContrastsSchoolData: self.data.isInContrastsSchoolData,
+		});
+	},
+
+	delete(e) {
+		const self = this;
+		var index = api.getDataSet(e, 'index');
+		api.delStorageArray('contrastsSchoolData', self.data.contrastsSchoolData[index], 'id');
+		self.data.contrastsSchoolData = api.getStorageArray('contrastsSchoolData');
+		self.data.isInContrastsSchoolData = api.findItemInArray(self.data.contrastsSchoolData, 'id', self.data.id);
+		self.setData({
+			web_contrastsSchoolData: self.data.contrastsSchoolData,
+			web_isInContrastsSchoolData: self.data.isInContrastsSchoolData
+		});
+	},
+
+	goContrasts(e) {
+		const self = this;
+		if (self.data.contrastsSchoolData.length >= 2) {
+			api.pathTo(api.getDataSet(e, 'path'), 'nav');
+		} else {
+			api.showToast('无法对比', 'none')
+		}
+	},
+
+
+
+	show() {
+		const self = this;
+		self.data.is_show = !self.data.is_show;
+		self.setData({
+			is_show: self.data.is_show
+		})
+	}, */
 
 	onReachBottom() {
 		const self = this;
@@ -156,17 +218,17 @@ Page({
 			is_show: self.data.is_show
 		})
 	},
-	
+
 	onPullDownRefresh() {
 		const self = this;
 		wx.showNavigationBarLoading();
 		delete self.data.searchItem.name;
 		self.data.sForm.item = '';
 		self.setData({
-			web_sForm:self.data.sForm
+			web_sForm: self.data.sForm
 		});
 		self.getMainData(true)
-	
+
 	},
 
 

@@ -13,15 +13,15 @@
  	 <view class="btm-item ilblock">
  		<view class="font14">
  			<picker bindchange="bindPickerChange" value="{{index}}" range="{{pArray}}">
- 				地区
+ 				黑龙江
  			    <image src="../../image/volume-icon2.png"></image>
  			</picker>
  		</view>
  	 </view>
  	 <view class="btm-item ilblock">
  			<view class="font14">
- 				<picker bindchange="bindPickerChange" value="{{index}}" range="{{web_yArray}}">
- 					时间
+ 				<picker bindchange="bindYearChange" value="{{index}}" range="{{web_yArray}}">
+ 					{{web_yIndex?web_yArray[web_yIndex]:'时间'}}
  				    <image src="../../image/volume-icon2.png"></image>
  				</picker>
  			</view>

@@ -23,7 +23,8 @@
     "pages/majorLine/majorLine",
     "pages/forecast/forecast",
     "pages/majorDetalis/majorDetalis",
-		"pages/zixunketang/zixunketang"
+		"pages/zixunketang/zixunketang",
+		"pages/contrasts/contrasts"
   ],
   "window": {
     "backgroundTextStyle": "light",

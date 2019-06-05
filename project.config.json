@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 115,
+			"current": 116,
 			"list": [
 				{
 					"id": -1,
@@ -733,6 +733,12 @@
 					"name": "zhuanye ",
 					"pathName": "pages/majorDetalis/majorDetalis",
 					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "对比",
+					"pathName": "pages/contrasts/contrasts",
 					"scene": null
 				}
 			]

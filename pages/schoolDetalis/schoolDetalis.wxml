@@ -18,9 +18,9 @@
 			<image src="{{web_isInCollectSchoolData?'../../image/school-icon1-active.png':'../../image/school-icon1.png'}}"></image>
 			<view class="font12 color1">{{web_isInCollectSchoolData?'已收藏':'收藏'}}</view>
 		</view>
-		<view style="margin-top: 30rpx;" bindtap="show">
+		<view style="margin-top: 30rpx;" bindtap="contrasts">
 			<image src="../../image/school-icon2.png"></image>
-			<view class="font12 color1">加入对比</view>
+			<view class="font12 color1">{{web_isInContrastsSchoolData?'取消对比':'加入对比'}}</view>
 		</view>
 	</view>
 	
@@ -53,15 +53,15 @@
 		<image class="flo-right" src="../../image/home-icon12.png" style="width: 14rpx;height: 14rpx;margin: 8rpx;" bindtap="show"></image>
 		对比栏
 	</view>
-	<view class="contrast color2 font11">
-		上海理工
-		<image src="../../image/home-icon12.png" style="width: 12rpx;height: 12rpx; margin-left: 20rpx;"></image>
+	<view class="contrast color2 font11" style="display: flex;">
+		<view style="width:70%" class="avoidOverflow">{{web_contrastsSchoolData[0].name}}</view>
+		<view style="width:30%"  bindtap="delete" data-index="0"><image src="../../image/home-icon12.png" style="width: 12rpx;height: 12rpx; margin-left: 20rpx;"></image></view>
 	</view>
-	<view class="contrast color2 font11">
-		南京大学
-		<image src="../../image/home-icon12.png" style="width: 12rpx;height: 12rpx; margin-left: 20rpx;"></image>
+	<view class="contrast color2 font11" style="display: flex;">
+		<view style="width:70%" class="avoidOverflow">{{web_contrastsSchoolData[1].name}}</view>
+		<view style="width:30%" bindtap="delete" data-index="1"><image src="../../image/home-icon12.png" style="width: 12rpx;height: 12rpx; margin-left: 20rpx;"></image></view>
 	</view>
-	<button class="contrast bg7 color5" style="border: none; border-radius: 10rpx;">对比</button>
+	<button class="contrast bg7 color5" style="border: none; border-radius: 10rpx;" bindtap="goContrasts" data-path="/pages/contrasts/contrasts">对比</button>
 </view>
 
 <view style="width: 100%; height: 200rpx;"></view>

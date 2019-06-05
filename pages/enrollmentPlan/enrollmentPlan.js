@@ -39,6 +39,25 @@ Page({
 		self.getMainData()
 	},
 
+	bindYearChange(e) {
+		const self = this;
+		self.data.searchItem.year = self.data.yArray[e.detail.value];
+		self.setData({
+			web_yIndex: e.detail.value
+		});
+		self.getMainData(true)
+	},
+
+	bindChange(e) {
+		const self = this;
+		self.data.searchItem.local_batch_name = self.data.bArray[e.detail.value];
+		self.setData({
+			web_bIndex: e.detail.value
+		});
+		self.getMainData(true)
+	},
+
+
 	changeType(e) {
 		const self = this;
 		var num = api.getDataSet(e, 'num')
@@ -49,9 +68,22 @@ Page({
 			self.data.searchItem.local_type_name = '文科'
 		};
 		self.setData({
-			num:self.data.num
+			num: self.data.num
 		})
 		self.getMainData(true)
+	},
+
+	onPullDownRefresh() {
+		const self = this;
+		wx.showNavigationBarLoading();
+		delete self.data.searchItem.local_batch_name;
+		delete self.data.searchItem.year;
+		self.setData({
+			web_bIndex: '',
+			web_yIndex: ''
+		});
+		self.getMainData(true)
+
 	},
 
 	getMainData(isNew) {
@@ -79,7 +111,7 @@ Page({
 					}
 				} else {
 					self.data.isLoadAll = true;
-					api.showToast('没有更多了', 'none')
+					api.showToast('暂无数据', 'none')
 				}
 				self.setData({
 					web_yArray: self.data.yArray,
@@ -90,7 +122,10 @@ Page({
 				api.buttonCanClick(self, true)
 				api.showToast(res.msg, 'none')
 			};
-
+			setTimeout(function() {
+				wx.hideNavigationBarLoading();
+				wx.stopPullDownRefresh();
+			}, 300);
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
 			console.log('getMainData', self.data.yArray)
 			console.log('getMainData', self.data.bArray)

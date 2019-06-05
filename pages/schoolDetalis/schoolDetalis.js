@@ -29,11 +29,21 @@ Page({
 
 		var collectSchoolData = api.getStorageArray('collectSchoolData');
 		self.data.isInCollectSchoolData = api.findItemInArray(collectSchoolData, 'id', self.data.id);
+		
+		
+		self.data.contrastsSchoolData = api.getStorageArray('contrastsSchoolData');
+		self.data.isInContrastsSchoolData = api.findItemInArray(self.data.contrastsSchoolData, 'id', self.data.id);
+		console.log(self.data.isInContrastsSchoolData)
 		self.getMainData();
 		self.setData({
+			web_contrastsSchoolData:self.data.contrastsSchoolData,
+			web_isInContrastsSchoolData: self.data.isInContrastsSchoolData,
 			web_isInCollectSchoolData: self.data.isInCollectSchoolData,
 		});
+		console.log('222',self.data.contrastsSchoolData)
 	},
+	
+
 
 	collect() {
 		const self = this;
@@ -46,8 +56,53 @@ Page({
 		var collectSchoolData = api.getStorageArray('collectSchoolData');
 		self.data.isInCollectSchoolData = api.findItemInArray(collectSchoolData, 'id', self.data.id);
 		self.setData({
+			
 			web_isInCollectSchoolData: self.data.isInCollectSchoolData,
 		});
+	},
+
+	contrasts() {
+		const self = this;
+		self.data.is_show = true;
+		if (self.data.isInContrastsSchoolData) {
+			api.delStorageArray('contrastsSchoolData', self.data.mainData, 'id');
+		} else {
+			if(self.data.contrastsSchoolData.length==2){
+				api.delStorageArray('contrastsSchoolData', self.data.contrastsSchoolData[0], 'id');
+				api.setStorageArray('contrastsSchoolData', self.data.mainData, 'id', 999);
+			}else{
+				api.setStorageArray('contrastsSchoolData', self.data.mainData, 'id', 999);
+			}
+			
+		};
+		self.data.contrastsSchoolData = api.getStorageArray('contrastsSchoolData');
+		self.data.isInContrastsSchoolData = api.findItemInArray(self.data.contrastsSchoolData, 'id', self.data.id);
+		self.setData({
+			web_contrastsSchoolData:self.data.contrastsSchoolData,
+			is_show: self.data.is_show,
+			web_isInContrastsSchoolData: self.data.isInContrastsSchoolData,
+		});
+	},
+	
+	delete(e){
+		const self = this;
+		var index = api.getDataSet(e,'index');
+		api.delStorageArray('contrastsSchoolData', self.data.contrastsSchoolData[index], 'id');
+		self.data.contrastsSchoolData = api.getStorageArray('contrastsSchoolData');
+		self.data.isInContrastsSchoolData = api.findItemInArray(self.data.contrastsSchoolData, 'id', self.data.id);
+		self.setData({
+			web_contrastsSchoolData:self.data.contrastsSchoolData,
+			web_isInContrastsSchoolData: self.data.isInContrastsSchoolData
+		});
+	},
+	
+	goContrasts(e){
+		const self = this;
+		if(self.data.contrastsSchoolData.length>=2){
+			api.pathTo(api.getDataSet(e, 'path'), 'nav');
+		}else{
+			api.showToast('无法对比','none')
+		}
 	},
 
 	showMore() {

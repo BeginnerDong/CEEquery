@@ -6,14 +6,14 @@
 	</view>
 </view>
 <block wx:for="{{web_mainData}}" wx:key="id">
-	<view class="list-two" bindtap="goDetail" data-path="/pages/schoolDetalis/schoolDetalis?id={{item.id}}">
+	<view class="list-two" bindtap="goDetail" data-path="/pages/schoolDetalis/schoolDetalis?id={{item.id}}" style="position: relative;">
 		 <view class="ilblock list-left">
 			<image src="{{'https://static-data.eol.cn/upload/logo/'+item.school_id+'.jpg'}}"></image>
 		 </view>
 		<view class="one-center ilblock">
 			<view>
 				<view class="one-title color1 font14 ilblock">{{item.name}}<text class="color2 font12" style="margin-left: 20rpx;">{{item.province_name}}</text> </view> 
-				<view class="flo-right color8 font12 ilblock" style="margin-top: 10rpx;">+加入对比</view>
+				
 			</view>
 			<view class="font12 one-color">
 				<view class="ilblock">{{item.type_name}}</view>
@@ -25,7 +25,9 @@
 				报名热度：{{item.rank.view_month}}
 			</view>
 		</view>
+<!-- 		 <view class=" color8 font12 " style="position: absolute;top:32rpx;right:32rpx;">+加入对比</view> -->
 	 </view>
+	
 	 <view class="he10"></view>
 </block>
  <view class="fixd" wx:if="{{is_show}}">
@@ -39,4 +41,18 @@
  		</view>
  	</view>
  </view>
- 
+<!-- <view class="contrast-box bg1" wx:if="{{is_show}}">
+ 	<view class="color1 font14 fat-font contrast-top">
+ 		<image class="flo-right" src="../../image/home-icon12.png" style="width: 14rpx;height: 14rpx;margin: 8rpx;" bindtap="show"></image>
+ 		对比栏
+ 	</view>
+ 	<view class="contrast color2 font11" style="display: flex;">
+ 		<view style="width:70%" class="avoidOverflow">{{web_contrastsSchoolData[0].name}}</view>
+ 		<view style="width:30%"  bindtap="delete" data-index="0"><image src="../../image/home-icon12.png" style="width: 12rpx;height: 12rpx; margin-left: 20rpx;"></image></view>
+ 	</view>
+ 	<view class="contrast color2 font11" style="display: flex;">
+ 		<view style="width:70%" class="avoidOverflow">{{web_contrastsSchoolData[1].name}}</view>
+ 		<view style="width:30%" bindtap="delete" data-index="1"><image src="../../image/home-icon12.png" style="width: 12rpx;height: 12rpx; margin-left: 20rpx;"></image></view>
+ 	</view>
+ 	<button class="contrast bg7 color5" style="border: none; border-radius: 10rpx;" bindtap="goContrasts" data-path="/pages/contrasts/contrasts">对比</button>
+ </view> -->

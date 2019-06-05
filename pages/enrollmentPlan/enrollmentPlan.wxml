@@ -20,16 +20,16 @@
  	 </view>
  	 <view class="btm-item ilblock">
  			<view class="font14">
- 				<picker bindchange="bindPickerChange" value="{{index}}" range="{{web_yArray}}">
- 					年份
+ 				<picker bindchange="bindYearChange" value="{{web_yIndex}}" range="{{web_yArray}}">
+ 					{{web_yIndex?web_yArray[web_yIndex]:'年份'}}
  				    <image src="../../image/volume-icon2.png"></image>
  				</picker>
  			</view>
  	</view>
  	  <view class="btm-item ilblock">
  	 		<view class="font14">
- 	 			<picker bindchange="bindPickerChange" value="{{index}}" range="{{web_bArray}}">
- 	 				批次
+ 	 			<picker bindchange="bindChange" value="{{web_bIndex}}" range="{{web_bArray}}">
+ 	 				{{web_bIndex?web_bArray[web_bIndex]:'批次'}}
  	 			    <image src="../../image/volume-icon2.png"></image>
  	 			</picker>
  	 		</view>

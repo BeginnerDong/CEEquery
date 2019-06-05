@@ -1,0 +1,92 @@
+
+   
+<view class="box">
+	<view class="tabe color2 font13">
+		<view class="th color1">
+			<view class="td" style="width:20%">学校名称</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[0].name}}</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[1].name}}</view>
+		</view>
+		<view class="th color1">
+			<view class="td" style="width:20%">报考热度</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[0].rank.view_month}}</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[1].rank.view_month}}</view>
+		</view>
+		<view class="th color1">
+			<view class="td" style="width:20%">所属地区</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[0].province_name}}</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[1].province_name}}</view>
+		</view>
+		<view class="th color1">
+			<view class="td" style="width:20%">办学性质</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[0].school_nature_name}}</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[1].school_nature_name}}</view>
+		</view>
+		<view class="th color1">
+			<view class="td" style="width:20%">学历层次</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[0].school_type_name}}</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[1].school_type_name}}</view>
+		</view>
+		<view class="th color1">
+			<view class="td" style="width:20%">院校类型</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[0].type_name}}</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[1].type_name}}</view>
+		</view>
+		<view class="th color1">
+			<view class="td" style="width:20%">211</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[0].f211==1?'是':'否'}}</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[1].f211==1?'是':'否'}}</view>
+		</view>
+		<view class="th color1">
+			<view class="td" style="width:20%">985</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[0].f985==1?'是':'否'}}</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[1].f985==1?'是':'否'}}</view>
+		</view>
+		<view class="th color1">
+			<view class="td" style="width:20%">教育部直属</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[0].department==1?'是':'否'}}</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[1].department==1?'是':'否'}}</view>
+		</view>
+		<view class="th color1">
+			<view class="td" style="width:20%">中央部委</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[0].central==1?'是':'否'}}</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[1].central==1?'是':'否'}}</view>
+		</view>
+		<view class="th color1">
+			<view class="td" style="width:20%">硕士点数量</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[0].num_master}}</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[1].num_master}}</view>
+		</view>
+		<view class="th color1">
+			<view class="td" style="width:20%">博士点数量</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[0].num_doctor}}</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[1].num_doctor}}</view>
+		</view>
+		<view class="th color1">
+			<view class="td" style="width:20%">院士数量</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[0].num_academician}}</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[1].num_academician}}</view>
+		</view>
+		<view class="th color1">
+			<view class="td" style="width:20%">重点学科数</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[0].num_subject}}</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[1].num_subject}}</view>
+		</view>
+		<view class="th color1">
+			<view class="td" style="width:20%">双一流院校</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[0].dual_class_name}}</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[1].dual_class_name}}</view>
+		</view>
+		<view class="th color1">
+			<view class="td" style="width:20%">自主招生点</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[0].admissions ==1?'是':'否'}}</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[1].admissions ==1?'是':'否'}}</view>
+		</view>
+		<view class="th color1">
+			<view class="td" style="width:20%">实验室数量</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[0].num_lab}}</view>
+			<view class="td" style="width:40%;background: #fff;">{{web_mainData[1].num_lab}}</view>
+		</view>
+	</view>
+</view>
+ 

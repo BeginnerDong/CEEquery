@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "省录取分数线"
+  "navigationBarTitleText": "省录取分数线",
+	"enablePullDownRefresh": true
 }
