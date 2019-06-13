@@ -24,9 +24,11 @@ Page({
 		mainData: [],
 		isFirstLoadAllStandard: ['getMainData'],
 		searchItem: {
-			local_type_name: '理科',
 			thirdapp_id: 2,
-		}
+		},
+		yearIndex:0,
+		batchIndex:0,
+		type:'理科'
 	},
 
 
@@ -41,20 +43,20 @@ Page({
 
 	bindYearChange(e) {
 		const self = this;
-		self.data.searchItem.year = self.data.yArray[e.detail.value];
+		self.data.yearIndex = e.detail.value;
 		self.setData({
-			web_yIndex: e.detail.value
+			web_yearIndex: e.detail.value
 		});
-		self.getMainData(true)
+		self.changeContent()
 	},
 
 	bindChange(e) {
 		const self = this;
-		self.data.searchItem.local_batch_name = self.data.bArray[e.detail.value];
+		self.data.batchIndex = e.detail.value;
 		self.setData({
-			web_bIndex: e.detail.value
+			web_batchIndex: e.detail.value
 		});
-		self.getMainData(true)
+		self.changeContent()
 	},
 
 
@@ -63,14 +65,33 @@ Page({
 		var num = api.getDataSet(e, 'num')
 		self.data.num = num;
 		if (num == 0) {
-			self.data.searchItem.local_type_name = '理科'
+			self.data.type = '理科'
 		} else if (num == 1) {
-			self.data.searchItem.local_type_name = '文科'
+			self.data.type = '文科'
 		};
 		self.setData({
 			num: self.data.num
 		})
-		self.getMainData(true)
+		self.changeContent()
+	},
+	
+	changeContent(){
+		const self = this;
+		var newData = [];
+		var year = self.data.yArray[self.data.yearIndex];
+		var batch = self.data.bArray[self.data.batchIndex];
+		var type = self.data.type;
+		console.log('type',type)
+		console.log('self.data.mainData',self.data.mainData)
+		for(var i = 0;i<self.data.mainData.length;i++){
+			if(self.data.mainData[i].year==year&&self.data.mainData[i].local_type_name==type&&self.data.mainData[i].local_batch_name==batch){
+				newData.push(self.data.mainData[i]);
+			};
+		};
+		console.log('newData',newData);
+		self.setData({
+			web_mainData:newData
+		})
 	},
 
 	onPullDownRefresh() {
@@ -93,7 +114,7 @@ Page({
 		};
 		const postData = {};
 		// postData.tokenFuncName = 'getProjectToken';
-		postData.paginate = api.cloneForm(self.data.paginate);
+		//postData.paginate = api.cloneForm(self.data.paginate);
 		postData.searchItem = api.cloneForm(self.data.searchItem);
 		postData.searchItem.school_id = self.data.id;
 		const callback = (res) => {
@@ -112,12 +133,19 @@ Page({
 				} else {
 					self.data.isLoadAll = true;
 					api.showToast('暂无数据', 'none')
-				}
+				};
+				console.log('(self.data.yArray',self.data.yArray);
+				if(self.data.yArray.indexOf(2018) != -1){
+					self.data.yearIndex = self.data.yArray.indexOf(2018);
+				};
+				
 				self.setData({
+					web_yearIndex:self.data.yearIndex,
+					web_batchIndex:self.data.batchIndex,
 					web_yArray: self.data.yArray,
-					web_bArray: self.data.bArray,
-					web_mainData: self.data.mainData,
+					web_bArray: self.data.bArray,	
 				});
+				self.changeContent();
 			} else {
 				api.buttonCanClick(self, true)
 				api.showToast(res.msg, 'none')
@@ -136,10 +164,10 @@ Page({
 
 	onReachBottom() {
 		const self = this;
-		if (!self.data.isLoadAll && self.data.buttonCanClick) {
+		/* if (!self.data.isLoadAll && self.data.buttonCanClick) {
 			self.data.paginate.currentPage++;
 			self.getMainData();
-		};
+		}; */
 	},
 
 
