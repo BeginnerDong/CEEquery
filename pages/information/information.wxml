@@ -1,10 +1,10 @@
-<!-- <view class="top">
+<view class="top">
 	<view class="topRight ilblock radiu40 bg1 hiden">
 		<image src="../../image/search-icon1.png" style="width: 28rpx; height: 28rpx;"></image>
-		<input class="color3 font11 ilblock" placeholder="请输入您想要查询的专业"/>
-		<button class="ilblock color5 bg7 font13 search-box flo-right">搜索</button>
+		<input class="color3 font11 ilblock" placeholder="根据文章标题模糊搜索"  data-key="title" bindblur="changeBind" value="{{web_submitData.title}}"/>
+		<button class="ilblock color5 bg7 font13 search-box flo-right" bindtap="search">搜索</button>
 	</view>
-</view> -->
+</view>
 <view class="top-two bg1">
 	 <view class="top-item ilblock  {{currentId == 0?'top-itemstar':''}}" data-id="0" bindtap="{{web_buttonCanClick?'tab':''}}">
 		 <view class="font15">
@@ -43,7 +43,7 @@
 		<view class="nav_img">
 			<image src="../../image/nabar2-a.png"></image>
 		</view>
-		<view class="text this-text">资讯</view>
+		<view class="text this-text">简章</view>
 	</view>
 	<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/questionBank/questionBank">
 		<view class="nav_img">

@@ -15,7 +15,10 @@ Page({
 		mainData: [],
 		labelData:[],
 		isFirstLoadAllStandard: ['getMainData'],
-		isShowMore: false
+		isShowMore: false,
+		submitData:{
+			title:''
+		}
 	},
 
 	onLoad(options) {
@@ -27,6 +30,34 @@ Page({
 		self.data.searchItem.menu_id = self.data.currentId;
 		self.getMainData();
 		self.getLabelData()
+	},
+	
+	changeBind(e) {
+		const self = this;
+		if (api.getDataSet(e, 'value')) {
+			self.data.submitData[api.getDataSet(e, 'key')] = api.getDataSet(e, 'value');
+		} else {
+			api.fillChange(e, self, 'submitData');
+		};
+		self.setData({
+			web_submitData: self.data.submitData,
+		});
+		console.log(self.data.submitData)
+	},
+	
+	search(){
+		const self = this;
+		if(self.data.submitData.title==''){
+			api.showToast('请输入搜索条件','none')
+		}else{
+			wx.navigateTo({
+				url:'/pages/search/search?title='+self.data.submitData.title
+			});
+			self.data.submitData.title = '';
+			self.setData({
+				web_submitData:self.data.submitData
+			})
+		}
 	},
 
 	getLabelData() {
@@ -52,10 +83,16 @@ Page({
 		const callback = (res) => {
 			if (res.info.data.length > 0) {
 				self.data.labelData.push.apply(self.data.labelData, res.info.data);
+				if(res.info.data.length<4){  
+				  self.data.viewWidth = (100/(res.info.data.length)).toString()+'%';
+				}else{
+				  self.data.viewWidth = '25'+'%'
+				};
 			}
 			api.buttonCanClick(self, true);
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getLabelData', self);
 			self.setData({
+				web_viewWidth:self.data.viewWidth,
 				web_labelData: self.data.labelData,
 			});
 		};
@@ -74,13 +111,16 @@ Page({
 		const callback = (res) => {
 			if (res.info.data.length > 0) {
 				self.data.mainData.push.apply(self.data.mainData, res.info.data);
+				
 			} else {
 				self.data.isLoadAll = true;
 				api.showToast('没有更多了', 'fail');
 			};
+			console.log(self.data.viewWidth)
 			api.buttonCanClick(self, true);
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
 			self.setData({
+				
 				web_mainData: self.data.mainData,
 			});
 		};

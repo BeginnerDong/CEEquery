@@ -63,7 +63,7 @@
 			<view class="nav_img">
 				<image src="../../image/nabar2.png"></image>
 			</view>
-			<view class="text">资讯</view>
+			<view class="text">简章</view>
 		</view>
 		<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/questionBank/questionBank">
 			<view class="nav_img">

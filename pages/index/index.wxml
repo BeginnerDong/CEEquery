@@ -68,6 +68,10 @@
 	</view>
 </view>
 <view class="bg2 he20" style="margin: 50rpx 0rpx 0rpx;"></view>
+<view class="line">
+	<view class="color1 font15 line-red fat-font ilblock">知分预测大学</view>
+	
+</view>
 <view class="info-box bg1">
 	<view class="info bg1 radiu15">
 		<view class="bg2 color2 font14 info-top">
@@ -130,10 +134,15 @@
 <view style="width: 100%;height: 120rpx;"></view>
 
 <view class="fixd" wx:if="{{is_show}}">
+	
 	<view class="bg1 fixd-box radiu15">
 		<view>
 			<image class="flo-right" src="../../image/details-icon1.png" style="width: 36rpx;height: 36rpx" bindtap="show"></image>
 		</view>
+		<view class="vip-img">
+			<image  src="../../image/home-img.png"></image>
+		</view>
+		
 		<view class="font15 color1" style="text-align: center; margin: 100rpx 0rpx 0rpx;">加入会员开通所有权限</view>
 		<view class="font13">
 			<button class="bg7" bindtap="intoPath" data-path="/pages/Vip/Vip">立即购买</button>
@@ -154,7 +163,7 @@
 		<view class="nav_img">
 			<image src="../../image/nabar2.png"></image>
 		</view>
-		<view class="text">资讯</view>
+		<view class="text">简章</view>
 	</view>
 	<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/questionBank/questionBank">
 		<view class="nav_img">

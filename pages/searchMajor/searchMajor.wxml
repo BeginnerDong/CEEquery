@@ -17,7 +17,8 @@
 			<view class="td">专业名称</view>
 			<view class="td">报考热度</view>
 			<view class="td">层次</view>
-			<view class="td last-td">专业详情</view>
+			<view class="td">专业详情</view>
+			<view class="td">开设院校</view>
 		</view>
 		<view style="width: 100%;border:solid 1rpx #F5F5F5;display: flex;" wx:for="{{web_mainData}}">
 			<view class="td4 font12">
@@ -28,20 +29,27 @@
 					<view class="td">{{c_value.name}}</view>
 					<view class="td">全国{{c_value.rankall}}{{web_type}}{{c_value.rank_type}}</view>
 					<view class="td">{{c_value.level1_name}}</view>
-					<view class="td last-td" bindtap="goDetail" data-path="/pages/majorDetalis/majorDetalis?id={{c_value.id}}">点击查看</view>
+					<view class="td last-td" bindtap="goDetail" data-path="/pages/majorDetalis/majorDetalis?id={{c_value.special_id}}">点击查看</view>
+					<view class="td last-td" bindtap="goDetail" data-path="/pages/majorSchool/majorSchool?id={{c_value.special_id}}">点击查看</view>
 				</view>
 			</view>
 		</view>
 	</view>
 </view>
- <view class="fixd" wx:if="{{is_show}}">
- 	<view class="bg1 fixd-box radiu15">
- 		<view>
- 			<image class="flo-right" src="../../image/details-icon1.png" style="width: 36rpx;height: 36rpx" bindtap="show"></image>
- 		</view>
- 		<view class="font15 color1" style="text-align: center; margin: 100rpx 0rpx 0rpx;">加入会员开通所有权限</view>
- 		<view class="font13">
- 			<button class="bg7" bindtap="intoPath" data-path="/pages/Vip/Vip">立即购买</button>
- 		</view>
- 	</view>
- </view>
+
+<view class="fixd" wx:if="{{is_show}}">
+	
+	<view class="bg1 fixd-box radiu15">
+		<view>
+			<image class="flo-right" src="../../image/details-icon1.png" style="width: 36rpx;height: 36rpx" bindtap="show"></image>
+		</view>
+		<view class="vip-img">
+			<image  src="../../image/home-img.png"></image>
+		</view>
+		
+		<view class="font15 color1" style="text-align: center; margin: 100rpx 0rpx 0rpx;">加入会员开通所有权限</view>
+		<view class="font13">
+			<button class="bg7" bindtap="intoPath" data-path="/pages/Vip/Vip">立即购买</button>
+		</view>
+	</view>
+</view>

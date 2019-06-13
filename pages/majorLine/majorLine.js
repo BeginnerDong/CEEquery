@@ -21,6 +21,7 @@ Page({
 		index: 0,
 		num: 0,
 		mainData: [],
+		yearData:[],
 		isFirstLoadAllStandard: ['getMainData'],
 		searchItem: {
 			local_type_name: '理科',
@@ -35,7 +36,10 @@ Page({
 		const self = this;
 		api.commonInit(self);
 		self.data.id = options.id;
-		self.getMainData()
+		self.getMainData();
+		self.setData({
+			web_yArray: self.data.yArray,
+		});
 	},
 
 	changeType(e) {
@@ -59,7 +63,19 @@ Page({
 		self.setData({
 			web_yIndex: e.detail.value
 		});
-		self.getMainData(true)
+		self.changeYearData(self.data.yArray[e.detail.value])
+	},
+	changeYearData(year){
+		const self = this;
+		self.data.yearData = [];
+		for (var i = 0; i < self.data.mainData.length; i++) {
+			if (self.data.mainData[i].year == year) {
+				self.data.yearData.push(self.data.mainData[i])
+			};
+		};
+		self.setData({
+			web_yearData:self.data.yearData
+		});
 	},
 	
 	onPullDownRefresh() {
@@ -87,20 +103,35 @@ Page({
 			if (res.solely_code == 100000) {
 				api.buttonCanClick(self, true)
 				if (res.info.data.length > 0) {
+					
 					self.data.mainData.push.apply(self.data.mainData, res.info.data);
 					for (var i = 0; i < self.data.mainData.length; i++) {
 						if (self.data.yArray.indexOf(self.data.mainData[i].year) == -1) {
-							self.data.yArray.push(self.data.mainData[i].year)
-						}
-					}
+							self.data.yArray.push(self.data.mainData[i].year);
+						};
+					};
+					
+					var exist = self.data.yArray.indexOf(2018);
+					if(exist> -1){
+						self.setData({
+							web_yIndex: exist
+						});
+						self.changeYearData(2018)
+					}else{
+						self.setData({
+							web_yIndex: 0
+						});
+						self.changeYearData(self.data.yArray[0])
+					};
+					
+					self.setData({
+						web_yArray: self.data.yArray,
+					});
 				} else {
 					self.data.isLoadAll = true;
 					api.showToast('暂无数据', 'none')
 				}
-				self.setData({
-					web_yArray: self.data.yArray,
-					web_mainData: self.data.mainData,
-				});
+				
 			} else {
 				api.buttonCanClick(self, true)
 				api.showToast(res.msg, 'none')
@@ -112,6 +143,7 @@ Page({
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
 			console.log('getMainData', self.data.yArray)
 			console.log('getMainData', self.data.bArray)
+			console.log('MainData', self.data.mainData)
 		};
 		api.schoolSpecialScoreGet(postData, callback);
 	},

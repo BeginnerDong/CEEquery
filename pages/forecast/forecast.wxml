@@ -16,7 +16,7 @@
 	 </view>
  </view>
  <block wx:for = "{{web_mainData}}" wx:key="id">
-	 <view class="list-two" bindtap="intoPath" data-path="/pages/schoolDetalis/schoolDetalis">
+	 <view class="list-two" bindtap="intoPath" data-path="/pages/schoolDetalis/schoolDetalis?id={{item.school_id}}">
 		 <view class="ilblock list-left">
 			 <view class="list-img">
 				<image src="{{'https://static-data.eol.cn/upload/logo/'+item.school_id+'.jpg'}}"></image>

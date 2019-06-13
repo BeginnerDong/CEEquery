@@ -28,11 +28,11 @@ Page({
 		self.data.id = options.id;
 
 		var collectSchoolData = api.getStorageArray('collectSchoolData');
-		self.data.isInCollectSchoolData = api.findItemInArray(collectSchoolData, 'id', self.data.id);
+		self.data.isInCollectSchoolData = api.findItemInArray(collectSchoolData, 'school_id', self.data.id);
 		
-		
+		console.log('22',self.data.isInCollectSchoolData)
 		self.data.contrastsSchoolData = api.getStorageArray('contrastsSchoolData');
-		self.data.isInContrastsSchoolData = api.findItemInArray(self.data.contrastsSchoolData, 'id', self.data.id);
+		self.data.isInContrastsSchoolData = api.findItemInArray(self.data.contrastsSchoolData, 'school_id', self.data.id);
 		console.log(self.data.isInContrastsSchoolData)
 		self.getMainData();
 		self.setData({
@@ -49,12 +49,12 @@ Page({
 		const self = this;
 
 		if (self.data.isInCollectSchoolData) {
-			api.delStorageArray('collectSchoolData', self.data.mainData, 'id');
+			api.delStorageArray('collectSchoolData', self.data.mainData, 'school_id');
 		} else {
-			api.setStorageArray('collectSchoolData', self.data.mainData, 'id', 999);
+			api.setStorageArray('collectSchoolData', self.data.mainData, 'school_id', 999);
 		};
 		var collectSchoolData = api.getStorageArray('collectSchoolData');
-		self.data.isInCollectSchoolData = api.findItemInArray(collectSchoolData, 'id', self.data.id);
+		self.data.isInCollectSchoolData = api.findItemInArray(collectSchoolData, 'school_id', self.data.id);
 		self.setData({
 			
 			web_isInCollectSchoolData: self.data.isInCollectSchoolData,
@@ -65,18 +65,18 @@ Page({
 		const self = this;
 		self.data.is_show = true;
 		if (self.data.isInContrastsSchoolData) {
-			api.delStorageArray('contrastsSchoolData', self.data.mainData, 'id');
+			api.delStorageArray('contrastsSchoolData', self.data.mainData, 'school_id');
 		} else {
 			if(self.data.contrastsSchoolData.length==2){
-				api.delStorageArray('contrastsSchoolData', self.data.contrastsSchoolData[0], 'id');
-				api.setStorageArray('contrastsSchoolData', self.data.mainData, 'id', 999);
+				api.delStorageArray('contrastsSchoolData', self.data.contrastsSchoolData[0], 'school_id');
+				api.setStorageArray('contrastsSchoolData', self.data.mainData, 'school_id', 999);
 			}else{
-				api.setStorageArray('contrastsSchoolData', self.data.mainData, 'id', 999);
+				api.setStorageArray('contrastsSchoolData', self.data.mainData, 'school_id', 999);
 			}
 			
 		};
 		self.data.contrastsSchoolData = api.getStorageArray('contrastsSchoolData');
-		self.data.isInContrastsSchoolData = api.findItemInArray(self.data.contrastsSchoolData, 'id', self.data.id);
+		self.data.isInContrastsSchoolData = api.findItemInArray(self.data.contrastsSchoolData, 'school_id', self.data.id);
 		self.setData({
 			web_contrastsSchoolData:self.data.contrastsSchoolData,
 			is_show: self.data.is_show,
@@ -87,9 +87,9 @@ Page({
 	delete(e){
 		const self = this;
 		var index = api.getDataSet(e,'index');
-		api.delStorageArray('contrastsSchoolData', self.data.contrastsSchoolData[index], 'id');
+		api.delStorageArray('contrastsSchoolData', self.data.contrastsSchoolData[index], 'school_id');
 		self.data.contrastsSchoolData = api.getStorageArray('contrastsSchoolData');
-		self.data.isInContrastsSchoolData = api.findItemInArray(self.data.contrastsSchoolData, 'id', self.data.id);
+		self.data.isInContrastsSchoolData = api.findItemInArray(self.data.contrastsSchoolData, 'school_id', self.data.id);
 		self.setData({
 			web_contrastsSchoolData:self.data.contrastsSchoolData,
 			web_isInContrastsSchoolData: self.data.isInContrastsSchoolData
@@ -127,7 +127,7 @@ Page({
 		// postData.tokenFuncName = 'getProjectToken';
 		postData.searchItem = {
 			thirdapp_id: 2,
-			id: self.data.id
+			school_id: self.data.id
 		};
 		postData.getAfter = {
 			special: {

@@ -71,8 +71,14 @@ Page({
 
 	changeSearch(e) {
 		const self = this;
-		api.buttonCanClick(self);
+		
 		if (self.data.searchItem.level2_name != api.getDataSet(e, 'name')) {
+			if(self.data.buttonCanClick){
+				api.buttonCanClick(self);
+			}else{
+				return;
+			};
+			
 			self.data.searchItem.level2_name = api.getDataSet(e, 'name');
 			self.data.isShow = false;
 

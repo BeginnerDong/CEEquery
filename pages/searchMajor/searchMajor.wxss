@@ -48,7 +48,7 @@ page{
 }
 .td{
 	
-	width: 19.4%;
+	width: 16.4%;
 	display: inline-block;
 	text-align: center;
 	font-size: 24rpx;
@@ -56,7 +56,7 @@ page{
 }
 .td4{
 
-	width: 19.4%;
+	width: 16.4%;
 	align-items:center;
 	justify-content:center;
 	display:flex;
@@ -65,7 +65,7 @@ page{
 }
 .td-more{
 	
-	width: 79.4%;
+	width: 82.4%;
 	border: solid 1rpx #F5F5F5;
 }
 .td-more .tr{
@@ -96,10 +96,12 @@ page{
 }
 .fixd-box{
 	width:90%;
-	height: 400rpx;
-	margin: 50% 5%;
-	box-sizing: border-box;
-	padding: 30rpx;
+	height:80%;
+	box-sizing:border-box;
+	padding:30rpx;
+	position:absolute;
+	top:10%;
+	left:5%;
 }
 .fixd-box button{
 	display: inline-block;
@@ -107,6 +109,14 @@ page{
 	height: 70rpx;
 	line-height:70rpx;
 	margin: 80rpx 30%;
+}
+.vip-img{
+	width:100%;
+	display: flex;
+	justify-content: center;
+}
+.vip-img image{
+	width:70%
 }
 
 

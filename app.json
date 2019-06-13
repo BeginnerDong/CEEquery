@@ -24,7 +24,9 @@
     "pages/forecast/forecast",
     "pages/majorDetalis/majorDetalis",
 		"pages/zixunketang/zixunketang",
-		"pages/contrasts/contrasts"
+		"pages/contrasts/contrasts",
+		"pages/search/search",
+		"pages/majorSchool/majorSchool"
   ],
   "window": {
     "backgroundTextStyle": "light",

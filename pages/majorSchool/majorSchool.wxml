@@ -1,10 +1,10 @@
-<view class="top">
+<!-- <view class="top">
 	<view class="topRight ilblock radiu40 bg1 hiden">
 		<image src="../../image/search-icon1.png" style="width: 28rpx; height: 28rpx;"></image>
 		<input class="color3 font11 ilblock" placeholder="请输入您想要查询的大学" bindchange="changeBind" data-key="item" value="{{web_sForm.item}}"/>
 		<button class="ilblock color5 bg7 font13 search-box flo-right" bindtap="search">搜索</button>
 	</view>
-</view>
+</view> -->
 <block wx:for="{{web_mainData}}" wx:key="id">
 	<view class="list-two"  style="position: relative;">
 		 <view class="ilblock list-left" bindtap="goDetail" data-path="/pages/schoolDetalis/schoolDetalis?id={{item.school_id}}">
@@ -25,7 +25,7 @@
 				报名热度：{{item.rank.view_month}}
 			</view>
 		</view>
-		 <view class=" color8 font12 " style="position: absolute;top:32rpx;right:32rpx;" bindtap="contrasts" data-index="{{index}}">{{item.isInContrastsSchoolData?'取消对比':'+加入对比'}}</view>
+		<view class=" color8 font12 " style="position: absolute;top:32rpx;right:32rpx;" bindtap="contrasts" data-index="{{index}}">{{item.isInContrastsSchoolData?'取消对比':'+加入对比'}}</view>
 	 </view>
 	
 	 <view class="he10"></view>

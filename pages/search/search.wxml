@@ -1,0 +1,14 @@
+
+<block wx:for="{{web_mainData}}" wx:key="id">
+	<view class="list-two" bindtap="intoPath" data-path="/pages/commentDetails/commentDetails?id={{item.id}}">
+		<view class="ilblock list-left">
+			<view class="font14 coloe1" style="height: 120rpx;">{{item.title}}</view>
+			<view class="color3 font12">{{item.create_time}}</view>
+		</view>
+		<view class="ilblock flo-right">
+			<image src="{{item.mainImg[0].url}}"></image>
+		</view>
+	</view>
+	<view class="he10"></view>
+</block>
+ 

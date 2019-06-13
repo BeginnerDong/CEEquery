@@ -153,7 +153,7 @@ class Api extends Base {
 
 	planGet(param, callback) {
 		var allParams = {
-			url: 'Common/Plan/get',
+			url: 'Common/PlanTwo/get',
 			type: 'post',
 			data: param,
 			sCallback: function(data) {

@@ -45,7 +45,38 @@ page{
 	top: -6rpx;
 }
 
-
+.fixd{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+	top: 0rpx;
+	z-index: 1000;
+}
+.fixd-box{
+	width:90%;
+	height:80%;
+	box-sizing:border-box;
+	padding:30rpx;
+	position:absolute;
+	top:10%;
+	left:5%;
+}
+.fixd-box button{
+	display: inline-block;
+	width: 40%;
+	height: 70rpx;
+	line-height:70rpx;
+	margin: 80rpx 30%;
+}
+.vip-img{
+	width:100%;
+	display: flex;
+	justify-content: center;
+}
+.vip-img image{
+	width:70%
+}
 
 
 

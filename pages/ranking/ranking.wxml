@@ -59,7 +59,7 @@
 			<view class="td">人气值</view>
 		</view>
 		<block wx:for="{{web_mainData}}" wx:key="id">
-			<view class="tr" bindtap="intoPath" data-path="/pages/schoolDetalis/schoolDetalis?id={{item.id}}">
+			<view class="tr"  bindtap="goDetail" data-path="/pages/schoolDetalis/schoolDetalis?id={{item.school_id}}">
 				<view class="td">{{index+1}}</view>
 				<view class="td avoidOverflow" style="width:23.7%">{{item.name}}</view>
 				<view class="td" style="width:15.7%">{{item.province_name}}</view>
@@ -79,7 +79,7 @@
 			<view class="td">人气值</view>
 		</view>
 		<block wx:for="{{web_mainData}}" wx:key="id">
-			<view class="tr" bindtap="intoPath" data-path="/pages/majorDetalis/majorDetalis?id={{item.id}}">
+			<view class="tr" bindtap="goDetail" data-path="/pages/majorDetalis/majorDetalis?id={{item.special_id}}">
 				<view class="td">{{index+1}}</view>
 				<view class="td avoidOverflow" style="width:23.7%">{{item.name}}</view>
 				<view class="td" style="width:15.7%">{{item.level1_name}}</view>
@@ -87,5 +87,21 @@
 				<view class="td">{{item.view_month}}</view>
 			</view>
 		</block>
+	</view>
+</view>
+<view class="fixd" wx:if="{{is_show}}">
+	
+	<view class="bg1 fixd-box radiu15">
+		<view>
+			<image class="flo-right" src="../../image/details-icon1.png" style="width: 36rpx;height: 36rpx" bindtap="show"></image>
+		</view>
+		<view class="vip-img">
+			<image  src="../../image/home-img.png"></image>
+		</view>
+		
+		<view class="font15 color1" style="text-align: center; margin: 100rpx 0rpx 0rpx;">加入会员开通所有权限</view>
+		<view class="font13">
+			<button class="bg7" bindtap="intoPath" data-path="/pages/Vip/Vip">立即购买</button>
+		</view>
 	</view>
 </view>

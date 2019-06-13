@@ -1,7 +1,14 @@
+<view class="top">
+	<view class="topRight ilblock radiu40 bg1 hiden">
+		<image src="../../image/search-icon1.png" style="width: 28rpx; height: 28rpx;"></image>
+		<input class="color3 font11 ilblock" placeholder="根据文章标题模糊搜索"  data-key="title" bindblur="changeBind" value="{{web_submitData.title}}"/>
+		<button class="ilblock color5 bg7 font13 search-box flo-right" bindtap="search">搜索</button>
+	</view>
+</view>
 <scroll-view scroll-x="true" style="white-space: nowrap;">
 	<view class="top-two bg1">
 		<block wx:for="{{web_labelData}}" wx:key="id">
-			<view style="width:25%" class="top-item ilblock {{currentId==item.id?'top-itemstar':''}}" data-id="{{item.id}}" bindtap="{{web_buttonCanClick?'tab':''}}">
+			<view style="width:{{web_viewWidth}}" class="top-item ilblock {{currentId==item.id?'top-itemstar':''}}" data-id="{{item.id}}" bindtap="{{web_buttonCanClick?'tab':''}}">
 				 <view class="font15">
 					 {{item.title}}
 				 </view>

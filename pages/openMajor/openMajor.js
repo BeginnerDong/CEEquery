@@ -39,7 +39,7 @@ Page({
 				// postData.tokenFuncName = 'getProjectToken';
 				postData.searchItem = {
 					thirdapp_id: 2,
-					id: self.data.id
+					special_id: self.data.id
 				};
 				const callback = (res) => {
 						if (res.solely_code == 100000) {
@@ -53,7 +53,7 @@ Page({
 								});
 							} else {
 								api.buttonCanClick(self, true)
-								api.showToast(res.msg, 'none')
+								api.showToast('暂无数据', 'none')
 							};
 
 							api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);

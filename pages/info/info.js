@@ -17,21 +17,36 @@ Page({
 			school:'',
 			class:''
 		},
-		buttonCanClick:true
+		isFirstLoadAllStandard: ['userInfoGet'],
 	},
 
 
 
 	onLoad() {
 		const self = this;
-		self.setData({
-			web_buttonCanClick:self.data.buttonCanClick
-		})
-
+		api.commonInit(self);
+		self.userInfoGet();
 	},
 
 
-	
+	userInfoGet() {
+		const self = this;
+		const postData = {};
+		postData.tokenFuncName = 'getProjectToken';
+		const callback = (res) => {		
+			if(res.solely_code==100000){
+				self.data.submitData.name = res.info.data[0].name;
+				self.data.submitData.phone = res.info.data[0].phone;
+				self.data.submitData.school = res.info.data[0].school;
+				self.data.submitData.class = res.info.data[0].class;
+			};
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'userInfoGet', self);
+			self.setData({
+				web_submitData:self.data.submitData
+			})
+		};
+		api.userInfoGet(postData, callback);
+	},
 
 
 	changeBind(e) {
@@ -91,7 +106,7 @@ Page({
 		postData.data = api.cloneForm(self.data.submitData);
 		const callback = (data) => {		
 			if (data.solely_code == 100000) {			
-				api.showToast('完善成功', 'none');			
+				api.showToast('完善成功', 'none');	
 				wx.navigateBack({
 					delta:1
 				})

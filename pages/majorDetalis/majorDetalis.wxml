@@ -10,17 +10,17 @@
 		</view>
 		<view class="info-list font13 color2">
 			<view class="list-left ilblock">
-				授予学位：{{web_mainData.degree}}
+				授予学位：{{web_mainData.degree?web_mainData.degree:'无'}}
 			</view>
 			<view class="list-right ilblock">
 				修业年限：{{web_mainData.limit_year}}
 			</view>
 		</view>
 		<view class="info-list font13 color2">
-			<view class="list-left ilblock">
+			<view class="list-left ilblock avoidOverflow">
 				学科门类：{{web_mainData.type}}
 			</view>
-			<view class="list-right ilblock">
+			<view class="list-right ilblock avoidOverflow">
 				专业类：{{web_mainData.type_detail}}
 			</view>
 		</view>
@@ -34,7 +34,7 @@
 </view>
 <view class="he10" style="margin-top: 40rpx;"></view>
 <view class="line">
-	<view class="color1 font15 line-red fat-font">学院简介</view>
+	<view class="color1 font15 line-red fat-font">专业简介</view>
 </view>
 <view class="blue font14 color8" style="margin-top: 30rpx;">是什么</view>
 <view class="text color2 font12">

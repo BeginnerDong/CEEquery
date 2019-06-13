@@ -21,7 +21,7 @@
  	 <view class="btm-item ilblock">
  	 		<view class="font14">
  	 			<picker bindchange="bindYearChange" value="{{index}}" range="{{web_yArray}}">
- 	 				{{web_yIndex?web_yArray[web_yIndex]:'时间'}}
+ 	 				{{web_yArray?web_yArray[web_yIndex]:'时间'}}
  	 			    <image src="../../image/volume-icon2.png"></image>
  	 			</picker>
  	 		</view>
@@ -39,7 +39,7 @@
 			<view class="td">录取批次</view>
 			
 		</view>
-		<block wx:for="{{web_mainData}}" wx:key="id">
+		<block wx:for="{{web_yearData}}" wx:key="id">
 			<view class="tr">
 				<view class="td">{{item.spname}}</view>
 				<view class="td">{{item.max}}</view>

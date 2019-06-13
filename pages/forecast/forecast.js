@@ -26,6 +26,9 @@ Page({
 
 	onLoad: function(options) {
 		const self = this;
+		wx.setNavigationBarTitle({
+			title: '知分预测',
+		});
 		api.commonInit(self);
 		if(options.score&&options.type){
 			self.data.type = options.type
@@ -47,7 +50,7 @@ Page({
 		self.data.num = num;
 		if (num == 0) {
 			self.data.searchItem.min = ['between',[self.data.score-10,parseInt(self.data.score)]];
-			 self.data.searchItem.min = ['not in',[0]]
+			
 		}else if (num == 1) {
 			self.data.searchItem.min = ['between',[self.data.score-50,self.data.score-20]] 
 		}else if(num==2){

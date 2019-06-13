@@ -29,7 +29,7 @@ Page({
 		self.data.id = options.id;
 
 		var collectSpecialData = api.getStorageArray('collectSpecialData');
-		self.data.isInCollectSpecialData = api.findItemInArray(collectSpecialData, 'id', self.data.id);
+		self.data.isInCollectSpecialData = api.findItemInArray(collectSpecialData, 'special_id', self.data.id);
 		self.getMainData();
 		self.setData({
 			web_isInCollectSpecialData: self.data.isInCollectSpecialData,
@@ -41,12 +41,12 @@ Page({
 		const self = this;
 
 		if (self.data.isInCollectSpecialData) {
-			api.delStorageArray('collectSpecialData', self.data.mainData, 'id');
+			api.delStorageArray('collectSpecialData', self.data.mainData, 'special_id');
 		} else {
-			api.setStorageArray('collectSpecialData', self.data.mainData, 'id', 999);
+			api.setStorageArray('collectSpecialData', self.data.mainData, 'special_id', 999);
 		};
 		var collectSpecialData = api.getStorageArray('collectSpecialData');
-		self.data.isInCollectSpecialData = api.findItemInArray(collectSpecialData, 'id', self.data.id);
+		self.data.isInCollectSpecialData = api.findItemInArray(collectSpecialData, 'special_id', self.data.id);
 		self.setData({
 			web_isInCollectSpecialData: self.data.isInCollectSpecialData,
 		});
@@ -66,7 +66,7 @@ Page({
 		// postData.tokenFuncName = 'getProjectToken';
 		postData.searchItem = {
 			thirdapp_id: 2,
-			id: self.data.id
+			special_id: self.data.id
 		};
 		const callback = (res) => {
 			if (res.solely_code == 100000) {
@@ -81,108 +81,119 @@ Page({
 					for (var i = 0; i < self.data.mainData.jobrate.length; i++) {
 						rate.push(self.data.mainData.jobrate[i].rate.split('-')[0])
 					};
-					for (var i = 0; i < self.data.mainData.jobdetail[2].length; i++) {
-						area.push(self.data.mainData.jobdetail[2][i].area);
-						areaRate.push(parseFloat(self.data.mainData.jobdetail[2][i].rate))
-					};
-					console.log('area',area)
-					console.log('areaRate',areaRate)
-					new wxCharts({
-						animation: true,
-						canvasId: 'ringCanvas',
-						type: 'ring',
-						extra: {
-							ringWidth: 10,
-						},
-						series: [{
-							name: '男',
-							data: parseInt(self.data.mainData.rate[0]),
-							stroke: false
-						}, {
-							name: '女',
-							data: parseInt(self.data.mainData.rate[1]),
-							stroke: false
-						}],
-						disablePieStroke: true,
-						width: 300,
-						height: 300,
-						dataLabel: true,
-						legend: true,
-						padding: 0
-					});
-					new wxCharts({
-						animation: true, //是否有动画
-						canvasId: 'pieCanvas',
-						type: 'pie',
-						series: [{
-								name: self.data.mainData.jobrate[0].year,
-								data: parseInt(rate[0]),
-							},
-							{
-								name: '未就业',
-								data: 100 - parseInt(rate[0]),
-							}
-						],
-						width: 300,
-						height: 300,
-						dataLabel: true,
-					});
-					new wxCharts({
-						animation: true, //是否有动画
-						canvasId: 'pieCanvasTwo',
-						type: 'pie',
-						series: [{
-								name: self.data.mainData.jobrate[1].year,
-								data: parseInt(rate[1]),
-							},
-							{
-								name: '未就业',
-								data: 100 - parseInt(rate[1]),
-							}
-						],
-						width: 300,
-						height: 300,
-						dataLabel: true,
-					});
-					new wxCharts({
-						animation: true, //是否有动画
-						canvasId: 'pieCanvasThree',
-						type: 'pie',
-						series: [{
-								name: self.data.mainData.jobrate[2].year,
-								data: parseInt(rate[2]),
-							},
-							{
-								name: '未就业',
-								data: 100 - parseInt(rate[2]),
-							}
-						],
-						width: 300,
-						height: 300,
-						dataLabel: true,
-					});
+					if(self.data.mainData.jobdetail[2]){
+						for (var i = 0; i < self.data.mainData.jobdetail[2].length; i++) {
+							area.push(self.data.mainData.jobdetail[2][i].area);
+							areaRate.push(parseFloat(self.data.mainData.jobdetail[2][i].rate))
+						};
+					}
 					
-					new wxCharts({
+					console.log('area', area)
+					console.log('areaRate', areaRate)
+					if (rate.length > 0) {
+						new wxCharts({
+							animation: true,
+							canvasId: 'ringCanvas',
+							type: 'ring',
+							extra: {
+								ringWidth: 10,
+							},
+							series: [{
+								name: '男',
+								data: parseInt(self.data.mainData.rate[0]),
+								stroke: false
+							}, {
+								name: '女',
+								data: parseInt(self.data.mainData.rate[1]),
+								stroke: false
+							}],
+							disablePieStroke: true,
+							width: 300,
+							height: 300,
+							dataLabel: true,
+							legend: true,
+							padding: 0
+						});
+					};
+					if (self.data.mainData.jobrate.length > 0) {
+						new wxCharts({
+							animation: true, //是否有动画
+							canvasId: 'pieCanvas',
+							type: 'pie',
+							series: [{
+									name: self.data.mainData.jobrate[0].year,
+									data: parseInt(rate[0]),
+								},
+								{
+									name: '未就业',
+									data: 100 - parseInt(rate[0]),
+								}
+							],
+							width: 300,
+							height: 300,
+							dataLabel: true,
+						});
+					};
+					if (self.data.mainData.jobrate.length > 1) {
+						new wxCharts({
+							animation: true, //是否有动画
+							canvasId: 'pieCanvasTwo',
+							type: 'pie',
+							series: [{
+									name: self.data.mainData.jobrate[1].year,
+									data: parseInt(rate[1]),
+								},
+								{
+									name: '未就业',
+									data: 100 - parseInt(rate[1]),
+								}
+							],
+							width: 300,
+							height: 300,
+							dataLabel: true,
+						});
+					};
+					if (self.data.mainData.jobrate.length > 2) {
+						new wxCharts({
+							animation: true, //是否有动画
+							canvasId: 'pieCanvasThree',
+							type: 'pie',
+							series: [{
+									name: self.data.mainData.jobrate[2].year,
+									data: parseInt(rate[2]),
+								},
+								{
+									name: '未就业',
+									data: 100 - parseInt(rate[2]),
+								}
+							],
+							width: 300,
+							height: 300,
+							dataLabel: true,
+						});
+					};
+
+					if(area.length>0&&areaRate.length>0){
+						new wxCharts({
 						
-						canvasId: 'canvas3',
-						type: 'column',
-						categories: area,
-						series: [{
-							name: '就业比例',
-							data:areaRate
-						}],
-						yAxis: {
-							format: function (val) {
-								return val + '%';
-							}
-						},
-						width: 320,
-						height: 200
-						
-						
-						
-						
-					});
+							canvasId: 'canvas3',
+							type: 'column',
+							categories: area,
+							series: [{
+								name: '就业比例',
+								data: areaRate
+							}],
+							yAxis: {
+								format: function(val) {
+									return val + '%';
+								}
+							},
+							width: 320,
+							height: 200		
+						});
+					}
+
+					
 				}
 				self.setData({
 					web_mainData: self.data.mainData,

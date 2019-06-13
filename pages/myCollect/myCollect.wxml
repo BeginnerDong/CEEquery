@@ -13,14 +13,13 @@
 
 <view wx:if="{{num==0}}">
 <block wx:for="{{web_schoolMainData}}" wx:key="id">
-	<view class="list-two" bindtap="intoPath" data-path="/pages/schoolDetalis/schoolDetalis?id={{item.id}}">
+	<view class="list-two" bindtap="intoPath" data-path="/pages/schoolDetalis/schoolDetalis?id={{item.school_id}}">
 		 <view class="ilblock list-left">
 			<image src="{{'https://static-data.eol.cn/upload/logo/'+item.school_id+'.jpg'}}"></image>
 		 </view>
 		<view class="one-center ilblock">
 			<view>
 				<view class="one-title color1 font14 ilblock">{{item.name}}<text class="color2 font12" style="margin-left: 20rpx;">{{item.province_name}}</text> </view> 
-				<view class="flo-right color8 font12 ilblock" style="margin-top: 10rpx;">+加入对比</view>
 			</view>
 			<view class="font12 one-color">
 				<view class="ilblock">{{item.type_name}}</view>

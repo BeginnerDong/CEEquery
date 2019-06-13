@@ -14,23 +14,20 @@ const token = new Token();
 
 Page({
 	data: {
-		num: 0,
+
 		mainData: [],
-		isFirstLoadAllStandard: ['getMainData'],
+		isFirstLoadAllStandard: ['getMainData','getOrderData'],
 		orderData: [],
-		sForm: {
-			item: ''
-		},
 		searchItem: {},
-		contrastsSchoolData:[],
-		isShow:false
+		contrastsSchoolData: [],
+		isShow: false
 	},
 
 
 	onLoad(options) {
 		const self = this;
 		api.commonInit(self);
-
+		self.data.special_id = parseInt(options.id);
 		self.data.contrastsSchoolData = api.getStorageArray('contrastsSchoolData');
 		self.getOrderData();
 		self.getMainData()
@@ -39,38 +36,7 @@ Page({
 
 	onShow() {
 		const self = this;
-		
-	},
 
-	changeBind(e) {
-		const self = this;
-		api.fillChange(e, self, 'sForm');
-		console.log(self.data.sForm);
-		self.setData({
-			web_sForm: self.data.sForm
-		})
-	},
-
-	search() {
-		const self = this;
-		if(self.data.buttonCanClick){
-			api.buttonCanClick(self,false);
-		}else{
-			return;
-		};
-		
-		console.log('self.data.sForm.item', self.data.sForm.item)
-		self.data.labelData = [];
-		if (self.data.sForm.item) {
-			console.log(666)
-			self.data.searchItem.name = ['LIKE', ['%' + self.data.sForm.item + '%']],
-				self.getMainData(true);
-
-		} else if (self.data.sForm.item == '') {
-			delete self.data.searchItem.name;
-			console.log(666)
-			self.getMainData(true)
-		}
 	},
 
 	getOrderData() {
@@ -97,36 +63,34 @@ Page({
 		};
 		const postData = {};
 		postData.paginate = api.cloneForm(self.data.paginate);
-		/* 		postData.tokenFuncName = 'getProjectToken'; */
 		postData.searchItem = api.cloneForm(self.data.searchItem);
 		postData.searchItem.thirdapp_id = getApp().globalData.thirdapp_id;
 		postData.order = {
 			school_id: 'asc'
 		};
-		postData.getAfter = {
+		postData.getBefore = {
 			rank: {
-				tableName: 'SchoolRank',
+				tableName: 'SchoolSpecial',
 				middleKey: 'school_id',
 				key: 'school_id',
-				condition: '=',
+				condition: 'in',
 				searchItem: {
-					status: 1
+					special_id: ['in', [self.data.special_id]]
 				},
-				info: ['view_month']
 			},
 		};
 		const callback = (res) => {
 			if (res.solely_code == 100000) {
 				api.buttonCanClick(self, true)
 				if (res.info.data.length > 0) {
-					
+
 					for (var i = 0; i < res.info.data.length; i++) {
-						res.info.data[i].school_url = 'https://static-data.eol.cn/upload/logo/'+res.info.data[i].school_id+'.jpg'	
+						res.info.data[i].school_url = 'https://static-data.eol.cn/upload/logo/' + res.info.data[i].school_id + '.jpg'
 					};
 					self.data.mainData.push.apply(self.data.mainData, res.info.data);
 					for (var i = 0; i < self.data.mainData.length; i++) {
 						self.data.mainData[i].isInContrastsSchoolData = false;
-						if(api.findItemInArray(self.data.contrastsSchoolData, 'id', self.data.mainData[i].id)){
+						if (api.findItemInArray(self.data.contrastsSchoolData, 'id', self.data.mainData[i].id)) {
 							self.data.mainData[i].isInContrastsSchoolData = true
 						}
 					}
@@ -141,10 +105,6 @@ Page({
 				api.showToast(res.msg, 'none')
 			};
 			api.buttonCanClick(self, true)
-			setTimeout(function() {
-				wx.hideNavigationBarLoading();
-				wx.stopPullDownRefresh();
-			}, 300);
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getMainData', self);
 			console.log('getMainData', self.data.mainData)
 		};
@@ -154,9 +114,8 @@ Page({
 	contrasts(e) {
 		const self = this;
 		self.data.isShow = true;
-		var index = api.getDataSet(e,'index');
+		var index = api.getDataSet(e, 'index');
 		self.data.mainData[index].index = index;
-		console.log(self.data.mainData[index].isInContrastsSchoolData)
 		console.log(self.data.contrastsSchoolData)
 		if (self.data.mainData[index].isInContrastsSchoolData) {
 			api.delStorageArray('contrastsSchoolData', self.data.mainData[index], 'id');
@@ -172,11 +131,11 @@ Page({
 		};
 		self.data.contrastsSchoolData = api.getStorageArray('contrastsSchoolData');
 		self.data.mainData[index].isInContrastsSchoolData = api.findItemInArray(self.data.contrastsSchoolData, 'id', self.data.mainData[index].id);
-		
+
 		self.setData({
 			web_contrastsSchoolData: self.data.contrastsSchoolData,
 			isShow: self.data.isShow,
-			web_mainData:self.data.mainData
+			web_mainData: self.data.mainData
 		});
 	},
 

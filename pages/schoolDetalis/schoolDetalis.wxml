@@ -1,6 +1,6 @@
 <view class="top">
 	<image src="../../image/school-img2.png" style="width: 100%; height: 200rpx;"></image>
-	<image class="logo" src="../../image/school-img1.png"></image>
+	<image src="{{'https://static-data.eol.cn/upload/logo/'+web_mainData.school_id+'.jpg'}}" class="logo" style="border-radius:50%"></image>
 </view>
 <view style="text-align: center; margin-top: 20rpx; position: relative;">
 	<view class="color1 font14">{{web_mainData.name}}<text class="color2 font12" style="margin-left: 20rpx;">{{web_mainData.province_name}}</text> </view>

@@ -125,10 +125,12 @@
 }
 .fixd-box{
 	width:90%;
-	height: 400rpx;
-	margin: 50% 5%;
-	box-sizing: border-box;
-	padding: 30rpx;
+	height:80%;
+	box-sizing:border-box;
+	padding:30rpx;
+	position:absolute;
+	top:10%;
+	left:5%;
 }
 .fixd-box button{
 	display: inline-block;
@@ -137,7 +139,14 @@
 	line-height:70rpx;
 	margin: 80rpx 30%;
 }
-
+.vip-img{
+	width:100%;
+	display: flex;
+	justify-content: center;
+}
+.vip-img image{
+	width:70%
+}
 .regulation{
 	width: 80%;
 	background: rgb(240,240,240);
