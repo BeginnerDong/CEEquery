@@ -75,7 +75,7 @@ Page({
 		postData.searchItem.local_type_name = self.data.type;
 		postData.searchItem.thirdapp_id = 2;
 		postData.searchItem.local_province_name  = '黑龙江';
-		postData.searchItem.year = '2017';
+		postData.searchItem.year = '2018';
 		postData.getAfter = {
 			school:{
 				tableName:'SchoolRank',

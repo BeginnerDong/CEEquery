@@ -39,19 +39,19 @@
 <view class="box">
 	<view class="tabe color2 font13">
 		<view class="th color1">
-			<view class="td">专业名称</view>
-			<view class="td">学科门类</view>
-			<view class="td">二级门类</view>
-			<view class="td">计划招生</view>
+			<view class="td" style="width:30%">专业名称</view>
+			<view class="td" style="width:25%">学科门类</view>
+			<view class="td" style="width:25%">二级门类</view>
+			<view class="td" style="width:20%">计划招生</view>
 		</view>
 		<block wx:for="{{web_mainData}}" wx:key="id">
 			<view class="tr">
-				<view class="td avoidOverflow">{{item.spname}}</view>
-				<view class="td avoidOverflow">{{item.level3_name?item.level3_name:'-'}}</view>
-				<view class="td avoidOverflow">{{item.level2_name?item.level2_name:'-'}}</view>
-				<view class="td">{{item.num}}</view>
+				<view class="td" style="width:30%">{{item.spname}}</view>
+				<view class="td" style="width:25%">{{item.level3_name?item.level3_name:'-'}}</view>
+				<view class="td" style="width:25%">{{item.level2_name?item.level2_name:'-'}}</view>
+				<view class="td" style="width:20%">{{item.num}}</view>
 			</view>
 		</block>
 	</view>
 </view>
- 
+<view style="width:100%;height:20px"></view>

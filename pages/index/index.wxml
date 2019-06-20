@@ -11,7 +11,7 @@
 		<swiper  indicator-dots="true" indicator-active-color="#606060"  class="banbox" autoplay="{{autoplay}}" duration="{{duration}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}">
 			<block class="swipera" wx:for="{{web_sliderData.mainImg}}">
 				<swiper-item>
-					<image src="{{item.url}}" mode="widthFix" class="banimg"></image>
+					<image src="{{item.url}}"class="banimg"></image>
 				</swiper-item>
 			</block>
 		</swiper>
@@ -96,7 +96,7 @@
 			<input class="font12 color2 ilblock" placeholder="请输入总分数" data-key="score" bindblur="changeBind" value="{{web_submitData.score}}"/>
 		</view>
 		<button class="bg7 color5 font14 radiu15" style="width: 85%; margin: 50rpx auto 20rpx;" bindtap="goSearch">立即查询</button>
-		<view class="color8 font10" style="margin-left: 7.5%;" bindtap="play">推荐规则</view>
+		<view class="color8 font14" style="margin-left: 7.5%;" bindtap="play">推荐规则</view>
 		<view class="regulation color2 font11" wx:if="{{is_play}}">
 			<view>
 				<image class="flo-right" src="../../image/home-icon12.png" style="width: 24rpx;height: 24rpx;" bindtap="play"></image>
@@ -108,7 +108,7 @@
 				2、考生输入分数，系统将根据在当省招生的高校录取情况，推荐合适的高校；
 			</view>
 			<view class="text">
-				3、本系统推荐的院校名单，仅供志愿参考。
+				3、本系统推荐三个层面院校仅供参考，最后选择责任自负。
 			</view>
 		</view>
 	</view>

@@ -37,6 +37,8 @@
 			<view class="one-time color1 font12">
 				<view class="ilblock">最高分：{{item.max}}</view>
 				<view class="ilblock" style="margin-left: 30rpx;">最低分：{{item.min}}</view>
+				<view class="ilblock" style="margin-left: 30rpx;">(2018年数据)</view>
+				
 			</view>
 			<view class="ilblock color1 font12">
 				<view class="ilblock">录取批次：{{item.local_batch_name}}</view>

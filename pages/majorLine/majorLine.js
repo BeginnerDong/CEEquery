@@ -59,7 +59,7 @@ Page({
 	
 	bindYearChange(e) {
 		const self = this;
-		self.data.searchItem.year = self.data.yArray[e.detail.value];
+		//self.data.searchItem.year = self.data.yArray[e.detail.value];
 		self.setData({
 			web_yIndex: e.detail.value
 		});
@@ -96,7 +96,7 @@ Page({
 		};
 		const postData = {};
 		// postData.tokenFuncName = 'getProjectToken';
-		postData.paginate = api.cloneForm(self.data.paginate);
+		//postData.paginate = api.cloneForm(self.data.paginate);
 		postData.searchItem = api.cloneForm(self.data.searchItem);
 		postData.searchItem.school_id = self.data.id;
 		const callback = (res) => {

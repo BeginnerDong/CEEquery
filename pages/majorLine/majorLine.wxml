@@ -31,24 +31,24 @@
 <view class="box">
 	<view class="tabe color2 font13">
 		<view class="th color1">
-			<view class="td">专业名称</view>
-			<view class="td">最高分</view>
-			<view class="td">平均分</view>
-			<view class="td">最低分</view>
-			<view class="td">省控分数线</view>
-			<view class="td">录取批次</view>
+			<view class="td" style="width:40%">专业名称</view>
+			<view class="td" style="width:10%">最高分</view>
+			<view class="td" style="width:10%">平均分</view>
+			<view class="td" style="width:10%">最低分</view>
+			<view class="td" style="width:15%">省控分数线</view>
+			<view class="td" style="width:15%">录取批次</view>
 			
 		</view>
 		<block wx:for="{{web_yearData}}" wx:key="id">
 			<view class="tr">
-				<view class="td">{{item.spname}}</view>
-				<view class="td">{{item.max}}</view>
-				<view class="td">{{item.average}}</view>
-				<view class="td">{{item.min}}</view>
-				<view class="td">{{item.proscore?item.proscore:'-'}}</view>
-				<view class="td">{{item.local_batch_name}}</view>
+				<view class="td" style="width:40%">{{item.spname}}</view>
+				<view class="td" style="width:10%">{{item.max}}</view>
+				<view class="td" style="width:10%">{{item.average?item.average:'-'}}</view>
+				<view class="td" style="width:10%">{{item.min}}</view>
+				<view class="td" style="width:15%">{{item.proscore?item.proscore:'-'}}</view>
+				<view class="td" style="width:15%">{{item.local_batch_name}}</view>
 			</view>
 		</block>
 	</view>
 </view>
- 
+<view style="width:100%;height:20px"></view>
